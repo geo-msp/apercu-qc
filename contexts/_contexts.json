@@ -46,5 +46,9 @@
   {
     "uri": "education",
     "title": "Éducation"
+  },
+  {
+    "uri": "glace",
+    "title": "Suivi des glaces"
   }
 ]

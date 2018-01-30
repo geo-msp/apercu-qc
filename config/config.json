@@ -4,7 +4,7 @@
       "enabled": false
     },
     "icherche": {
-      "url": "/icherche/geopasdecode"
+      "url": "/icherche/geocode?type=adresse,route,municipalite,mrc,region_administrative,ancienne_municipalite"
     },
     "datasource": {
       "url": "/igo2/api/layers/search"
