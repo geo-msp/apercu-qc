@@ -12,6 +12,7 @@
   "layers": [
   {
       "title": "Route II",
+	"id":"routeii",
       "type": "xyz",
       "visible" : true,
       "baseLayer": false,
@@ -407,7 +408,7 @@
 
     } ,
     {
-      "title": "Direction générale des territoires",
+      "title": "Sous-ministériat aux territoires",
       "id" : "bgr_v_dirct_genrl_geomt_act",
       "type": "wms",
       "optionsFromCapabilities": true,
@@ -425,7 +426,7 @@
 
     } ,
     {
-      "title": "Direction territoriale",
+      "title": "Directions générales",
       "id" : "bgr_v_dirct_terrt_geomt_act",
       "type": "wms",
       "optionsFromCapabilities": true,
