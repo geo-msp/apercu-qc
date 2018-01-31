@@ -147,8 +147,9 @@
     "contextManager",
     "mapDetails",
     "shareMap",
-    "timeAnalysis",
     "catalog",
+    "timeAnalysis",
+    "importExport",
     "print"
   ],
   "tools": [

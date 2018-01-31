@@ -119,8 +119,9 @@
     "contextManager",
     "mapDetails",
     "shareMap",
-    "timeAnalysis",
     "catalog",
+    "timeAnalysis",
+    "importExport",
     "print"
   ],
   "tools": [
@@ -139,10 +140,7 @@
         "toggleLegendOnVisibilityChange": false
       }
     },
-    {
-      "name": "timeAnalysis"
-    },
-    {
+       {
       "name": "shareMap"
     },
     {
@@ -152,6 +150,12 @@
     {
       "name": "catalogLayers",
       "title": "Catalogue"
+    },
+    {
+      "name": "timeAnalysis"
+    },
+    {
+      "name": "importExport"
     },
     {
       "name": "print"

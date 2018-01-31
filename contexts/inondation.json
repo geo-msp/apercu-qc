@@ -219,8 +219,9 @@
     "contextManager",
     "mapDetails",
     "shareMap",
-    "timeAnalysis",
     "catalog",
+    "timeAnalysis",
+    "importExport",
     "print"
   ],
   "tools": [
@@ -241,10 +242,7 @@
     },
     {
       "name": "shareMap"
-    }, 
-    {
-      "name": "timeAnalysis"
-    },    
+    },
     {
       "name": "catalog",
       "title": "Catalogue"
@@ -252,6 +250,12 @@
     {
       "name": "catalogLayers",
       "title": "Catalogue"
+    },
+    {
+      "name": "timeAnalysis"
+    },
+    {
+      "name": "importExport"
     },
     {
       "name": "print"
