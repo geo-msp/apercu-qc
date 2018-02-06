@@ -100,8 +100,8 @@
 
     } ,
     {
-      "title": "Zones potentiellement exposées aux glissements de terrain",
-      "id" : "cgt_mtq",
+      "title": "Zones potentiellement exposées aux glissements de terrain (lignes)",
+      "id" : "zpegt_cgt_l",
       "type": "wms",
       "optionsFromCapabilities": true,
       "visible": false,
@@ -111,7 +111,25 @@
       "source": {
         "url": "/ws/igo_gouvouvert.fcgi",
         "params": {
-          "layers": "cgt_mtq",
+          "layers": "zpegt_cgt_l",
+          "version": "1.3.0"
+        }
+      }
+
+    } ,
+    {
+      "title": "Zones potentiellement exposées aux glissements de terrain",
+      "id" : "zpegt_cgt_s",
+      "type": "wms",
+      "optionsFromCapabilities": true,
+      "visible": false,
+      "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/zones-potentiellement-exposees-aux-glissements-de-terrain-zpegt"},
+      "queryFormat": "html",
+      "queryHtmlTarget": "innerhtml",
+      "source": {
+        "url": "/ws/igo_gouvouvert.fcgi",
+        "params": {
+          "layers": "zpegt_cgt_s",
           "version": "1.3.0"
         }
       }
