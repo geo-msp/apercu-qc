@@ -1,5 +1,5 @@
 {
-  "uri": "apercu",
+  "uri": "donneesqc",
   "title": "Données en vedette",
   "map": {
     "view": {
@@ -9,6 +9,12 @@
     }
     },
     "layers": [
+     {
+	      "title" : "OSM",
+	      "type" : "osm",
+ 	      "visible" : false,
+              "baseLayer": true
+	},
      {
       "title": "Route II",
       "type": "xyz",
@@ -60,6 +66,22 @@
         "url": "/carto/tms/1.0.0/fond_thematique@EPSG_3857/{z}/{x}/{-y}.png",
           "attributions": "  © <a href='https://www.droitauteur.gouv.qc.ca/copyright.php'><img src='/gouvouvert/public/images/quebec/gouv_qc_logo.png' width='64' height='14'>Gouvernement du Québec</a>"
       }
+    },
+    {
+      "type": "wms",
+      "optionsFromCapabilities": true,
+      "visible" : false,
+      "metadata": {
+          "extern": true
+      },
+      "source": {
+        "url": "/ws/igo_gouvouvert.fcgi",
+	"attributions": "<font size='2'>Inclus du matériel <a href='http://www.si-imaging.com/products/' target='_blank'> ©KARI 2017</a>, Distribution (SI Imaging Services, République de Corée), tous droits réservés.</a> </font>",
+        "params": {
+          "layers": "MEGANTIC_KOMSAT_20170504",
+          "version": "1.3.0"
+        }
+      }
     }
   ],
   "toolbar": [
@@ -67,8 +89,9 @@
     "contextManager",
     "mapDetails",
     "shareMap",
-    "timeAnalysis",
     "catalog",
+    "timeAnalysis",
+    "importExport",
     "print"
   ],
   "tools": [
@@ -88,9 +111,6 @@
       }
     },
     {
-      "name": "timeAnalysis"
-    },
-    {
       "name": "shareMap"
     },
     {
@@ -100,6 +120,12 @@
     {
       "name": "catalogLayers",
       "title": "Catalogue"
+    },
+    {
+      "name": "timeAnalysis"
+    },
+    {
+      "name": "importExport"
     },
     {
       "name": "print"

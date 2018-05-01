@@ -4,7 +4,7 @@
     "title": "Fond de carte"
   },
   {
-    "uri": "apercu",
+    "uri": "donneesqc",
     "title": "Données en vedette"
   },
   {
@@ -16,12 +16,20 @@
     "title": "Inventaire forestier"
   },
   {
-    "uri": "inondation",
-    "title": "Inondations 2017"
-  },
-  {
     "uri": "mtq",
     "title": "Transports Québec"
+  },
+  {
+    "uri": "glace",
+    "title": "Suivi des glaces"
+  },
+  {
+    "uri": "crue",
+    "title": "Surveillance des crues"
+  },
+  {
+    "uri": "inondation",
+    "title": "Inondations 2017"
   },
   {
     "uri": "embacle",
@@ -38,10 +46,6 @@
   {
     "uri": "cptaq",
     "title": "Agriculture"
-  },
-  {
-    "uri": "crue",
-    "title": "Surveillance des crues"
   },
   {
     "uri": "education",

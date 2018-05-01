@@ -11,7 +11,13 @@
     }
     },
     "layers": [
-{
+    {
+	      "title" : "OSM",
+	      "type" : "osm",
+ 	      "visible" : false,
+              "baseLayer": true
+	},
+    {
       "title": "Route II",
       "type": "xyz",
       "visible" : true,
@@ -213,8 +219,9 @@
     "contextManager",
     "mapDetails",
     "shareMap",
-    "timeAnalysis",
     "catalog",
+    "timeAnalysis",
+    "importExport",
     "print"
   ],
   "tools": [
@@ -234,9 +241,6 @@
       }
     },
     {
-      "name": "timeAnalysis"
-    },
-    {
       "name": "shareMap"
     },
     {
@@ -246,6 +250,12 @@
     {
       "name": "catalogLayers",
       "title": "Catalogue"
+    },
+    {
+      "name": "timeAnalysis"
+    },
+    {
+      "name": "importExport"
     },
     {
       "name": "print"

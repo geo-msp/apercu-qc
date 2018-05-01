@@ -518,13 +518,14 @@
 ]
 ,
 "toolbar": [
-  "searchResults",
-  "contextManager",
-  "mapDetails",
-  "shareMap",
-  "timeAnalysis",
-  "catalog",
-  "print"
+    "searchResults",
+    "contextManager",
+    "mapDetails",
+    "shareMap",
+    "catalog",
+    "timeAnalysis",
+    "importExport",
+    "print"
 ],
 "tools": [
   {
@@ -542,22 +543,25 @@
       "toggleLegendOnVisibilityChange": false
     }
   },
-  {
-    "name": "timeAnalysis"
-  },
-  {
-    "name": "shareMap"
-  },
-  {
-    "name": "catalog",
-    "title": "Catalogue"
-  },
-  {
-    "name": "catalogLayers",
-    "title": "Catalogue"
-  },
-  {
-    "name": "print"
-  }
+      {
+      "name": "shareMap"
+    },
+    {
+      "name": "catalog",
+      "title": "Catalogue"
+    },
+    {
+      "name": "catalogLayers",
+      "title": "Catalogue"
+    },
+    {
+      "name": "timeAnalysis"
+    },
+    {
+      "name": "importExport"
+    },
+    {
+      "name": "print"
+    }
 ]
 }
