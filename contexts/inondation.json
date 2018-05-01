@@ -9,7 +9,14 @@
       "geolocate": false
     }
     },
-    "layers": [{
+    "layers": [
+     {
+	      "title" : "OSM",
+	      "type" : "osm",
+ 	      "visible" : false,
+              "baseLayer": true
+	},
+     {
       "title": "Route II",
       "type": "xyz",
       "visible" : true,

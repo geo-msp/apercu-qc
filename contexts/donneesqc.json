@@ -1,21 +1,21 @@
 {
-  "uri": "crue",
-  "title": "Surveillance des crues",
+  "uri": "donneesqc",
+  "title": "Données en vedette",
   "map": {
     "view": {
       "projection": "EPSG:3857",
-      "center": [-74.066644, 47.844253],
+      "center": [-71.811360, 47.560696],
       "zoom": 7
     }
     },
     "layers": [
-    {
+     {
 	      "title" : "OSM",
 	      "type" : "osm",
  	      "visible" : false,
               "baseLayer": true
 	},
-    {
+     {
       "title": "Route II",
       "type": "xyz",
       "visible" : true,
@@ -66,36 +66,7 @@
         "url": "/carto/tms/1.0.0/fond_thematique@EPSG_3857/{z}/{x}/{-y}.png",
           "attributions": "  © <a href='https://www.droitauteur.gouv.qc.ca/copyright.php'><img src='/gouvouvert/public/images/quebec/gouv_qc_logo.png' width='64' height='14'>Gouvernement du Québec</a>"
       }
-    },
-   {
-      "type": "wms",
-      "opacity": 0.6,
-      "optionsFromCapabilities": true,
-      "metadata": {
-          "extern": true
-      },
-      "source": {
-        "url": "/ws/adnInternetV2.fcgi",
-        "params": {
-          "layers": "adn_reg_admin_public_v",
-          "version": "1.3.0"
-        }
-      }
-      },
-   {
-      "type": "wms",
-      "optionsFromCapabilities": true,
-      "metadata": {
-          "extern": true
-      },
-      "source": {
-        "url": "/ws/adnInternetV2.fcgi",
-        "params": {
-          "layers": "adn_station_max_public_v",
-          "version": "1.3.0"
-        }
-      }
-      }
+    }
   ],
   "toolbar": [
     "searchResults",
@@ -123,7 +94,7 @@
         "toggleLegendOnVisibilityChange": false
       }
     },
-        {
+    {
       "name": "shareMap"
     },
     {

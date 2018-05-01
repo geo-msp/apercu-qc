@@ -1,5 +1,5 @@
 {
-  "uri": "apercu",
+  "uri": "donneesqc",
   "title": "Données en vedette",
   "map": {
     "view": {
@@ -9,6 +9,12 @@
     }
     },
     "layers": [
+     {
+	      "title" : "OSM",
+	      "type" : "osm",
+ 	      "visible" : false,
+              "baseLayer": true
+	},
      {
       "title": "Route II",
       "type": "xyz",
