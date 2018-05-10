@@ -1,536 +1,694 @@
 {
   "uri": "mtq",
   "title": "Transports Québec",
+
   "map": {
     "view": {
-      "projection": "EPSG:3857",
-      "center": [-72, 52],
-      "zoom": 6,
-      "geolocate": false
+    "projection": "EPSG:3857",
+    "center": [-72, 48],
+    "zoom": 7,
+    "geolocate": false
     }
   },
   "layers": [
-  {
-      "title": "Route II",
-      "type": "xyz",
-      "visible" : true,
-      "baseLayer": false,
-      	"view": {
-	"maxResolution": 10
-	},
-      "source": {
-        "url": "/carto/tms/1.0.0/carte_gouv_qc_public@EPSG_3857/{z}/{x}/{-y}.png",
-          "attributions": "  © <a href='https://www.droitauteur.gouv.qc.ca/copyright.php'><img src='/gouvouvert/public/images/quebec/gouv_qc_logo.png' width='64' height='14'>Gouvernement du Québec</a> /  Fondé sur<a href='https://github.com/infra-geo-ouverte/igo2'> IGO2</a>"
-      }
+{
+    "title": "Route II",
+    "zIndex": 4,
+    "id":"routeii",
+    "type": "xyz",
+    "visible" : true,
+    "baseLayer": false,
+    "view": {
+    "maxResolution": 10
+    },
+    "source": {
+      "url": "/carto/tms/1.0.0/carte_gouv_qc_public@EPSG_3857/{z}/{x}/{-y}.png",
+      "attributions": "  © <a href='https://www.droitauteur.gouv.qc.ca/copyright.php'><img src='/gouvouvert/public/images/quebec/gouv_qc_logo.png' width='64' height='14'>Gouvernement du Québec</a> /  Fondé sur<a href='https://github.com/infra-geo-ouverte/igo2'> IGO2</a>"
+    }
     },
     {
-	"title": "Blanc",
-	"type": "xyz",
-	"baseLayer": true,
-	"visible": false,
-	"source": {
-	"url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII="
-	   }
-	},
+    "title": "Blanc",
+    "zIndex": 3,
+    "type": "xyz",
+    "baseLayer": true,
+    "visible": false,
+    "source": {
+    "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII="
+     }
+    },
    {
-      "title": "Route",
-      "type": "xyz",
-      "visible" : true,
-      "baseLayer": true,
-      "source": {
-        "url": "/carto/tms/1.0.0/carte_gouv_qc_ro@EPSG_3857/{z}/{x}/{-y}.png",
-          "attributions": "  © <a href='https://www.droitauteur.gouv.qc.ca/copyright.php'><img src='/gouvouvert/public/images/quebec/gouv_qc_logo.png' width='64' height='14'>Gouvernement du Québec</a> /  Fondé sur<a href='https://github.com/infra-geo-ouverte/igo2'> IGO2</a>"
-      }
+    "title": "Route",
+    "zIndex": 2,
+    "type": "xyz",
+    "visible" : true,
+    "baseLayer": true,
+    "source": {
+      "url": "/carto/tms/1.0.0/carte_gouv_qc_ro@EPSG_3857/{z}/{x}/{-y}.png",
+      "attributions": "  © <a href='https://www.droitauteur.gouv.qc.ca/copyright.php'><img src='/gouvouvert/public/images/quebec/gouv_qc_logo.png' width='64' height='14'>Gouvernement du Québec</a> /  Fondé sur<a href='https://github.com/infra-geo-ouverte/igo2'> IGO2</a>"
+    }
     },{
-      "title": "Couleur",
-      "baseLayer": true,
-      "visible" : false,
-      "opacity": 0.8,
-      "type": "xyz",
-      "source": {
-        "url": "/carto/tms/1.0.0/carte_adn@EPSG_3857/{z}/{x}/{-y}.png",
-          "attributions": "  © <a href='https://www.droitauteur.gouv.qc.ca/copyright.php'><img src='/gouvouvert/public/images/quebec/gouv_qc_logo.png' width='64' height='14'>Gouvernement du Québec</a>"
-      }
+    "title": "Couleur",
+    "zIndex": 1,
+    "baseLayer": true,
+    "visible" : false,
+    "opacity": 0.8,
+    "type": "xyz",
+    "source": {
+      "url": "/carto/tms/1.0.0/carte_adn@EPSG_3857/{z}/{x}/{-y}.png",
+      "attributions": "  © <a href='https://www.droitauteur.gouv.qc.ca/copyright.php'><img src='/gouvouvert/public/images/quebec/gouv_qc_logo.png' width='64' height='14'>Gouvernement du Québec</a>"
+    }
     },{
-      "title": "Gris",
-      "baseLayer": true,
-      "visible" : false,
-      "opacity": 0.8,
-      "type": "xyz",
-      "source": {
-        "url": "/carto/tms/1.0.0/fond_thematique@EPSG_3857/{z}/{x}/{-y}.png",
-          "attributions": "  © <a href='https://www.droitauteur.gouv.qc.ca/copyright.php'><img src='/gouvouvert/public/images/quebec/gouv_qc_logo.png' width='64' height='14'>Gouvernement du Québec</a>"
+    "title": "Gris",
+    "zIndex": 0,
+    "baseLayer": true,
+    "visible" : false,
+    "opacity": 0.8,
+    "type": "xyz",
+    "source": {
+      "url": "/carto/tms/1.0.0/fond_thematique@EPSG_3857/{z}/{x}/{-y}.png",
+      "attributions": "  © <a href='https://www.droitauteur.gouv.qc.ca/copyright.php'><img src='/gouvouvert/public/images/quebec/gouv_qc_logo.png' width='64' height='14'>Gouvernement du Québec</a>"
+    }
+},
+    
+    {
+    "title": "Nom de lieux habités",
+    "id" : "lieuhabite",
+    "zIndex": 7,
+    "type": "wms",
+    "optionsFromCapabilities": true,
+    "visible": false,
+     "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/lieux-habites-du-quebec"},
+    "queryFormat": "html",
+    "queryHtmlTarget": "innerhtml",
+    "source": {
+      "url": "/ws/igo_gouvouvert.fcgi",
+      "params": {
+        "layers": "lieuhabite",
+        "version": "1.3.0",
+        "feature_count": 365
       }
+    }
+    
+    } ,
+    {
+    "title": "Village relais",
+    "id" : "villagerelais",
+    "zIndex": 8,
+    "type": "wms",
+    "optionsFromCapabilities": true,
+    "visible": false,
+     "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/villages-relais-du-quebec"},
+    "queryFormat": "html",
+    "queryHtmlTarget": "innerhtml",
+    "source": {
+      "url": "/ws/igo_gouvouvert.fcgi",
+      "params": {
+        "layers": "villagerelais",
+        "version": "1.3.0",
+        "feature_count": 365
+      }
+    }
+    
+    } ,
+    {
+    "title": "Potentiel de glissement – surface",
+    "id" : "zpegt_cgt_s",
+    "zIndex": 9,
+    "type": "wms",
+    "optionsFromCapabilities": true,
+    "visible": false,
+     "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/zones-potentiellement-exposees-aux-glissements-de-terrain-zpegt"},
+    "queryFormat": "html",
+    "queryHtmlTarget": "innerhtml",
+    "source": {
+      "url": "/ws/igo_gouvouvert.fcgi",
+      "params": {
+        "layers": "zpegt_cgt_s",
+        "version": "1.3.0",
+        "feature_count": 365
+      }
+    }
+    
+    } ,
+    {
+    "title": "Potentiel de glissement – ligne",
+    "id" : "zpegt_cgt_l",
+    "zIndex": 10,
+    "type": "wms",
+    "optionsFromCapabilities": true,
+    "visible": false,
+     "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/zones-potentiellement-exposees-aux-glissements-de-terrain-zpegt"},
+    "queryFormat": "html",
+    "queryHtmlTarget": "innerhtml",
+    "source": {
+      "url": "/ws/igo_gouvouvert.fcgi",
+      "params": {
+        "layers": "zpegt_cgt_l",
+        "version": "1.3.0",
+        "feature_count": 365
+      }
+    }
+    
+    } ,
+    {
+    "title": "Stations météoroutières, année courante",
+    "id" : "stations_meteoroutieres",
+    "zIndex": 11,
+    "type": "wms",
+    "optionsFromCapabilities": true,
+    "visible": false,
+     "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/station-meteo/"},
+    "queryFormat": "html",
+    "queryHtmlTarget": "innerhtml", 
+      "timeFilter": {
+         "min": "2008-01-01",
+         "max": "2020-06-01",
+         "range": true,
+         "type": "date",
+         "style": "calendar",
+         "timeinterval": 86400000
     },
-    {
-      "title": "Nom de lieux habités",
-      "id" : "lieuhabite",
-      "type": "wms",
-      "optionsFromCapabilities": true,
-      "visible": false,
-      "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/lieux-habites-du-quebec"},
-      "queryFormat": "html",
-      "queryHtmlTarget": "innerhtml",
-      "source": {
-        "url": "/ws/igo_gouvouvert.fcgi",
-        "params": {
-          "layers": "lieuhabite",
-          "version": "1.3.0"
-        }
+    "source": {
+      "url": "/ws/igo_gouvouvert.fcgi",
+      "params": {
+        "layers": "stations_meteoroutieres",
+        "version": "1.3.0",
+        "feature_count": 365
       }
-
+    }
+    
     } ,
     {
-      "title": "Village relais",
-      "id" : "villagerelais",
-      "type": "wms",
-      "optionsFromCapabilities": true,
-      "visible": false,
-      "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/villages-relais-du-quebec"},
-      "queryFormat": "html",
-      "queryHtmlTarget": "innerhtml",
-      "source": {
-        "url": "/ws/igo_gouvouvert.fcgi",
-        "params": {
-          "layers": "villagerelais",
-          "version": "1.3.0"
-        }
+    "title": "Stations météoroutières",
+    "id" : "histo_stations_meteoroutieres",
+    "zIndex": 12,
+    "type": "wms",
+    "optionsFromCapabilities": true,
+    "visible": false,
+     "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/station-meteo/"},
+    "queryFormat": "html",
+    "queryHtmlTarget": "innerhtml", 
+      "timeFilter": {
+         "min": "2008-01-01",
+         "max": "2020-06-01",
+         "range": true,
+         "type": "date",
+         "style": "calendar",
+         "timeinterval": 86400000
+    },
+    "source": {
+      "url": "/ws/igo_gouvouvert.fcgi",
+      "params": {
+        "layers": "histo_stations_meteoroutieres",
+        "version": "1.3.0",
+        "feature_count": 365
       }
-
+    }
+    
     } ,
     {
-      "title": "Zones potentiellement exposées aux glissements de terrain",
-      "id" : "cgt_mtq",
-      "type": "wms",
-      "optionsFromCapabilities": true,
-      "visible": false,
-      "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/zones-potentiellement-exposees-aux-glissements-de-terrain-zpegt"},
-      "queryFormat": "html",
-      "queryHtmlTarget": "innerhtml",
-      "source": {
-        "url": "/ws/igo_gouvouvert.fcgi",
-        "params": {
-          "layers": "cgt_mtq",
-          "version": "1.3.0"
-        }
+    "title": "Téléphone urgence",
+    "id" : "telephone_urg",
+    "zIndex": 13,
+    "type": "wms",
+    "optionsFromCapabilities": true,
+    "visible": false,
+     "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/telephones-de-secours-transports-quebec"},
+    "queryFormat": "html",
+    "queryHtmlTarget": "innerhtml",
+    "source": {
+      "url": "/ws/igo_gouvouvert.fcgi",
+      "params": {
+        "layers": "telephone_urg",
+        "version": "1.3.0",
+        "feature_count": 365
       }
-
+    }
+    
     } ,
-
     {
-      "title": "Stations météoroutières, année courante",
-      "id" : "stations_meteoroutieres",
+    "title": "Débit moyen journalier annuel",
+    "id" : "circulation_routier",
+    "zIndex": 14,
+    "type": "wms",
+    "optionsFromCapabilities": true,
+    "visible": false,
+     "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/debits-de-circulation-transports-quebec"},
+    "queryFormat": "html",
+    "queryHtmlTarget": "innerhtml",
+    "source": {
+      "url": "/ws/igo_gouvouvert.fcgi",
+      "params": {
+        "layers": "circulation_routier",
+        "version": "1.3.0",
+        "feature_count": 365
+      }
+    }
+    
+    } ,
+    {
+    "title": "Aéroport",
+    "id" : "aeroport",
+    "zIndex": 15,
+    "type": "wms",
+    "optionsFromCapabilities": true,
+    "visible": false,
+     "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/aeroport"},
+    "queryFormat": "html",
+    "queryHtmlTarget": "innerhtml",
+    "source": {
+      "url": "/ws/igo_gouvouvert.fcgi",
+      "params": {
+        "layers": "aeroport",
+        "version": "1.3.0",
+        "feature_count": 365
+      }
+    }
+    
+    } ,
+    {
+    "title": "Liaison maritime",
+    "id" : "liaison_maritime",
+    "zIndex": 16,
+    "type": "wms",
+    "optionsFromCapabilities": true,
+    "visible": false,
+     "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/liaison-maritime"},
+    "queryFormat": "html",
+    "queryHtmlTarget": "innerhtml",
+    "source": {
+      "url": "/ws/igo_gouvouvert.fcgi",
+      "params": {
+        "layers": "liaison_maritime",
+        "version": "1.3.0",
+        "feature_count": 365
+      }
+    }
+    
+    } ,
+    {
+    "title": "Parc routier",
+    "id" : "parc_routier",
+    "zIndex": 17,
+    "type": "wms",
+    "optionsFromCapabilities": true,
+    "visible": false,
+     "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/parc-routier"},
+    "queryFormat": "html",
+    "queryHtmlTarget": "innerhtml",
+    "source": {
+      "url": "/ws/igo_gouvouvert.fcgi",
+      "params": {
+        "layers": "parc_routier",
+        "version": "1.3.0",
+        "feature_count": 365
+      }
+    }
+    
+    } ,
+    {
+    "title": "Repère kilométrique",
+    "id" : "repere_km",
+    "zIndex": 18,
+    "type": "wms",
+    "optionsFromCapabilities": true,
+    "visible": false,
+     "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/repere-kilometrique"},
+    "queryFormat": "html",
+    "queryHtmlTarget": "innerhtml",
+    "source": {
+      "url": "/ws/igo_gouvouvert.fcgi",
+      "params": {
+        "layers": "repere_km",
+        "version": "1.3.0",
+        "feature_count": 365
+      }
+    }
+    
+    } ,
+    {
+    "title": "Zone de dégel",
+    "id" : "zones_degel",
+    "zIndex": 19,
+    "type": "wms",
+    "optionsFromCapabilities": true,
+    "visible": false,
+     "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/zones-de-degel-transports-quebec"},
+    "queryFormat": "html",
+    "queryHtmlTarget": "innerhtml",
+    "source": {
+      "url": "/ws/igo_gouvouvert.fcgi",
+      "params": {
+        "layers": "zones_degel",
+        "version": "1.3.0",
+        "feature_count": 365
+      }
+    }
+    
+    } ,
+    {
+    "title": "Aéroport - Piste",
+    "id" : "aeroport_piste",
+    "zIndex": 20,
+    "type": "wms",
+    "optionsFromCapabilities": true,
+    "visible": false,
+     "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/aeroport-piste"},
+    "queryFormat": "html",
+    "queryHtmlTarget": "innerhtml",
+    "source": {
+      "url": "/ws/igo_gouvouvert.fcgi",
+      "params": {
+        "layers": "aeroport_piste",
+        "version": "1.3.0",
+        "feature_count": 365
+      }
+    }
+    
+    } ,
+    {
+    "title": "Établissement du MTQ",
+    "id" : "etablissement_mtq",
+    "zIndex": 21,
+    "type": "wms",
+    "optionsFromCapabilities": true,
+    "visible": false,
+     "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/etablissements-de-transports-quebec"},
+    "queryFormat": "html",
+    "queryHtmlTarget": "innerhtml",
+    "source": {
+      "url": "/ws/igo_gouvouvert.fcgi",
+      "params": {
+        "layers": "etablissement_mtq",
+        "version": "1.3.0",
+        "feature_count": 365
+      }
+    }
+    
+    } ,
+    {
+    "title": "Réseau ferroviaire",
+    "id" : "reseau_chfer_qc",
+    "zIndex": 22,
+    "type": "wms",
+    "optionsFromCapabilities": true,
+    "visible": false,
+     "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/reseau-ferroviaire"},
+    "queryFormat": "html",
+    "queryHtmlTarget": "innerhtml",
+    "source": {
+      "url": "/ws/igo_gouvouvert.fcgi",
+      "params": {
+        "layers": "reseau_chfer_qc",
+        "version": "1.3.0",
+        "feature_count": 365
+      }
+    }
+    
+    } ,
+    {
+    "title": "Port installation",
+    "id" : "port_installation",
+    "zIndex": 23,
+    "type": "wms",
+    "optionsFromCapabilities": true,
+    "visible": false,
+     "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/port-installation"},
+    "queryFormat": "html",
+    "queryHtmlTarget": "innerhtml",
+    "source": {
+      "url": "/ws/igo_gouvouvert.fcgi",
+      "params": {
+        "layers": "port_installation",
+        "version": "1.3.0",
+        "feature_count": 365
+      }
+    }
+    
+    } ,
+    {
+    "title": "Camionnage réseau suprérieur",
+    "id" : "camionnage_reseau_superieur",
+    "zIndex": 24,
+    "type": "wms",
+    "optionsFromCapabilities": true,
+    "visible": false,
+     "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/reseau-camionnage-transports-quebec"},
+    "queryFormat": "html",
+    "queryHtmlTarget": "innerhtml",
+    "source": {
+      "url": "/ws/igo_gouvouvert.fcgi",
+      "params": {
+        "layers": "camionnage_reseau_superieur",
+        "version": "1.3.0",
+        "feature_count": 365
+      }
+    }
+    
+    } ,
+    {
+    "title": "Sortie autoroute",
+    "id" : "sortie_aut",
+    "zIndex": 25,
+    "type": "wms",
+    "optionsFromCapabilities": true,
+    "visible": false,
+     "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/mtq-sortie-dautoroute-du-quebec"},
+    "queryFormat": "html",
+    "queryHtmlTarget": "innerhtml",
+    "source": {
+      "url": "/ws/igo_gouvouvert.fcgi",
+      "params": {
+        "layers": "sortie_aut",
+        "version": "1.3.0",
+        "feature_count": 365
+      }
+    }
+    
+    } ,
+    {
+    "title": "Convivialié en vélo",
+    "id" : "convi_velo_glv",
+    "zIndex": 26,
+    "type": "wms",
+    "optionsFromCapabilities": true,
+    "visible": false,
+     "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/convivialite-des-routes-pour-les-cyclistes-transports-quebec"},
+    "queryFormat": "html",
+    "queryHtmlTarget": "innerhtml",
+    "source": {
+      "url": "/ws/igo_gouvouvert.fcgi",
+      "params": {
+        "layers": "convi_velo_glv",
+        "version": "1.3.0",
+        "feature_count": 365
+      }
+    }
+    
+    } ,
+    {
+    "title": "Sous-ministériat aux territoires",
+    "id" : "bgr_v_dirct_genrl_geomt_act",
+    "zIndex": 27,
+    "type": "wms",
+    "optionsFromCapabilities": true,
+    "visible": false,
+     "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/territoires-administratifs-transports-quebec"},
+    "queryFormat": "html",
+    "queryHtmlTarget": "innerhtml",
+    "source": {
+      "url": "/ws/igo_gouvouvert.fcgi",
+      "params": {
+        "layers": "bgr_v_dirct_genrl_geomt_act",
+        "version": "1.3.0",
+        "feature_count": 365
+      }
+    }
+    
+    } ,
+    {
+    "title": "Directions générales",
+    "id" : "bgr_v_dirct_terrt_geomt_act",
+    "zIndex": 28,
+    "type": "wms",
+    "optionsFromCapabilities": true,
+    "visible": false,
+     "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/territoires-administratifs-transports-quebec"},
+    "queryFormat": "html",
+    "queryHtmlTarget": "innerhtml",
+    "source": {
+      "url": "/ws/igo_gouvouvert.fcgi",
+      "params": {
+        "layers": "bgr_v_dirct_terrt_geomt_act",
+        "version": "1.3.0",
+        "feature_count": 365
+      }
+    }
+    
+    } ,
+    {
+    "title": "Centre de services",
+    "id" : "bgr_v_centr_servc_geomt_act",
+    "zIndex": 29,
+    "type": "wms",
+    "optionsFromCapabilities": true,
+    "visible": false,
+     "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/territoires-administratifs-transports-quebec"},
+    "queryFormat": "html",
+    "queryHtmlTarget": "innerhtml",
+    "source": {
+      "url": "/ws/igo_gouvouvert.fcgi",
+      "params": {
+        "layers": "bgr_v_centr_servc_geomt_act",
+        "version": "1.3.0",
+        "feature_count": 365
+      }
+    }
+    
+    } ,
+    {
+    "title": "Structure",
+    "id" : "gsq_v_desc_strct_tri",
+    "zIndex": 30,
+    "type": "wms",
+    "optionsFromCapabilities": true,
+    "visible": false,
+     "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/structure-gsq"},
+    "queryFormat": "html",
+    "queryHtmlTarget": "innerhtml",
+    "source": {
+      "url": "/ws/igo_gouvouvert.fcgi",
+      "params": {
+        "layers": "gsq_v_desc_strct_tri",
+        "version": "1.3.0",
+        "feature_count": 365
+      }
+    }
+    
+    } ,
+    {
+    "title": "Système de référence linéaire RTSS-C",
+    "id" : "bgr_v_sous_route_res_sup_act",
+    "zIndex": 31,
+    "type": "wms",
+    "optionsFromCapabilities": true,
+    "visible": false,
+     "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/systeme-de-reference-lineaire-transports-quebec"},
+    "queryFormat": "html",
+    "queryHtmlTarget": "innerhtml",
+    "source": {
+      "url": "/ws/igo_gouvouvert.fcgi",
+      "params": {
+        "layers": "bgr_v_sous_route_res_sup_act",
+        "version": "1.3.0",
+        "feature_count": 365
+      }
+    }
+    
+    } ,
+    {
+    "title": "Chantiers de construction",
+    "id" : "chantiers_mtmdet",
+    "zIndex": 32,
+    "type": "wms",
+    "optionsFromCapabilities": true,
+    "visible": false,
+     "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/chantiers-transports-quebec"},
+    "queryFormat": "html",
+    "queryHtmlTarget": "innerhtml",
+    "source": {
+      "url": "/ws/igo_gouvouvert.fcgi",
+      "params": {
+        "layers": "chantiers_mtmdet",
+        "version": "1.3.0",
+        "feature_count": 365
+      }
+    }
+    
+    } ,
+    {
+    "title": "Emplacement des photos radars",
+    "id" : "radars_photos",
+    "zIndex": 33,
+    "type": "wms",
+    "optionsFromCapabilities": true,
+    "visible": false,
+     "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/radars-photo-transports-quebec"},
+    "queryFormat": "html",
+    "queryHtmlTarget": "innerhtml",
+    "source": {
+      "url": "/ws/igo_gouvouvert.fcgi",
+      "params": {
+        "layers": "radars_photos",
+        "version": "1.3.0",
+        "feature_count": 365
+      }
+    }
+    
+    } ,
+    {
+    "title": "Limite de charge",
+    "id" : "pes_v_limtn_charg",
+    "zIndex": 34,
+    "type": "wms",
+    "optionsFromCapabilities": true,
+    "visible": false,
+     "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/limites-de-charge-sur-les-ponts-et-viaducs-de-transports-quebec"},
+    "queryFormat": "html",
+    "queryHtmlTarget": "innerhtml",
+    "source": {
+      "url": "/ws/igo_gouvouvert.fcgi",
+      "params": {
+        "layers": "pes_v_limtn_charg",
+        "version": "1.3.0",
+        "feature_count": 365
+      }
+    }
+    
+    } ,
+    {
+    "title": "Avertissement routier",
+    "id" : "evenements",
+    "zIndex": 35,
+    "type": "wms",
+    "optionsFromCapabilities": true,
+    "visible": false,
+     "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/avertissement-routier-de-transports-quebec"},
+    "queryFormat": "html",
+    "queryHtmlTarget": "innerhtml",
+    "source": {
+      "url": "/ws/igo_gouvouvert.fcgi",
+      "params": {
+        "layers": "evenements",
+        "version": "1.3.0",
+        "feature_count": 365
+      }
+    }
+    
+    },
+     {
+      "title": "Investissements routiers",
+      "id" : "investissement2018_2020",
+      "zIndex": 5,
       "type": "wms",
       "optionsFromCapabilities": false,
-      "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/station-meteo"},
-      "visible": false,
-      "queryFormat": "json",
-      "source": {
-        "url": "/ws/igo_gouvouvert.fcgi",
-        "params": {
-          "layers": "stations_meteoroutieres",
-          "version": "1.3.0",
-          "feature_count": 365
-        }
-      }
-
-    } ,
-    {
-      "title": "Archives, Stations météoroutières",
-      "id" : "histo_stations_meteoroutieres",
-      "type": "wms",
-      "optionsFromCapabilities": false,
-      "visible": false,
-      "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/station-meteo"},
-      "queryFormat": "json",
-
-      "source": {
-        "url": "/ws/igo_gouvouvert.fcgi",
-        "params": {
-          "layers": "histo_stations_meteoroutieres",
-          "version": "1.3.0",
-          "feature_count": 365
-        }
-      }
-
-    } ,
-    {
-      "title": "Téléphone urgence",
-      "id" : "telephone_urg",
-      "type": "wms",
-      "optionsFromCapabilities": true,
-      "visible": false,
-      "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/telephones-de-secours-transports-quebec"},
-      "queryFormat": "html",
-      "queryHtmlTarget": "innerhtml",
-      "source": {
-        "url": "/ws/igo_gouvouvert.fcgi",
-        "params": {
-          "layers": "telephone_urg",
-          "version": "1.3.0"
-        }
-      }
-
-    } ,
-    {
-      "title": "Débit moyen journalier annuel",
-      "id" : "circulation_routier",
-      "type": "wms",
-      "optionsFromCapabilities": true,
-      "visible": false,
-      "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/debits-de-circulation-transports-quebec"},
-      "queryFormat": "html",
-      "queryHtmlTarget": "innerhtml",
-      "source": {
-        "url": "/ws/igo_gouvouvert.fcgi",
-        "params": {
-          "layers": "circulation_routier",
-          "version": "1.3.0"
-        }
-      }
-
-    } ,
-    {
-      "title": "Aéroport",
-      "id" : "aeroport",
-      "type": "wms",
-      "optionsFromCapabilities": true,
-      "visible": false,
-      "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/aeroport-aerogare"},
-      "queryFormat": "html",
-      "queryHtmlTarget": "innerhtml",
-      "source": {
-        "url": "/ws/igo_gouvouvert.fcgi",
-        "params": {
-          "layers": "aeroport",
-          "version": "1.3.0"
-        }
-      }
-
-    } ,
-    {
-      "title": "Liaison maritime",
-      "id" : "liaison_maritime",
-      "type": "wms",
-      "optionsFromCapabilities": true,
-      "visible": false,
-      "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/liaison-maritime"},
-      "queryFormat": "html",
-      "queryHtmlTarget": "innerhtml",
-      "source": {
-        "url": "/ws/igo_gouvouvert.fcgi",
-        "params": {
-          "layers": "liaison_maritime",
-          "version": "1.3.0"
-        }
-      }
-
-    } ,
-    {
-      "title": "parc routier",
-      "id" : "parc_routier",
-      "type": "wms",
-      "optionsFromCapabilities": true,
-      "visible": false,
-      "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/parc-routier"},
-      "queryFormat": "html",
-      "queryHtmlTarget": "innerhtml",
-      "source": {
-        "url": "/ws/igo_gouvouvert.fcgi",
-        "params": {
-          "layers": "parc_routier",
-          "version": "1.3.0"
-        }
-      }
-
-    } ,
-    {
-      "title": "Repère kilométrique",
-      "id" : "repere_km",
-      "type": "wms",
-      "optionsFromCapabilities": true,
-      "visible": false,
-      "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/repere-kilometrique"},
-      "queryFormat": "html",
-      "queryHtmlTarget": "innerhtml",
-      "source": {
-        "url": "/ws/igo_gouvouvert.fcgi",
-        "params": {
-          "layers": "repere_km",
-          "version": "1.3.0"
-        }
-      }
-
-    } ,
-    {
-      "title": "Zone de dégel",
-      "id" : "zones_degel",
-      "type": "wms",
-      "optionsFromCapabilities": true,
-      "visible": false,
-      "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/zones-de-degel-transports-quebec"},
-      "queryFormat": "html",
-      "queryHtmlTarget": "innerhtml",
-      "source": {
-        "url": "/ws/igo_gouvouvert.fcgi",
-        "params": {
-          "layers": "zones_degel",
-          "version": "1.3.0"
-        }
-      }
-
-    } ,
-    {
-      "title": "Aéroport - Piste",
-      "id" : "aeroport_piste",
-      "type": "wms",
-      "optionsFromCapabilities": true,
-      "visible": false,
-      "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/aeroport-piste"},
-      "queryFormat": "html",
-      "queryHtmlTarget": "innerhtml",
-      "source": {
-        "url": "/ws/igo_gouvouvert.fcgi",
-        "params": {
-          "layers": "aeroport_piste",
-          "version": "1.3.0"
-        }
-      }
-
-    } ,
-    {
-      "title": "Établissement du MTQ",
-      "id" : "etablissement_mtq",
-      "type": "wms",
-      "optionsFromCapabilities": true,
-      "visible": false,
-      "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/etablissements-de-transports-quebec"},
-      "queryFormat": "html",
-      "queryHtmlTarget": "innerhtml",
-      "source": {
-        "url": "/ws/igo_gouvouvert.fcgi",
-        "params": {
-          "layers": "etablissement_mtq",
-          "version": "1.3.0"
-        }
-      }
-
-    } ,
-    {
-      "title": "Réseau ferroviaire",
-      "id" : "reseau_chfer_qc",
-      "type": "wms",
-      "optionsFromCapabilities": true,
-      "visible": false,
-      "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/reseau-ferroviaire"},
-      "queryFormat": "html",
-      "queryHtmlTarget": "innerhtml",
-      "source": {
-        "url": "/ws/igo_gouvouvert.fcgi",
-        "params": {
-          "layers": "reseau_chfer_qc",
-          "version": "1.3.0"
-        }
-      }
-
-    } ,
-    {
-      "title": "Port installation",
-      "id" : "port_installation",
-      "type": "wms",
-      "optionsFromCapabilities": true,
-      "visible": false,
-      "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/port-installation"},
-      "queryFormat": "html",
-      "queryHtmlTarget": "innerhtml",
-      "source": {
-        "url": "/ws/igo_gouvouvert.fcgi",
-        "params": {
-          "layers": "port_installation",
-          "version": "1.3.0"
-        }
-      }
-
-    } ,
-    {
-      "title": "Camionnage réseau suprérieur",
-      "id" : "camionnage_reseau_superieur",
-      "type": "wms",
-      "optionsFromCapabilities": true,
-      "visible": false,
-      "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/reseau-camionnage-transports-quebec"},
-      "queryFormat": "html",
-      "queryHtmlTarget": "innerhtml",
-      "source": {
-        "url": "/ws/igo_gouvouvert.fcgi",
-        "params": {
-          "layers": "camionnage_reseau_superieur",
-          "version": "1.3.0"
-        }
-      }
-
-    } ,
-    {
-      "title": "Sortie autoroute",
-      "id" : "sortie_aut",
-      "type": "wms",
-      "optionsFromCapabilities": true,
-      "visible": false,
-      "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/mtq-sortie-dautoroute-du-quebec"},
-      "queryFormat": "html",
-      "queryHtmlTarget": "innerhtml",
-      "source": {
-        "url": "/ws/igo_gouvouvert.fcgi",
-        "params": {
-          "layers": "sortie_aut",
-          "version": "1.3.0"
-        }
-      }
-
-    } ,
-    {
-      "title": "Convivialié en vélo",
-      "id" : "convi_velo_glv",
-      "type": "wms",
-      "optionsFromCapabilities": true,
-      "visible": false,
-      "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/convivialite-des-routes-pour-les-cyclistes-transports-quebec"},
-      "queryFormat": "html",
-      "queryHtmlTarget": "innerhtml",
-      "source": {
-        "url": "/ws/igo_gouvouvert.fcgi",
-        "params": {
-          "layers": "convi_velo_glv",
-          "version": "1.3.0"
-        }
-      }
-
-    } ,
-    {
-      "title": "Direction générale des territoires",
-      "id" : "bgr_v_dirct_genrl_geomt_act",
-      "type": "wms",
-      "optionsFromCapabilities": true,
-      "visible": false,
-      "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/territoires-administratifs-transports-quebec"},
-      "queryFormat": "html",
-      "queryHtmlTarget": "innerhtml",
-      "source": {
-        "url": "/ws/igo_gouvouvert.fcgi",
-        "params": {
-          "layers": "bgr_v_dirct_genrl_geomt_act",
-          "version": "1.3.0"
-        }
-      }
-
-    } ,
-    {
-      "title": "Direction territoriale",
-      "id" : "bgr_v_dirct_terrt_geomt_act",
-      "type": "wms",
-      "optionsFromCapabilities": true,
-      "visible": false,
-      "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/territoires-administratifs-transports-quebec"},
-      "queryFormat": "html",
-      "queryHtmlTarget": "innerhtml",
-      "source": {
-        "url": "/ws/igo_gouvouvert.fcgi",
-        "params": {
-          "layers": "bgr_v_dirct_terrt_geomt_act",
-          "version": "1.3.0"
-        }
-      }
-
-    } ,
-    {
-      "title": "Centre de services",
-      "id" : "bgr_v_centr_servc_geomt_act",
-      "type": "wms",
-      "optionsFromCapabilities": true,
-      "visible": false,
-      "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/territoires-administratifs-transports-quebec"},
-      "queryFormat": "html",
-      "queryHtmlTarget": "innerhtml",
-      "source": {
-        "url": "/ws/igo_gouvouvert.fcgi",
-        "params": {
-          "layers": "bgr_v_centr_servc_geomt_act",
-          "version": "1.3.0"
-        }
-      }
-
-    } ,
-    {
-      "title": "Structure",
-      "id" : "gsq_v_desc_strct_tri",
-      "type": "wms",
-      "optionsFromCapabilities": true,
-      "visible": false,
-      "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/structure-gsq"},
-      "queryFormat": "html",
-      "queryHtmlTarget": "innerhtml",
-      "source": {
-        "url": "/ws/igo_gouvouvert.fcgi",
-        "params": {
-          "layers": "gsq_v_desc_strct_tri",
-          "version": "1.3.0"
-        }
-      }
-
-    } ,
-    {
-      "title": "Système de référence linéaire",
-      "id" : "bgr_v_sous_route_res_sup_act",
-      "type": "wms",
-      "optionsFromCapabilities": true,
-      "visible": false,
-      "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/systeme-de-reference-lineaire-transports-quebec"},
-      "queryFormat": "html",
-      "queryHtmlTarget": "innerhtml",
-      "source": {
-        "url": "/ws/igo_gouvouvert.fcgi",
-        "params": {
-          "layers": "bgr_v_sous_route_res_sup_act",
-          "version": "1.3.0"
-        }
-      }
-
-    } ,
-    {
-      "title": "Chantiers de construction",
-      "id" : "chantiers_mtmdet",
-      "type": "wms",
-      "optionsFromCapabilities": true,
-      "visible": false,
-      "metadata": {"extern": true,"url": "https://www.donneesquebec.ca/recherche/fr/dataset/chantiers-transports-quebec"},
-      "queryFormat": "html",
-      "queryHtmlTarget": "innerhtml",
-      "source": {
-        "url": "/ws/igo_gouvouvert.fcgi",
-        "params": {
-          "layers": "chantiers_mtmdet",
-          "version": "1.3.0"
-        }
-      }
-
-    } ,
-    {
-      "title": "Emplacement des photos radars",
-      "id" : "radars_photos",
-      "type": "wms",
-      "optionsFromCapabilities": true,
       "visible": false,
       "queryFormat": "html",
       "queryHtmlTarget": "innerhtml",
       "source": {
         "url": "/ws/igo_gouvouvert.fcgi",
         "params": {
-          "layers": "radars_photos",
+          "layers": "prototype_investissement2018_2020",
           "version": "1.3.0"
+        },
+        "metadata" : {
+          "extern": true,
+          "url": "https://www.transports.gouv.qc.ca/fr/projets-infrastructures/investissements/investissements-routiers/investissements-routiers-2018-2020/Pages/investissements-routiers-2018-2020.aspx"
         }
       }
 
     }
+
 ],
 "toolbar": [
   "searchResults",
@@ -552,7 +710,7 @@
   {
     "name": "mapDetails",
     "options": {
-      "toggleLegendOnVisibilityChange": false
+    "toggleLegendOnVisibilityChange": false
     }
   },
   {
