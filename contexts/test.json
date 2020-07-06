@@ -6,6 +6,7 @@
     {
       "title": "test couche service DIF",
       "sourceOptions": {
+        "crossOrigin": "anonymous",
         "url": "https://geoegl.msp.gouv.qc.ca/ws/mffpecofor.fcgi?",
         "optionsFromCapabilities": true,
         "queryable": true,
