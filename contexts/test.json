@@ -36,7 +36,29 @@
           "type": "wms",
           "optionsFromCapabilities": true         
       }
+  },
+  {
+    "title": "Unité de gestion",
+    "zIndex": 6,
+    "visible" : true,
+    "metadata": {
+      "url": "https://www.donneesquebec.ca/recherche/fr/dataset/stf",
+      "extern": "false"
+      },
+    "sourceOptions": {
+      "queryable": true,
+      "queryFormat": "geojson",
+      "crossOrigin": "anonymous",
+      "queryHtmlTarget": "iframe",
+      "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?",
+      "params": {
+          "layers": "Unité gestion,Unité gestion - 1M"
+      },
+      "type": "wms",
+      "optionsFromCapabilities": true         
+    }
   }
+
 
   ]
 }
