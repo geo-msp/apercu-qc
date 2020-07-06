@@ -107,18 +107,7 @@
       {
         "title": "Inventaire forestier",
         "url": "/ws/mffpecofor.fcgi"
-      },
-      {
-        "id":7,
-        "title": "test - STF",
-        "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?",
-        "crossOrigin": true,
-        "showLegend":false,
-        "queryFormat": {
-            "geojson": "*"
-        }
-    }
-
+      }
     ]
   }
 }
