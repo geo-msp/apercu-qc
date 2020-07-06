@@ -1,0 +1,42 @@
+{
+  "uri": "test",
+  "title": "test contexte",
+  "base": "_base",
+  "layers": [
+    {
+      "title": "test couche service DIF",
+      "sourceOptions": {
+        "url": "https://geoegl.msp.gouv.qc.ca/ws/mffpecofor.fcgi",
+        "optionsFromCapabilities": true,
+        "queryable": true,
+        "queryFormat": "gml2",
+        "params": {
+          "layers": "sh_reg_eco",
+          "version": "1.3.0"
+        },
+        "type": "wms"
+      }
+    },
+    {
+      "title": "Écosystème forestier exceptionnel",
+      "zIndex": 7,
+      "visible" : true,
+      "metadata": {
+        "url": "https://www.donneesquebec.ca/recherche/fr/dataset/stf",
+        "extern": "false"
+        },
+      "sourceOptions": {
+          "crossOrigin": "anonymous",
+          "queryFormat": "geojson",
+          "queryHtmlTarget": "iframe",
+          "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?",
+          "params": {
+              "layers": "Écosystème forestier exceptionnel - S"
+          },
+          "type": "wms",
+          "optionsFromCapabilities": true         
+      }
+  }
+
+  ]
+}

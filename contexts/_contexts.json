@@ -4,6 +4,10 @@
     "title": "Contexte de départ"
   },
   {
+    "uri": "test",
+    "title": "Contexte de test"
+  },
+  {
     "uri": "avp",
     "title": "Vigilance multi-risque"
   },
