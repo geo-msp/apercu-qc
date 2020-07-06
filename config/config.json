@@ -111,7 +111,7 @@
       {
         "title": "Test STF",
         "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?",
-        "crossOrigin": "anonymous"
+        "crossOrigin": true
       }
     ]
   }
