@@ -109,10 +109,16 @@
         "url": "/ws/mffpecofor.fcgi"
       },
       {
-        "title": "Test STF",
+        "id":7,
+        "title": "test - STF",
         "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?",
-        "crossOrigin": true
-      }
+        "crossOrigin": true,
+        "showLegend":false,
+        "queryFormat": {
+            "geojson": "*"
+        }
+    }
+
     ]
   }
 }
