@@ -1,0 +1,35 @@
+{
+  "uri": "foret_STF",
+  "title": "Données subdivisions territoriales forestières (STF)",
+  "base": "_base",
+  "layers": [
+    {
+      "title": "Eau",
+      "sourceOptions": {
+        "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?",
+        "optionsFromCapabilities": true,
+        "queryable": true,
+        "queryFormat": "gml2",
+        "params": {
+          "layers": "eau",
+          "version": "1.3.0"
+        },
+        "type": "wms"
+      }
+    },
+    {
+
+      "sourceOptions": {
+        "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?",
+        "optionsFromCapabilities": true,
+        "queryable": true,
+        "queryFormat": "gml2",
+        "params": {
+          "layers": "Territoires autochtones",
+          "version": "1.3.0"
+        },
+        "type": "wms"
+      }
+    }
+  ]
+}
