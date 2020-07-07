@@ -1,5 +1,4 @@
 
-
 {
     "uri": "dif",
     "title": "Inventaire forestier",
@@ -1404,7 +1403,7 @@
                 "queryHtmlTarget": "iframe",
                 "url": "/ws/mffpecofor.fcgi",
                 "params": {
-                    "layers": "feuillets_20K",
+                    "layers": "feuillets_20k",
                     "version": "1.3.0"
                 },
                 "type": "wms",
