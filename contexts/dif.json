@@ -610,23 +610,6 @@
         },
        
         {
-            "id":"lidar_dendro",
-            "zIndex": 25,
-            "visible": false,
-            "sourceOptions": {
-                "crossOrigin": "anonymous",
-                "queryFormat": "htmlgml2",
-                "queryHtmlTarget": "iframe",
-                "url": "/ws/mffpecofor.fcgi",
-                "params": {
-                    "layers": "lidar_dendro",
-                    "version": "1.3.0"
-                },
-                "type": "wms",
-                "optionsFromCapabilities": true
-            }
-        },
-        {
             "id":"lidar_index_planification",
             "zIndex": 26,
             "visible": false,
