@@ -382,22 +382,6 @@
             }
         },
         {
-            "id": "investissement2018_2020",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
-                "queryable": true,
-                "queryFormat": "htmlgml2",
-                "queryHtmlTarget": "iframe",
-                "params": {
-                    "layers": "investissement2018_2020"
-                }
-            }
-        },
-        {
             "id": "radars_photos",
             "visible": false,
             "removable": false,
