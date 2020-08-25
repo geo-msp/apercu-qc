@@ -744,6 +744,7 @@
                 },
                 "sourceFields": [
                     { "alias": "Identifiant", "name": "ide_drang_" },
+                    { "alias": "Numéro référence", "name": "num_refrn_" },
                     { "alias": "Type", "name": "des_long_t" },
                     { "alias": "Sous-type", "name": "des_long_s" },
                     { "alias": "Longueur (m)", "name": "val_mesr" },
