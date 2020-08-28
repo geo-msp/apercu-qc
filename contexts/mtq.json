@@ -737,7 +737,7 @@
                 "optionsFromCapabilities": true,
                 "url": "/apis/ws/swtq",
                 "queryable": true,
-                "queryTitle": "Référence ponceau  ${num_refrn_}",
+                "queryTitle": "Ponceau # ${ide_drang_}",
                 "params": {
                     "layers": "iit_v_drang_condu_permn_ligne",
                     "feature_count": 365
