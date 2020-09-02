@@ -1183,6 +1183,12 @@
         },
         {
           "name": "print"
+        },
+        {
+          "name": "activeTimeFilter"
+        },
+        {
+          "name": "activeOgcFilter"
         }
       ]
     }
