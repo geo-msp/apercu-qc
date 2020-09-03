@@ -1,5 +1,6 @@
 {
   "title": "IGO2 - Données Québec",
+  "description": "IGO2 est un navigateur web qui permet de visualiser différentes couches d'informations géographiques",
   "theme": "blue-theme",
   "sidenavTitle": "Donnée Québec",
   "analytics": {
