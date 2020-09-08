@@ -1,7 +1,7 @@
 
 {
     "uri": "dif",
-    "title": "Inventaire forestier",
+    "title": "Données écoforestières",
     "map": {
         "view": {
             "enableRotation": false,
