@@ -6,7 +6,7 @@
     {
       "title": "Téléphone d'urgence",
       "sourceOptions": {
-        "url": "/apis/wss/securite.fcgi",
+        "url": "/apis/wss/transport.fcgi",
         "optionsFromCapabilities": true,
         "queryable": true,
         "queryFormat": "gml2",
