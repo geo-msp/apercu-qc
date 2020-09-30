@@ -1,5 +1,5 @@
 [
- 
+
   {
     "uri": "_default",
     "title": "Contexte de départ"
@@ -37,16 +37,8 @@
     "title": "Embâcle (analyse temporelle)"
   },
   {
-    "uri": "qc911",
-    "title": "Qc-911"
-  },
-  {
     "uri": "inspq",
     "title": "Santé publique"
-  },
-  {
-    "uri": "cptaq",
-    "title": "Agriculture"
   },
   {
     "uri": "education",

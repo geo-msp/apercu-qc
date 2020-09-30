@@ -20,17 +20,6 @@
         "url": "/apis/wss/historiquesc.fcgi",
         "optionsFromCapabilities": true,
         "params": {
-          "layers": "20200420154911UTC_inondations_lacstpierre_sentinel2",
-          "version": "1.3.0"
-        },
-        "type": "wms"
-      }
-    },
-    {
-      "sourceOptions": {
-        "url": "/apis/wss/historiquesc.fcgi",
-        "optionsFromCapabilities": true,
-        "params": {
           "layers": "20200420154911UTC_inondations_grandmontreal_sentinel2",
           "version": "1.3.0"
         },
