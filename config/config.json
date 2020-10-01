@@ -3,6 +3,9 @@
   "description": "IGO2 est un navigateur web qui permet de visualiser différentes couches d'informations géographiques",
   "theme": "blue-theme",
   "sidenavTitle": "Donnée Québec",
+  "hasExpansionPanel": true,
+  "hasSearchPointerSummary": false,
+  "hasFeatureEmphasisOnSelection": true,
   "analytics": {
     "provider": "matomo",
     "url": "https://geoegl.msp.gouv.qc.ca/Visiteur",
@@ -114,5 +117,8 @@
         "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?"
       }
     ]
+  },
+  "welcomeWindow": {
+    "showAgainOnNewIGOVersion": true
   }
 }
