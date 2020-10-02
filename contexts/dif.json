@@ -1,1480 +1,1369 @@
+
 {
-  "uri": "dif",
-  "title": "Données écoforestières",
-  "map": {
-    "view": {
-      "enableRotation": false,
-      "projection": "EPSG:3857",
-      "center": [-71.938087, 48.446975],
-      "zoom": 6
-    }
-  },
-  "mapOverlay": [
-    {
-      "media": ["desktop"],
-      "cssClass": "top-center",
-      "imgSrc": " ./particular/images/FO_logo_2c.png",
-      "imgSize": "280px",
-      "link": "https://www.foretouverte.gouv.qc.ca/",
-      "alt": "Foret ouverte",
-      "fixed": true,
-      "marginTop": "10px"
-    },
+    "uri": "dif",
+    "title": "Données écoforestières",
+    
 
-    {
-      "media": ["desktop"],
-      "cssClass": "bottom-left",
-      "link": "http://igouverte.org/",
-      "imgSrc": "./particular/images/2a-logo_bleu_sans_icone.png",
-      "imgSize": "30px",
-      "fontSize": "6pt",
-      "marginLeft": "45px",
-      "marginBottom": "10px",
-      "alt": "IGO",
-      "fixed": false
-    },
-
-    {
-      "media": ["desktop"],
-      "cssClass": "bottom-right",
-      "imgSrc": "./particular/images/QUEB.png",
-      "imgSize": "150px",
-      "link": "https://www.quebec.ca",
-      "marginRight": "60px",
-      "marginBottom": "20px"
-    },
-
-    {
-      "media": ["desktop"],
-      "cssClass": "bottom-right",
-      "text": "© Gouvernement du Québec 2019",
-      "fontSize": "10pt",
-      "link": "http://www.droitauteur.gouv.qc.ca/copyright.php",
-      "marginRight": "70px",
-      "marginBottom": "10px"
-    },
-
-    {
-      "media": ["tablet"],
-      "cssClass": "top-right",
-      "imgSrc": " ./particular/images/FO_logo_2c.png",
-      "imgSize": "180px",
-      "alt": "Foret ouverte",
-      "link": "https://www.foretouverte.gouv.qc.ca/",
-      "fixed": true,
-      "marginTop": "15px",
-      "marginRight": "55px"
-    },
-
-    {
-      "media": ["tablet"],
-      "cssClass": "bottom-left",
-      "link": "http://igouverte.org/",
-      "imgSrc": "./particular/images/2a-logo_bleu_sans_icone.png",
-      "imgSize": "30px",
-      "fontSize": "6pt",
-      "marginLeft": "85px",
-      "marginBottom": "15px",
-      "alt": "IGO",
-      "fixed": true
-    },
-
-    {
-      "media": ["tablet"],
-      "cssClass": "bottom-right",
-      "imgSrc": "./particular/images/QUEB.png",
-      "imgSize": "150px",
-      "link": "https://www.quebec.ca",
-      "marginRight": "40px",
-      "marginBottom": "10px"
-    },
-
-    {
-      "media": ["tablet"],
-      "cssClass": "bottom-right",
-      "text": "© Gouvernement du Québec 2019",
-      "fontSize": "10pt",
-      "link": "http://www.droitauteur.gouv.qc.ca/copyright.php",
-      "marginRight": "45px",
-      "marginBottom": "10px"
-    },
-
-    {
-      "media": ["mobile"],
-      "cssClass": "top-center",
-      "imgSrc": " ./particular/images/FO_logo_2c.png",
-      "imgSize": "200px",
-      "alt": "Foret ouverte",
-      "link": "https://www.foretouverte.gouv.qc.ca/",
-      "marginTop": "60px",
-      "fixed": true
-    },
-
-    {
-      "media": ["mobile"],
-      "cssClass": "bottom-left",
-      "link": "http://igouverte.org/",
-      "imgSrc": "./particular/images/2a-logo_bleu_sans_icone.png",
-      "imgSize": "33px",
-      "alt": "IGO",
-      "fixed": true,
-      "marginLeft": "50px",
-      "marginBottom": "5px"
-    },
-
-    {
-      "media": ["mobile"],
-      "cssClass": "bottom-right",
-      "imgSrc": "./particular/images/QUEB.png",
-      "imgSize": "100px",
-      "link": "https://www.quebec.ca",
-      "marginRight": "37px",
-      "marginBottom": "3px"
-    },
-
-    {
-      "cssClass": "top-left"
-    },
-    {
-      "cssClass": "top-right"
-    },
-    {
-      "media": ["mobile", "tablet", "desktop"],
-
-      "cssClass": "top-center"
-    },
-    {
-      "cssClass": "center-center"
-    },
-    {
-      "cssClass": "bottom-center"
-    },
-    {
-      "cssClass": "center-right"
-    },
-    {
-      "cssClass": "center-left"
-    }
-  ],
-
-  "layers": [
-    {
-      "id": "fond",
-      "zIndex": 1,
-      "title": "Fond Québec",
-      "visible": true,
-      "baseLayer": true,
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "url": "/carto/tms/1.0.0/carte_gouv_qc_public@EPSG_3857/{z}/{x}/{-y}.png",
-        "type": "xyz"
-      }
-    },
-
-    {
-      "id": "fond_canada",
-      "zIndex": 2,
-      "title": "Fond Canada",
-      "visible": false,
-      "baseLayer": true,
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "type": "wms",
-        "url": "https://geogratis.gc.ca/cartes/CBCT?",
-        "queryable": false,
-        "params": {
-          "layers": "CBCT",
-          "version": "1.1.1",
-          "srs": "EPSG:3857"
+    "map": {
+        "view": {
+            "enableRotation": false,
+            "projection": "EPSG:3857",
+            "center": [-71.938087, 48.446975],
+            "zoom": 6
         }
-      }
     },
-    {
-      "id": "fond_osm",
-      "zIndex": 3,
-      "title": "Open Street Map®",
-      "visible": false,
-      "baseLayer": true,
-      "sourceOptions": {
-        "type": "osm",
-        "attributions": "  © les contributeurs <a href='https://www.openstreetmap.org/copyright' target='_blank'>d’OpenStreetMap</a>"
-      }
-    },
-    {
-      "id": "giin_dec",
-      "zIndex": 4,
-      "title": "Mosaïque photos aériennes",
-      "visible": false,
-      "baseLayer": true,
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "url": "https://servicesmatriciels.mern.gouv.qc.ca/erdas-iws/ogc/wmts/Inventaire_Ecoforestier?",
-        "matrixSet": "GoogleMapsCompatibleExt2:epsg:3857",
-        "layer": "Inventaire_Ecoforestier",
-        "style": "default",
-        "type": "wmts",
-        "format": "image/png"
-      }
-    },
-    {
-      "id": "giin_index",
-      "zIndex": 5,
-      "title": "Index photos aériennes",
-      "visible": false,
-      "style": "default",
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "type": "wms",
-        "url": "https://servicesvectoriels.atlas.gouv.qc.ca/IDS_INVENTAIRE_ECOFORESTIER_WMS/service.svc/get?",
-        "queryable": true,
-        "queryFormat": "html",
-        "queryHtmlTarget": "iframe",
-        "params": {
-          "layers": "Index_Inventaire_Ecoforestier_Continue",
-          "version": "1.1.1",
-          "srs": "EPSG:3857"
+    "mapOverlay": [
+        {
+            "media": ["desktop"],
+            "cssClass": "top-center",
+            "imgSrc": " ./particular/images/FO_logo_2c.png",
+            "imgSize": "280px",
+            "link": "https://www.foretouverte.gouv.qc.ca/",
+            "alt": "Foret ouverte",
+            "fixed": true,
+            "marginTop": "10px"
+
+        },
+
+        {
+            "media": ["desktop"],
+            "cssClass": "bottom-left",
+            "link": "http://igouverte.org/",
+            "imgSrc": "./particular/images/2a-logo_bleu_sans_icone.png",
+            "imgSize": "30px",
+            "fontSize": "6pt",
+            "marginLeft": "40px",
+            "marginBottom":"10px",
+            "alt": "IGO",
+            "fixed": false
+        },
+     
+        {
+            "media": ["desktop"],
+            "cssClass": "bottom-right",
+            "imgSrc": "./particular/images/QUEB.png",
+            "imgSize": "150px",
+            "link": "https://www.quebec.ca",
+            "marginRight": "60px",
+            "marginBottom": "20px"
+        },
+
+        {
+            "media": ["desktop"],
+            "cssClass": "bottom-right",
+            "text": "© Gouvernement du Québec 2019",
+            "fontSize": "10pt",
+            "link": "http://www.droitauteur.gouv.qc.ca/copyright.php",
+            "marginRight": "70px",
+            "marginBottom":"10px"
+        },
+
+
+        {
+            "media": ["tablet"],
+            "cssClass": "top-right",
+            "imgSrc": " ./particular/images/FO_logo_2c.png",
+            "imgSize": "180px",
+            "alt": "Foret ouverte",
+            "link": "https://www.foretouverte.gouv.qc.ca/",
+            "fixed": true,
+            "marginTop":"15px",
+            "marginRight": "55px"
+
+        },
+
+        {
+            "media": ["tablet"],
+            "cssClass": "bottom-left",
+            "link": "http://igouverte.org/",
+            "imgSrc": "./particular/images/2a-logo_bleu_sans_icone.png",
+            "imgSize": "30px",
+            "fontSize": "6pt",
+            "marginLeft": "40px",
+            "marginBottom":"15px",
+            "alt": "IGO",
+            "fixed": false
+        },
+
+        {
+            "media": ["tablet"],
+            "cssClass": "bottom-right",
+            "imgSrc": "./particular/images/QUEB.png",
+            "imgSize": "150px",
+            "link": "https://www.quebec.ca",
+            "marginRight": "40px",
+            "marginBottom": "10px"
+        },
+
+        {
+            "media": ["tablet"],
+            "cssClass": "bottom-right",
+            "text": "© Gouvernement du Québec 2019",
+            "fontSize": "10pt",
+            "link": "http://www.droitauteur.gouv.qc.ca/copyright.php",
+            "marginRight": "45px",
+            "marginBottom":"10px"
+        },
+
+
+        {
+            "media": ["mobile"],
+            "cssClass": "top-center",
+            "imgSrc": " ./particular/images/FO_logo_2c.png",
+            "imgSize": "200px",
+            "alt": "Foret ouverte",
+            "link": "https://www.foretouverte.gouv.qc.ca/",
+            "marginTop": "60px",
+            "fixed": true
+
+        },
+
+        {
+            "media": ["mobile"],
+            "cssClass": "bottom-left",
+            "link": "http://igouverte.org/",
+            "imgSrc": "./particular/images/2a-logo_bleu_sans_icone.png",
+            "imgSize": "33px",
+            "alt": "IGO",
+            "fixed": true,
+            "marginLeft":"90px",
+            "marginBottom": "5px"
+
+        },
+
+        {
+            "media": ["mobile"],
+            "cssClass": "bottom-right",
+            "imgSrc": "./particular/images/QUEB.png",
+            "imgSize": "100px",
+            "link": "https://www.quebec.ca",
+            "marginRight": "37px",
+            "marginBottom": "3px"
+          },
+
+
+        {
+            "cssClass": "top-left"
+        },
+        {
+            "cssClass": "top-right"
+        },
+        {
+            "media": ["mobile", "tablet", "desktop"],
+
+            "cssClass": "top-center"
+        },
+        {
+            "cssClass": "center-center"
+        },
+        {
+            "cssClass": "bottom-center"
+        },
+        {
+            "cssClass": "center-right"
+        },
+        {
+            "cssClass": "center-left"
         }
-      }
-    },
-    {
-      "id": "sentinel_2018",
-      "zIndex": 6,
-      "visible": false,
-      "baseLayer": true,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "sentinel_2018",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "lsat_mos2018",
-      "zIndex": 7,
-      "visible": false,
-      "baseLayer": true,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "lsat_mos2018",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "lsat_mos1986",
-      "zIndex": 8,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "lsat_mos1986",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "sh_zone_veg",
-      "zIndex": 9,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "sh_zone_veg",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "sh_szone_veg",
-      "zIndex": 10,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "sh_szone_veg",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "sh_dom_bio",
-      "zIndex": 11,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "sh_dom_bio",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "sh_soudom_bio",
-      "zIndex": 12,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "sh_soudom_bio",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "sh_reg_eco",
-      "zIndex": 13,
-      "visible": false,
-      "metadata": {
-        "extern": false
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "sh_reg_eco",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "sh_sreg_eco",
-      "zIndex": 14,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "sh_sreg_eco",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "sh_upays_reg",
-      "zIndex": 15,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "sh_upays_reg",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "sh_dis_eco",
-      "zIndex": 16,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "sh_dis_eco",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
 
-    {
-      "id": "nord_dep_sur",
-      "zIndex": 17,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "nord_dep_sur",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "nord_veg",
-      "zIndex": 18,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "nord_nord_veg",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
+    ],
 
-    {
-      "id": "pente_cpn",
-      "zIndex": 19,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "pente_cpn",
-          "version": "1.3.0"
+    "layers": [
+    
+        {
+            "zIndex": 6.1,
+            "visible" : false,
+            "baseLayer": true,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "lsat_mos2019",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
         },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "lidar_mnt",
-      "zIndex": 20,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "lidar_mnt",
-          "version": "1.3.0"
+        {
+            "zIndex": 6.2,
+            "visible" : false,
+            "baseLayer": true,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "sentinel_2019",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },  
+        {
+            "zIndex": 7,
+            "title": "Photos aériennes de l'inventaire écoforestier",
+            "visible": false,
+            "metadata": {
+                "url": "https://www.donneesquebec.ca/recherche/fr/dataset/mosaique",
+                "extern": "false"
+                },
+            "baseLayer": false,
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "url": "https://servicesmatriciels.mern.gouv.qc.ca/erdas-iws/ogc/wmts/Inventaire_Ecoforestier?",
+                "matrixSet": "GoogleMapsCompatibleExt2:epsg:3857",
+                "layer": "Inventaire_Ecoforestier",
+                "style": "default",
+                "type": "wmts",
+                "format": "image/png"
+    
+            }
         },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "lidar_ombre",
-      "zIndex": 21,
-      "visible": false,
-      "baseLayer": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "lidar_ombre",
-          "version": "1.3.0"
+        {
+            "zIndex": 8,
+            "title": "Index des photos aériennes de l'inventaire écoforestier",
+            "visible": false,
+            "metadata": {
+                "url": "https://www.donneesquebec.ca/recherche/fr/dataset/mosaique",
+                "extern": "false"
+                },
+            "style": "default",
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "type": "wms",
+                "url": "https://servicesvectoriels.atlas.gouv.qc.ca/IDS_INVENTAIRE_ECOFORESTIER_WMS/service.svc/get?",
+                "queryable": true,
+                "queryFormat": "html",
+                "queryHtmlTarget": "iframe",
+                "params": {
+                    "layers": "Index_Inventaire_Ecoforestier_Continue",
+                    "version": "1.1.1" ,
+                    "srs": "EPSG:3857"      
+                }
+            }
+        },   
+        {
+            "zIndex": 9,
+            "visible": false,
+            "metadata": {
+                "extern": true
+            },     
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",   
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "sh_zone_veg",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
         },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
+        {
+            "zIndex": 10,
+            "visible": false,
+            "metadata": {
+                "extern": true
+            },     
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",   
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "sh_szone_veg",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 11,
+            "visible": false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "sh_dom_bio",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 12,
+            "visible": false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "sh_soudom_bio",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 13,
+            "visible": false,
+            "metadata": {
+                "extern": false
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "sh_reg_eco",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 14,
+            "visible": false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "sh_sreg_eco",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 15,
+            "visible": false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "sh_upays_reg",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 16,
+            "visible": false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "sh_dis_eco",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+            
+        {
+            "zIndex": 17,
+            "visible" : false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "nord_dep_sur",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 18,
+            "visible": false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "nord_nord_veg",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+    
+        {
+            "zIndex": 19,
+            "visible" : false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "pente_cpn",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 20,
+            "visible": false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "lidar_mnt",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 21,
+            "visible" : false,
+            "baseLayer": false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "lidar_ombre",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+    
+        {
+            "zIndex": 22,
+            "visible" : false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "lidar_pentes",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },   
+        {
+            "zIndex": 23,
+            "visible": false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "lidar_mhc",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+       
+        {
+            "zIndex": 24,
+            "visible": false,
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "lidar_index_planification",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 25,
+            "visible": false,
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "lidar_index_acquisition",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 26,
+            "visible" : true,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "ori_pee_ori_prov",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        }, 
+        {
+            "zIndex": 27,
+            "visible": false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "con_sensib",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 28,
+            "visible": false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "con_erosion",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 29,
+            "visible": false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "con_ornier",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 30,
+            "visible": false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "con_rugos",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 31,
+            "visible": false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "con_sol_tm",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 32,
+            "visible": false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "con_solid",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 33,
+            "visible": false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "iqs_pot_epn",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 34,
+            "visible": false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "iqs_pot_epb",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 35,
+            "visible": false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "iqs_pot_epr",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 36,
+            "visible": false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "iqs_pot_sab",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 37,
+            "visible": false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "iqs_pot_pib",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 38,
+            "visible": false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "iqs_pot_pig",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 39,
+            "visible": false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "iqs_pot_bop",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 40,
+            "visible": false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "iqs_pot_pex",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 41,
+            "visible": false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "iqs_pot_tho",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 42,
+            "visible": false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "accr_st_ers",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 43,
+            "visible": false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "accr_st_boj",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 44,
+            "visible": false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "accr_st_err",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },    
+    
+        {
+            "zIndex": 45,
+            "visible" : false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "vmb_ha_tot",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "title": "Infrastructures en milieu forestier ↺",
+            "zIndex": 46,
+            "visible": false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "ca_non_fores",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true,
+                "timeFilter": {       
+                    "min": "2003-01-01",
+                    "max": "2019-01-01",
+                    "style": "calendar",
+                    "range": true,
+                    "step": 63072000000,
+                    "type": "year"
+                }
+            }
+        },
+        {
+            "title": "Épidemies, chablis et verglas ↺",
+            "zIndex": 47,
+            "visible": false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "ca_pertu_autre",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true,
+                "timeFilter": {     
+                    "min": "1976-01-01",
+                    "max": "2019-01-01",
+                    "style": "calendar",
+                    "range": true,
+                    "type": "year"
+                }
+            }
+        },
+        {
+            "title": "Feux de forêt ↺",
+            "zIndex": 48,
+            "visible": false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "ca_feux",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true,
+                "timeFilterable": true,
+                "timeFilter": {
+                    "min": "1984",
+                    "max": "2019",
+                    "style": "calendar",
+                    "range": true,
+                    "step": 63072000000,
+                    "type": "year"
+                }
+            }
+        },
+        {
+            "title": "Récolte et reboisement ↺",
+            "zIndex": 49,
+            "visible": false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "ca_interv_fores",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true,
+                "timeFilterable": true,
+                "timeFilter": { 
+                    "min": "1976-01-01",
+                    "max": "2019-01-01",
+                    "style": "calendar",
+                    "range": true,
+                    "step": 63072000000,
+                    "type": "year"
+                }
+            }
+        },
+        {
+            "zIndex": 50,
+            "visible" : false,
+            "metadata": {
+            "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "sond_pet2",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 51,
+            "visible" : false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "sond_pet3",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 52,
+            "visible" : false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                        "layers": "sond_pet4",
+                        "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 53,
+            "visible" : false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                        "layers": "sond_pet5",
+                        "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 54,
+            "visible" : false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "nord_photo_oblique",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+    
+        {
+            "zIndex": 55,
+            "visible" : false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "pee_index_pdf",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 56,
+            "visible" : true,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "telecharge_index_250k",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
+            "zIndex": 57,
+            "visible" : false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "lidar_index_extraction",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },
+        {
 
-    {
-      "id": "lidar_pentes",
-      "zIndex": 22,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "lidar_pentes",
-          "version": "1.3.0"
+            "zIndex": 58,
+            "visible": false,
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "fuseaux_mtm",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
         },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "lidar_mhc",
-      "zIndex": 23,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "lidar_mhc",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
+        {
 
-    {
-      "id": "lidar_index_planification",
-      "zIndex": 26,
-      "visible": false,
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "lidar_index_planification",
-          "version": "1.3.0"
+            "zIndex": 59,
+            "visible": false,
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "fuseaux_utm",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
+        },  
+        {
+            "zIndex": 60,
+            "title": "Feuillets 1/20 000",
+            "visible" : false,
+            "metadata": {
+                "extern": true
+            },
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryFormat": "htmlgml2",
+                "queryHtmlTarget": "iframe",
+                "url": "/ws/mffpecofor.fcgi",
+                "params": {
+                    "layers": "feuillets_20k",
+                    "version": "1.3.0"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
         },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "lidar_index_acquisition",
-      "zIndex": 27,
-      "visible": false,
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "lidar_index_acquisition",
-          "version": "1.3.0"
+        {
+            "zIndex": 61,
+            "title": "Courbes de niveau",
+            "visible": false,
+            "baseLayer": false,
+            "style": "default",
+            "sourceOptions": {
+                "crossOrigin": "anonymous",
+                "queryable": true,
+                "queryFormat": "html",
+                "queryHtmlTarget": "iframe",
+                "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Territoire/HYPSOMETRIE_REGIONALE_WMS/MapServer/WmsServer?",
+                "params": {
+                    "layers": "Courbes de niveau"
+                },
+                "type": "wms",
+                "optionsFromCapabilities": true
+            }
         },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
+        {
+            "zIndex": 62,
+            "title": "Chemins",
+            "visible": false,
+            "baseLayer": false,
+            "legendOptions": {
+              "display": false
+            },
+            "sourceOptions": {
+              "crossOrigin": "anonymous",
+              "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Territoire/AQreseauPlus_WMS/MapServer/WMSServer",
+              "params": {
+                "version": "1.3.0",
+                "layers": "Autoroute [35M - 750K],Autoroute [50K - 8K],Autoroute [750K - 50K],Autoroute [8K - 1],Nationale [25M - 40K],Nationale [40K - 25K],Nationale [25K - 10K],Nationale [10K - 1],Collectrice [650K - 350K],Collectrice [350K - 75K],Collectrice [75K - 10K],Collectrice [10K - 1],Régionale  [250K - 25K],Régionale  [25K - 1],Autre route [150K - 15K],Autre route [15K - 1],Bretelle [10K - 1],Bretelle [35K - 10K],Bretelle [750K - 35K],Bretelle [3K - 2],Bretelle [14K - 3K],Bretelle [500K - 13K],Bretelle [5K - 1],Bretelle [15K - 5K],Bretelle [40K - 15K],Bretelle [3K - 1],Bretelle [13K -3k],Bretelle [50K - 13K],Route locale [200K - 25K],Route locale [25K - 10K],Route locale [10K - 1]",
+                "srs": "ESPG:3857"
+              },
+              "type": "wms"
+            }
+          },
+          {
+            "zIndex": 63,
+            "title": "Lieux habités",
+            "visible": false,
+            "baseLayer": false,
+            "style": "default",
+            "sourceOptions": {
+              "crossOrigin": "anonymous",
+              "url": "/apis/ws/swtq?",
+              "params": {
+                "version": "1.3.0",
+                "layers": "villagerelais,lieuhabite",
+                "srs": "ESPG:3857"
+              },
+              "type": "wms"
+            }
+          }
+    
+    ],
+    "toolbar": [
+        "searchResults",
+        "contextManager",
+        "mapTools",
+        "measurer",
+        "directions",
+        "catalog",
+        "importExport",
+        "print",
+        "shareMap",
+        "timeFilter",
+        "about"
+      ],
+      "tools": [
 
-    {
-      "id": "pee_ori_prov",
-      "zIndex": 28,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "ori_pee_ori_prov",
-          "version": "1.3.0"
+        {
+            "name": "about",
+            "options": {
+              "html": "<head>   <meta charset='utf-8'>   <style>      .page{         padding-left: 0px;         font-family: 'Verdana', 'Arial', 'Times New Roman';     }      .bold_class{         font-weight:bold;     }     .red{         color:red;     }     .tool_name{         border-top: 1px solid #00897B;         /* padding-left: 5px; */         padding-right: 1%;         padding-bottom: 1%;     }      .titre_outil{         font-weight: bold;          font-size: 18px;     }     .align_right{         text-align:right;     }     .describe{         text-align: justify;     }    </style> </head>  <body>     <div class='page' style='color: black;'>     <div>  <img src='./particular/images/FO_logo_2c.png' alt='Forêt ouverte' width='220' style='margin-left:0px';'padding-bottom:10px'>  </div>   <div style='font-size:16px;color:#00897B'>Carte interactive des données écoforestières... et bien plus!</div>  <br>          <div>             <a href='https://www.foretouverte.gouv.qc.ca' target='_blank'> https://www.foretouverte.gouv.qc.ca</a>         </div>         <br>         <div class='bold_class'>Service de cartographie Web :</div>         <div>https://geoegl.msp.gouv.qc.ca/ws/mffpecofor.fcgi? </div>         <br>          <div class='group_tool_name'>             <div style='font-weight: bold;font-size:20px;padding-bottom:10px'>Aperçu des fonctionnalités</div>          <div class='tool_name'>             <div class='titre_outil' style= 'padding-bottom:8px; padding-top:10px'> <mat-icon class='mat-icon'> <svg viewBox='0 0 24 24' fit='' height='100%' width='100%' preserveAspectRatio='xMidYMid meet' focusable='false'> <path d='M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z'> </path> </svg></mat-icon> Recherche </div>             <div class='describe'>             Situé dans la portion supérieure gauche de l’interface, l’outil permet de vous positionner à l’aide d’une adresse,              d’un lieu ou de coordonnées GPS. Il peut également servir à chercher une couche.             </div>         </div>         <br>         <div class='tool_name'>                              <div class='titre_outil' style= 'padding-bottom:8px; padding-top:6px'> <mat-icon class='mat-icon'> <svg viewBox='0 0 24 24' fit='' height='100%' width='100%' preserveAspectRatio='xMidYMid meet' focusable='false'> <path d='M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z'></path> </svg></mat-icon> Contextes</div>                 <div class='describe'>                         Visualisez des regroupements de couches faits par thème ou par utilité. Lorsque vous sélectionnez un                          <span class='bold_class'>Contexte</span>, vous trouverez dans                          <span class='bold_class'>Carte</span> chacune des couches qu’elle contient. Vous pouvez y ajouter d’autres couches                          à partir du <span class='bold_class'>Catalogue</span> ou de l’outil <span class='bold_class'>Recherche.</span>                 </div>                 <br>                 <div class='red'>                         <span class='bold_class'>ATTENTION :</span> Si vous sélectionnez un autre                          <span class='bold_class'>Contexte</span>, toutes les couches affichées dans <span class='bold_class'>Carte</span> seront remplacées.                  </div>         </div>         <br>         <div class='tool_name'>             <div class='titre_outil' style= 'padding-bottom:8px; padding-top:6px'> <mat-icon class='mat-icon'> <svg viewBox='0 0 24 24' fit='' height='100%' width='100%' preserveAspectRatio='xMidYMid meet' focusable='false'> <path d='M15,19L9,16.89V5L15,7.11M20.5,3C20.44,3 20.39,3 20.34,3L15,5.1L9,3L3.36,4.9C3.15,4.97 3,5.15 3,5.38V20.5A0.5,0.5 0 0,0 3.5,21C3.55,21 3.61,21 3.66,20.97L9,18.9L15,21L20.64,19.1C20.85,19 21,18.85 21,18.62V3.5A0.5,0.5 0 0,0 20.5,3Z'> </path> </svg></mat-icon> Carte             </div>             <div class='describe'>                     Personnalisez votre carte à partir du <span class='bold_class'>Catalogue</span> ou de l’outil                      <span class='bold_class'>Recherche.</span> Cet espace permet d’ajouter,                      de supprimer et d’interroger des couches ainsi que de télécharger des données.        </div>             <br>         </div>     <div class='tool_name'> <div class='titre_outil' style= 'padding-bottom:8px; padding-top:6px'> <mat-icon class='mat-icon'> <svg viewBox='0 0 24 24' fit='' height='100%' width='100%' preserveAspectRatio='xMidYMid meet' focusable='false'> <path d='M1.39,18.36L3.16,16.6L4.58,18L5.64,16.95L4.22,15.54L5.64,14.12L8.11,16.6L9.17,15.54L6.7,13.06L8.11,11.65L9.53,13.06L10.59,12L9.17,10.59L10.59,9.17L13.06,11.65L14.12,10.59L11.65,8.11L13.06,6.7L14.47,8.11L15.54,7.05L14.12,5.64L15.54,4.22L18,6.7L19.07,5.64L16.6,3.16L18.36,1.39L22.61,5.64L5.64,22.61L1.39,18.36Z'> </path> </svg></mat-icon> Outil de mesure </div><div class='describe'> Mesurez des distances ou des superficies sur la carte. </div><br></div><div class='tool_name'> <div class='titre_outil' style= 'padding-bottom:8px; padding-top:6px'> <mat-icon class='mat-icon'> <svg viewBox='0 0 24 24' fit='' height='100%' width='100%' preserveAspectRatio='xMidYMid meet' focusable='false'> <path d='M14,14.5V12H10V15H8V11A1,1 0 0,1 9,10H14V7.5L17.5,11M21.71,11.29L12.71,2.29H12.7C12.31,1.9 11.68,1.9 11.29,2.29L2.29,11.29C1.9,11.68 1.9,12.32 2.29,12.71L11.29,21.71C11.68,22.09 12.31,22.1 12.71,21.71L21.71,12.71C22.1,12.32 22.1,11.68 21.71,11.29Z'> </path> </svg></mat-icon> Itinéraire </div><div class='describe'> Construisez un itinéraire entre deux points (en placant les deux points dans la carte ou en cherchant des adresses). Vous pourrez ensuite ajouter des points intermédiaires, copier la description de l'itinéraire dans le presse papier ou partager le lien. </div><br></div>    <div class='tool_name'>             <div class='titre_outil' style= 'padding-bottom:8px; padding-top:6px'> <mat-icon class='mat-icon'> <svg viewBox='0 0 24 24' fit='' height='100%' width='100%' preserveAspectRatio='xMidYMid meet' focusable='false'> <path d='M17,14H19V17H22V19H19V22H17V19H14V17H17V14M11,16L2,9L11,2L20,9L11,16M11,18.54L12,17.75V18C12,18.71 12.12,19.39 12.35,20L11,21.07L2,14.07L3.62,12.81L11,18.54Z'></path> </svg></mat-icon> Catalogue             </div>             <div class='describe'>                 Trouvez toutes les couches qui peuvent être ajoutées à la <span class='bold_class'>Carte.</span>                     Cliquez sur le + à droite de la couche désirée pour l’ajouter.             </div>             <br>         </div>            <div class='tool_name'> <div class='titre_outil' style= 'padding-bottom:8px; padding-top:6px'> <mat-icon class='mat-icon'> <svg viewBox='0 0 24 24' fit='' height='100%' width='100%' preserveAspectRatio='xMidYMid meet' focusable='false'> <path d='M14,17H18V14L23,18.5L18,23V20H14V17M13,9H18.5L13,3.5V9M6,2H14L20,8V12.34C19.37,12.12 18.7,12 18,12A6,6 0 0,0 12,18C12,19.54 12.58,20.94 13.53,22H6C4.89,22 4,21.1 4,20V4A2,2 0 0,1 6,2Z'></path> </svg></mat-icon> Importer/Exporter </div><div class='describe'> Importez ou exportez un fichier de forme (shp). </div><br></div><div class='tool_name'> <div class='titre_outil' style= 'padding-bottom:8px; padding-top:6px'> <mat-icon class='mat-icon'> <svg viewBox='0 0 24 24' fit='' height='100%' width='100%' preserveAspectRatio='xMidYMid meet' focusable='false'> <path d='M18,3H6V7H18M19,12A1,1 0 0,1 18,11A1,1 0 0,1 19,10A1,1 0 0,1 20,11A1,1 0 0,1 19,12M16,19H8V14H16M19,8H5A3,3 0 0,0 2,11V17H6V21H18V17H22V11A3,3 0 0,0 19,8Z'></path> </svg></mat-icon> Imprimer </div><div class='describe'> Imprimez la carte affichée à l’écran. </div><br></div>         <div class='tool_name'>             <div class='titre_outil' style= 'padding-bottom:8px; padding-top:6px'> <mat-icon class='mat-icon'> <svg viewBox='0 0 24 24' fit='' height='100%' width='100%' preserveAspectRatio='xMidYMid meet' focusable='false'> <path d='M18,16.08C17.24,16.08 16.56,16.38 16.04,16.85L8.91,12.7C8.96,12.47 9,12.24 9,12C9,11.76 8.96,11.53 8.91,11.3L15.96,7.19C16.5,7.69 17.21,8 18,8A3,3 0 0,0 21,5A3,3 0 0,0 18,2A3,3 0 0,0 15,5C15,5.24 15.04,5.47 15.09,5.7L8.04,9.81C7.5,9.31 6.79,9 6,9A3,3 0 0,0 3,12A3,3 0 0,0 6,15C6.79,15 7.5,14.69 8.04,14.19L15.16,18.34C15.11,18.55 15.08,18.77 15.08,19C15.08,20.61 16.39,21.91 18,21.91C19.61,21.91 20.92,20.61 20.92,19A2.92,2.92 0 0,0 18,16.08Z'> </path> </svg></mat-icon> Partager             </div>             <div class='describe'>                     Créez une adresse URL qui redirige vers une représentation exacte de votre carte qui se trouve à l’écran.                      Ce lien peut être partagé ou diffusé dans un document et permet de «&nbspsauvegarder » votre carte pour une                      utilisation ultérieure.             </div>             <br>         </div>      <div class='tool_name'> <p> <br> <a href='http://igouverte.org/' target='_blank'><img src='./assets/igo2/core/logo.png' alt='IGO' height=32>IGO2</a> est une solution Web libre en géomatique, développée en mode collaboratif par des spécialistes provenant de plusieurs ministères et organismes du gouvernement du Québec.</p></div>       </div> </body> " 
+            }
         },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-
-    {
-      "id": "con_sensib",
-      "zIndex": 29,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "con_sensib",
-          "version": "1.3.0"
+        {
+            "name": "timeFilter"
         },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "con_erosion",
-      "zIndex": 30,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "con_erosion",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "con_ornier",
-      "zIndex": 31,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "con_ornier",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "con_rugos",
-      "zIndex": 32,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "con_rugos",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "con_sol_tm",
-      "zIndex": 33,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "con_sol_tm",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "con_solid",
-      "zIndex": 34,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "con_solid",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "iqs_pot_epn",
-      "zIndex": 35,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "iqs_pot_epn",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "iqs_pot_epb",
-      "zIndex": 36,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "iqs_pot_epb",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "iqs_pot_epr",
-      "zIndex": 37,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "iqs_pot_epr",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "iqs_pot_sab",
-      "zIndex": 38,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "iqs_pot_sab",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "iqs_pot_pib",
-      "zIndex": 39,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "iqs_pot_pib",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "iqs_pot_pig",
-      "zIndex": 40,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "iqs_pot_pig",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "iqs_pot_bop",
-      "zIndex": 41,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "iqs_pot_bop",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "iqs_pot_pex",
-      "zIndex": 42,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "iqs_pot_pex",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "iqs_pot_tho",
-      "zIndex": 43,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "iqs_pot_tho",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "accr_st_ers",
-      "zIndex": 44,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "accr_st_ers",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "accr_st_boj",
-      "zIndex": 45,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "accr_st_boj",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "accr_st_err",
-      "zIndex": 46,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "accr_st_err",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-
-    {
-      "id": "vmb_ha_tot",
-      "zIndex": 47,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "vmb_ha_tot",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "ca_non_fores",
-      "title": "Infrastructures en milieu forestier ↺",
-      "zIndex": 48,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "ca_non_fores",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true,
-        "timeFilter": {
-          "min": "2003-01-01",
-          "max": "2019-01-01",
-          "style": "calendar",
-          "range": true,
-          "step": 63072000000,
-          "type": "year"
-        }
-      }
-    },
-    {
-      "id": "ca_pertu_autre",
-      "title": "Épidemies, chablis et verglas ↺",
-      "zIndex": 49,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "ca_pertu_autre",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true,
-        "timeFilter": {
-          "min": "1976-01-01",
-          "max": "2019-01-01",
-          "style": "calendar",
-          "range": true,
-          "type": "year"
-        }
-      }
-    },
-    {
-      "id": "ca_feux",
-      "title": "Feux de forêt ↺",
-      "zIndex": 50,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "ca_feux",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true,
-        "timeFilterable": true,
-        "timeFilter": {
-          "min": "1984",
-          "max": "2019",
-          "style": "calendar",
-          "range": true,
-          "step": 63072000000,
-          "type": "year"
-        }
-      }
-    },
-    {
-      "id": "ca_interv_fores",
-      "title": "Récolte et reboisement ↺",
-      "zIndex": 51,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "ca_interv_fores",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true,
-        "timeFilterable": true,
-        "timeFilter": {
-          "min": "1976-01-01",
-          "max": "2019-01-01",
-          "style": "calendar",
-          "range": true,
-          "step": 63072000000,
-          "type": "year"
-        }
-      }
-    },
-
-    {
-      "id": "sond_pet2",
-      "zIndex": 52,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "sond_pet2",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "sond_pet3",
-      "zIndex": 53,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "sond_pet3",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "sond_pet4",
-      "zIndex": 54,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "sond_pet4",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "sond_pet5",
-      "zIndex": 55,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "sond_pet5",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "nord_photo",
-      "zIndex": 56,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "nord_photo_oblique",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-
-    {
-      "id": "pee_index_pdf",
-      "zIndex": 57,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "pee_index_pdf",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "telecharge_index_250k",
-      "zIndex": 58,
-      "visible": true,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "telecharge_index_250k",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "lidar_index_extraction",
-      "zIndex": 59,
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "lidar_index_extraction",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-
-    {
-      "id": "Perimetre_UA_1M",
-      "zIndex": 60,
-      "title": "Unités d’aménagement (1:1 000 000)",
-      "minResolution": 10,
-      "visible": false,
-      "baseLayer": false,
-      "style": "default",
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryable": true,
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "https://servicesvecto2-atlas.mrnf.gouv.qc.ca/IDS_CSTF_UA_WMS/service.svc/get?",
-        "params": {
-          "version": "1.3.0",
-          "layers": "Perimetre_UA_1M",
-          "srs": "ESPG:3857"
-        },
-        "type": "wms"
-      }
-    },
-    {
-      "id": "Perimetre_UA_20K",
-      "zIndex": 61,
-      "title": "Unités d’aménagement (1:20 000)",
-      "maxResolution": 10,
-      "visible": false,
-      "baseLayer": false,
-      "style": "default",
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryable": true,
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "https://servicesvecto2-atlas.mrnf.gouv.qc.ca/IDS_CSTF_UA_WMS/service.svc/get?",
-        "params": {
-          "version": "1.3.0",
-          "layers": "Perimetre_UA_20K",
-          "srs": "ESPG:3857"
-        },
-        "type": "wms"
-      }
-    },
-    {
-      "id": "feuillets_20K",
-      "zIndex": 62,
-      "title": "Feuillets (1:20 000)",
-      "visible": false,
-      "metadata": {
-        "extern": true
-      },
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "queryFormat": "htmlgml2",
-        "queryHtmlTarget": "iframe",
-        "url": "/ws/mffpecofor.fcgi",
-        "params": {
-          "layers": "feuillets_20k",
-          "version": "1.3.0"
-        },
-        "type": "wms",
-        "optionsFromCapabilities": true
-      }
-    },
-    {
-      "id": "Chemin",
-      "zIndex": 63,
-      "title": "Chemins",
-      "visible": false,
-      "baseLayer": false,
-      "style": "default",
-      "sourceOptions": {
-        "crossOrigin": "anonymous",
-        "url": "https://servicesvecto2-atlas.mrnf.gouv.qc.ca/IDS_Reseau_routier_WMS/service.svc/get?",
-        "params": {
-          "version": "1.3.0",
-          "layers": "Autoroute,Route_Nationale,Route_Régionale,Route_locale,Autres_routes",
-          "srs": "ESPG:3857"
-        },
-        "type": "wms"
-      }
-    }
-  ],
-  "toolbar": [
-    "searchResults",
-    "contextManager",
-    "mapTools",
-    "timeAnalysis",
-    "ogcFilter",
-    "measurer",
-    "directions",
-    "catalog",
-    "importExport",
-    "print",
-    "shareMap",
-    "about"
-  ],
-  "tools": [
-    {
-      "name": "searchResults",
-      "title": "Recherche",
-      "options": {
-        "focusFirst": false
-      }
-    },
-    {
-      "name": "contextManager",
-      "title": "Vues"
-    },
-    {
-      "name": "about",
-      "options": {
-        "html": "<head>   <meta charset='utf-8'>   <style>      .page{         padding-left: 0px;         font-family: 'Verdana', 'Arial', 'Times New Roman';     }      .bold_class{         font-weight:bold;     }     .red{         color:red;     }     .tool_name{         border-top: 1px solid #00897B;         /* padding-left: 5px; */         padding-right: 1%;         padding-bottom: 1%;     }      .titre_outil{         font-weight: bold;          font-size: 18px;     }     .align_right{         text-align:right;     }     .describe{         text-align: justify;     }    </style> </head>  <body>     <div class='page' style='color: black;'>         <div>                 <a href='https://www.foretouverte.gouv.qc.ca' target='_blank'>                  <img src='./particular/images/FO_logo_2c.png' alt='Foret ouverte' width='220' style='margin-left:0px;margin-bottom:3px'>         </div>          <div style='font-size:17px;color:#00897B'>Carte interactive des données écoforestières... et bien plus!</div>         <br>         <div>             <a href='https://www.foretouverte.gouv.qc.ca' target='_blank'> https://www.foretouverte.gouv.qc.ca</a>         </div>         <br>         <div class='bold_class'>Service de cartographie Web DIF :</div>         <div>https://geoegl.msp.gouv.qc.ca/ws/mffpecofor.fcgi? </div>         <br>          <div class='group_tool_name'>             <div style='font-weight: bold;font-size:20px;padding-bottom:10px'>Fonctionnalités</div>          <div class='tool_name'>             <div class='titre_outil'>                      Recherche </div>             <div class='describe'>             Situé dans la portion supérieure gauche de l’interface, l’outil permet de vous positionner à l’aide d’une adresse,              d’un lieu ou de coordonnées GPS. Il peut également servir à chercher une couche.             </div>         </div>         <br>         <div class='tool_name'>                              <div class='titre_outil'>Vues</div>                 <div class='describe'>                         Visualisez des regroupements de couches faits par thème ou par utilité. Lorsque vous sélectionnez une                          <span class='bold_class'>Vues</span>, vous trouverez dans                          <span class='bold_class'>Couches</span> chacune des couches qu’elle contient. Vous pouvez y ajouter d’autres couches                          à partir de <span class='bold_class'>Catalogues</span> ou de l’outil <span class='bold_class'>Recherche.</span>                 </div>                 <br>                 <div class='red'>                         <span class='bold_class'>ATTENTION :</span> Si vous basculez vers une autre                          <span class='bold_class'>Vues</span>, toutes les couches affichées dans <span class='bold_class'>Couhes</span> seront écrasées.                  </div>         </div>         <br>         <div class='tool_name'>             <div class='titre_outil'>                 Couches             </div>             <div class='describe'>                     Personnalisez votre carte à partir du <span class='bold_class'>Catalogue</span> ou de l’outil                      <span class='bold_class'>Recherche.</span> Cet espace permet d’ajouter,                      de supprimer et d’interroger des couches ainsi que de télécharger des données.                      Consultez la section <span class='bold_class'>Personnaliser sa carte</span> pour plus de détails.             </div>             <br>         </div>         <div class='tool_name'>             <div class='titre_outil'>                 Catalogues             </div>             <div class='describe'>                 Trouvez toutes les couches qui peuvent être ajoutées à l'intérieur de <span class='bold_class'>Couches.</span>                     Cliquez sur la couche désirée pour l’ajouter.             </div>             <br>         </div>            </div>         <div class='tool_name'>             <div class='titre_outil' >                  Partager             </div>             <div class='describe'>                     Créez une adresse URL qui redirige vers une représentation exacte de votre carte qui se trouve à l’écran.                      Ce lien peut être partagé ou diffusé dans un document et permet de «&nbspsauvegarder » votre carte pour une                      utilisation ultérieure.             </div>             <br>         </div>                       <div class='tool_name'>             <div class='titre_outil'>                 Imprimer             </div>             <div class='describe'>                 Imprimez la carte affichée à l’écran.             </div>             <br>         </div>              <div>               <div class='titre_outil' style='font-weight: bold;font-size:20px;border-top: 1px solid #00897B;padding-top:10px'>Personnaliser sa carte</div>             <div class='describe'>                     Il y a différentes façons de créer une carte personnalisée. Vous pouvez débuter par choisir un regroupoement dans <span class='bold_class'>Vues</span>, selon votre intérêt,                     puis y ajouter d’autres couches à partir des <span class='bold_class'>Catalogues</span> ou de l’outil                      <span class='bold_class'>Recherche.</span>                            </div>         </div>                <div style='text-align:right;'>             <div class='attribution' >                 <a href='https://quebec.ca' target='_blank'> <img src='./particular/images/QUEB.png'></a>             </div>              <div>                 <a href='http://www.droitauteur.gouv.qc.ca/copyright.php' target='_blank'> © Gouvernement du Québec</a>             </div>         </div>             </div> </body> "
-      }
-    },
-    {
-      "name": "mapTools",
-      "title": "Couches",
-      "options": {
-        "toggleLegendOnVisibilityChange": true,
-        "expandLegendOfVisibleLayers": true,
-        "layerListControls": {
-          "excludeBaseLayers": false
-        }
-      }
-    },
-    {
-      "name": "shareMap",
-      "options": {
-        "hasShareMapButton": false,
-        "hasCopyLinkButton": true
-      }
-    },
-    {
-      "name": "measurer"
-    },
-    {
-      "name": "directions"
-    },
-    {
-      "name": "catalog"
-    },
-    {
-      "name": "catalogBrowser",
-      "options": {
-        "toggleCollapsedGroup": false
-      }
-    },
-    {
-      "name": "timeAnalysis"
-    },
-    {
-      "name": "ogcFilter"
-    },
-    {
-      "name": "importExport"
-    },
-    {
-      "name": "print"
-    }
-  ]
+        {
+          "name": "mapTools",
+          "options": {
+            "allowShowAllLegends": false,
+            "toggleLegendOnVisibilityChange": true,
+            "expandLegendOfVisibleLayers":true,
+            "layerListControls": {
+              "excludeBaseLayers": false
+            }
+          }
+        } 
+      ]
+   
 }
