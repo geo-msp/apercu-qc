@@ -923,7 +923,8 @@
                     { "alias": "Restriction de charge ou dimension", "name": "cddescr", "excludeFromOgcFilters": true },
                     { "alias": "No. de règlement municipal", "name": "reglmun", "excludeFromOgcFilters": true },
                     { "alias": "Date d’approbation MTQ", "name": "dateappr", "excludeFromOgcFilters": true },
-                    { "alias": "Tonnage max. 1-2-3 essieux", "name": "cdtonnage", "excludeFromOgcFilters": true }
+                    { "alias": "Tonnage max. 1-2-3 essieux", "name": "cdtonnage", "excludeFromOgcFilters": true },
+                    { "alias": "Version", "name": "version" }
                 ]
             }
         },
