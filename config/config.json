@@ -3,7 +3,7 @@
   "description": "IGO2 est un navigateur web qui permet de visualiser différentes couches d'informations géographiques",
   "theme": "blue-theme",
   "sidenavTitle": "Donnée Québec",
-  "hasExpansionPanel": true,
+  "hasExpansionPanel": false,
   "hasSearchPointerSummary": false,
   "hasFeatureEmphasisOnSelection": true,
   "analytics": {
