@@ -113,7 +113,7 @@
         "url": "/ws/mffpecofor.fcgi"
       },
       {
-        "title": "Données subdivisions territoriales forestières (STF)",
+        "title": "Subdivisions territoriales forestières (STF)",
         "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?"
       }
     ]
