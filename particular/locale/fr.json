@@ -16,5 +16,6 @@
   "Recherche": "Recherche",
   "Vues": "Vues",
   "Couches": "Couches",
-  "Catalogue": "Catalogue"
+  "Catalogue": "Catalogue",
+  "messageContextSTF": "<head><meta charset='utf-8'><style> .page{ padding-left: 0px; margin-right: -45px; padding-bottom: 15px; font-family: 'Verdana', 'Arial', 'Times New Roman'; } .bold_class{ font-weight:bold; } .italic_class{ font-style: italic; } </style> </head> <body> <div class='page' style='color: white;'> <div style= 'text-align: right; font-size: x-large'>x </div> <div> <img img-size='30px' src='./particular/images/star.svg'> <span class='bold_class'>Subdivisions territoriales forestières (STF)</span> </div> <br> <div> Explorez les différents produits qui composent les subdivisions territoriales forestières du MFFP. Chaque produit est disponible pour le téléchargement via le site de <a href='https://www.donneesquebec.ca/recherche/fr/dataset/stf' target='_blank'>Données Québec</a>.</div></div></body>"
 }
