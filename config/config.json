@@ -115,7 +115,17 @@
       {
         "title": "Subdivisions territoriales forestières (STF)",
         "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?"
-      }
+      },
+      {​​
+
+        "title": "Milieux humides",
+
+        "url": "https://www.servicesgeo.enviroweb.gouv.qc.ca/donnees/services/Public/Themes_publics/MapServer/WMSServer?",
+
+        "sortDirection": "asc"
+
+      }​​
+
     ]
   },
   "welcomeWindow": {
