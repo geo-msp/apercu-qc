@@ -361,7 +361,7 @@
                 "params": {
                     "layers": "histo_stations_meteoroutieres",
                     "feature_count": 3650,
-                    "time": "2008-01-01/2019-10-31"
+                    "time": "2008-01-01/2020-10-31"
                 }
             }
         },
