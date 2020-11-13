@@ -23,6 +23,9 @@
   "language": {
     "prefix": ["./particular/locale/", "./locale/"]
   },
+  "interactiveTour": {
+    "activateInteractiveTour": false
+  },
   "searchSources": {
     "storedqueries": {
       "title": "Réseau routier Transports Québec",
@@ -129,8 +132,5 @@
         "sortDirection": "asc"
       }
     ]
-  },
-  "welcomeWindow": {
-    "showAgainOnNewIGOVersion": true
   }
 }
