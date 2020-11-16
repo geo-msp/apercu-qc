@@ -129,7 +129,7 @@
           "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?REQUEST=GetLegendGraphic&SERVICE=WMS&FORMAT=image/png&SLD_VERSION=1.1.0&VERSION=1.3.0&LAYER=Syndicat%20ou%20office%20de%20producteurs%20forestiers%20{1:20%20000}"
         },
         "metadata": {
-          "url": "https://www.donneesquebec.ca/recherche/fr/dataset/stf",
+          "url": "https://www.donneesquebec.ca/recherche/fr/dataset/syndicat-ou-office-de-producteurs-forestiers",
           "extern": "false"
           },
         "sourceOptions": {
@@ -299,8 +299,7 @@
         "visible": false,
         "baseLayer": false,
         "legendOptions": {
-            "display": true,
-            "html": "<img width=45% height=45% src='./particular/images/chemins.png'>"
+            "display": false
           },
         "sourceOptions": {
           "crossOrigin": "anonymous",
@@ -318,10 +317,6 @@
         "title": "Lieux habités",
         "visible": false,
         "baseLayer": false,
-        "legendOptions": {
-            "display": true,
-            "html": "<img width=45% height=45% src='./particular/images/lieux_habites.png'>"
-          },
         "style": "default",
         "sourceOptions": {
           "crossOrigin": "anonymous",
