@@ -9,287 +9,333 @@
         "timeOut": 30000
       }
     },
-  
+   
     "layers": [
    
-    {
-      "title": "Subdivisions territoriales forestières",
-      "zIndex": 5,
-      "visible" : false,
-      "metadata": {
-        "url": "https://www.donneesquebec.ca/recherche/fr/dataset/stf",
-        "extern": "false"
+        {
+          "title": "Subdivisions territoriales forestières",
+          "zIndex": 5,
+          "visible" : false,
+          "metadata": {
+            "url": "https://www.donneesquebec.ca/recherche/fr/dataset/stf",
+            "extern": "false"
+            },
+          "sourceOptions": {
+            "queryable": true,
+            "queryFormat": "geojson",
+            "crossOrigin": "anonymous",
+            "queryHtmlTarget": "iframe",
+            "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?",
+            "params": {
+                "layers": "Unité aménagement - UA,Territoires forestiers résiduels - TFR,Forêt de proximité - FP,Forêt enseignement et de recherche,Forêt expérimentation,Station forestière Duchesnay,Pépinière publique forestière - PPU,Aires protégées,Autres terrains publics,Terres privées,Territoires autochtones,Lacs et rivières importantes"
+            },
+            "type": "wms"
+          }
         },
-      "sourceOptions": {
-        "queryable": true,
-        "queryFormat": "geojson",
-        "crossOrigin": "anonymous",
-        "queryHtmlTarget": "iframe",
-        "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?",
-        "params": {
-            "layers": "Unité aménagement - UA,Territoires forestiers résiduels - TFR,Forêt de proximité - FP,Forêt enseignement et de recherche,Forêt expérimentation,Station forestière Duchesnay,Pépinière publique forestière - PPU,Aires protégées,Autres terrains publics,Terres privées,Territoires autochtones,Lacs et rivières importantes"
+        {
+          "title": "Région de garantie d'approvisement (RGA)",
+          "zIndex": 6,
+          "visible" : false,
+          "legendOptions": {
+            "display": true,
+            "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?REQUEST=GetLegendGraphic&SERVICE=WMS&FORMAT=image/png&SLD_VERSION=1.1.0&VERSION=1.3.0&LAYER=R%C3%A9gion%20de%20garantie%20approvisionnement%20{1:20%20000}"
+          },
+          "metadata": {
+            "url": "https://www.donneesquebec.ca/recherche/fr/dataset/region-de-garantie-d-approvisionnement-rga",
+            "extern": "false"
+            },
+          "sourceOptions": {
+              "queryable": true,
+              "crossOrigin": "anonymous",
+              "queryFormat": "geojson",
+              "queryHtmlTarget": "iframe",
+              "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?",
+              "params": {
+                  "layers": "Région de garantie approvisionnement {1:20 000},Région de garantie approvisionnement {1:1 000 000}"
+              },
+              "type": "wms"   
+          }
         },
-        "type": "wms"
-      }
-    },
-    {
-      "title": "Région de garantie d'approvisement (RGA)",
-      "zIndex": 6,
-      "visible" : false,
-      "metadata": {
-        "url": "https://www.donneesquebec.ca/recherche/fr/dataset/region-de-garantie-d-approvisionnement-rga",
-        "extern": "false"
+        {
+          "title": "Unité d'aménagement (UA)",
+          "zIndex": 7,
+          "visible" : true,
+          "legendOptions": {
+            "display": true,
+            "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?REQUEST=GetLegendGraphic&SERVICE=WMS&FORMAT=image/png&SLD_VERSION=1.1.0&VERSION=1.3.0&LAYER=Unit%C3%A9%20am%C3%A9nagement%20{1:20%20000}"
+          },
+          "metadata": {
+            "url": "https://www.donneesquebec.ca/recherche/fr/dataset/unite-d-amenagement",
+            "extern": "false"
+            },
+          "sourceOptions": {
+              "queryable": true,
+              "crossOrigin": "anonymous",
+              "queryFormat": "geojson",
+              "queryHtmlTarget": "iframe",
+              "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?",
+              "params": {
+                  "layers": "Unité aménagement {1:20 000},Unité aménagement {1:1 000 000}"
+              },
+              "type": "wms" 
+          }
+      },
+      {
+        "title": "Limite territoriale des forêts attribuables",
+        "zIndex": 8,
+        "visible" : true,
+        "metadata": {
+            "url": "https://www.donneesquebec.ca/recherche/fr/dataset/limite-territoriale-des-forets-attribuables",
+            "extern": "false"
+            },
+        "sourceOptions": {
+            "queryable": true,
+            "crossOrigin": "anonymous",
+            "queryFormat": "geojson",
+            "queryHtmlTarget": "iframe",
+            "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?",
+            "params": {
+                "layers": "Limite territoriale des forêts attribuables"
+            },
+            "type": "wms"       
+        }
+      },
+      {
+        "title": "Aire d'intensification de la production ligneuse (AIPL)",
+        "zIndex": 9,
+        "visible" : false,
+        "metadata": {
+            "url": "https://www.donneesquebec.ca/recherche/fr/dataset/aire-d-intensification-de-la-production-ligneuse-aipl",
+            "extern": "false"
+            },
+        "sourceOptions": {
+            "queryable": true,
+            "crossOrigin": "anonymous",
+            "queryFormat": "geojson",
+            "queryHtmlTarget": "iframe",
+            "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?",
+            "params": {
+                "layers": "Aire intensification de la production ligneuse"
+            },
+            "type": "wms"       
+        }
+      },
+      {
+        "title": "Syndicat ou office de producteurs forestiers",
+        "zIndex": 10,
+        "visible" : false,
+        "legendOptions": {
+          "display": true,
+          "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?REQUEST=GetLegendGraphic&SERVICE=WMS&FORMAT=image/png&SLD_VERSION=1.1.0&VERSION=1.3.0&LAYER=Syndicat%20ou%20office%20de%20producteurs%20forestiers%20{1:20%20000}"
         },
-      "sourceOptions": {
+        "metadata": {
+          "url": "https://www.donneesquebec.ca/recherche/fr/dataset/stf",
+          "extern": "false"
+          },
+        "sourceOptions": {
+          "queryable": true,
+          "queryFormat": "geojson",
+          "crossOrigin": "anonymous",
+          "queryHtmlTarget": "iframe",
+          "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?",
+          "params": {
+              "layers": "Syndicat ou office de producteurs forestiers {1:20 000},Syndicat ou office de producteurs forestiers {1:1 000 000}",
+              "version": "1.3.0"
+          },
+          "type": "wms"  
+        }
+      },
+      {
+        "title": "Agence régionale de mise en valeur des forêts privées",
+        "zIndex": 11,
+        "visible" : false,
+        "legendOptions": {
+            "display": true,
+            "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?REQUEST=GetLegendGraphic&SERVICE=WMS&FORMAT=image/png&SLD_VERSION=1.1.0&VERSION=1.3.0&LAYER=Agence%20de%20mise%20en%20valeur%20des%20for%C3%AAts%20priv%C3%A9es%20{1:20%20000}"
+          },
+        "metadata": {
+            "url": "https://www.donneesquebec.ca/recherche/fr/dataset/agences-regionales-de-mise-en-valeur-des-forets-privees",
+            "extern": "false"
+            },
+        "sourceOptions": {
           "queryable": true,
           "crossOrigin": "anonymous",
           "queryFormat": "geojson",
           "queryHtmlTarget": "iframe",
           "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?",
           "params": {
-              "layers": "Région de garantie approvisionnement {1:20 000},Région de garantie approvisionnement {1:1 000 000}"
+              "layers": "Agence de mise en valeur des forêts privées {1:20 000},Agence de mise en valeur des forêts privées {1:1 000 000}"
           },
-          "type": "wms"   
-      }
-  },
-    {
-      "title": "Unité d'aménagement (UA)",
-      "zIndex": 7,
-      "visible" : true,
-      "metadata": {
-        "url": "https://www.donneesquebec.ca/recherche/fr/dataset/unite-d-amenagement",
-        "extern": "false"
-        },
-      "sourceOptions": {
+          "type": "wms"         
+        }
+      },
+      {
+        "title":"Zone de tarification forestière",
+        "zIndex": 12,
+        "visible" : false,
+        "metadata": {
+            "url": "https://www.donneesquebec.ca/recherche/fr/dataset/zone-de-tarification",
+            "extern": "false"
+            },
+        "sourceOptions": {
           "queryable": true,
           "crossOrigin": "anonymous",
           "queryFormat": "geojson",
           "queryHtmlTarget": "iframe",
           "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?",
           "params": {
-              "layers": "Unité aménagement {1:20 000},Unité aménagement {1:1 000 000}"
+              "layers": "Zone de tarification"
           },
-          "type": "wms" 
+          "type": "wms"         
+        }
+      },
+      {
+        "title":"Territoire de droits consentis (TDC)",
+        "zIndex": 13,
+        "visible" : false,
+        "metadata": {
+            "url": "https://www.donneesquebec.ca/recherche/fr/dataset/territoire-de-droits-consentis-tdc",
+            "extern": "false"
+            },
+        "sourceOptions": {
+          "queryable": true,
+          "crossOrigin": "anonymous",
+          "queryFormat": "geojson",
+          "queryHtmlTarget": "iframe",
+          "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?",
+          "params": {
+              "layers": "Convention de gestion territoriale - CGT,Entente de délégation - ED,Forêt enseignement et de recherche - FER,Garantie approvisionnement - GA,Permis de récolte approvisionnement usine - PRAU,Permis de récolte approvisionnement usine biomasse - PRBIO,Station forestière,Terres de catégorie"
+          },
+          "type": "wms"         
+        }
+      },
+      {
+        "title":"Bureau de l'unité de gestion (UG)",
+        "zIndex": 14,
+        "visible" : true,
+        "metadata": {
+            "url": "https://www.donneesquebec.ca/recherche/fr/dataset/bureau-de-l-unite-de-gestion-ug",
+            "extern": "false"
+            },
+        "sourceOptions": {
+          "queryable": true,
+          "crossOrigin": "anonymous",
+          "queryFormat": "geojson",
+          "queryHtmlTarget": "iframe",
+          "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?",
+          "params": {
+              "layers": "Bureau UG"
+          },
+          "type": "wms"       
+        }
+      },
+      {
+        "title":"Unité de gestion (UG)",
+        "zIndex": 15,
+        "visible" : true,
+        "legendOptions": {
+            "display": true,
+            "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?REQUEST=GetLegendGraphic&SERVICE=WMS&FORMAT=image/png&SLD_VERSION=1.1.0&VERSION=1.3.0&LAYER=Unit%C3%A9%20de%20gestion%20{1:20%20000}"
+          },
+        "metadata": {
+            "url": "https://www.donneesquebec.ca/recherche/fr/dataset/unite-de-gestion-ug",
+            "extern": "false"
+            },
+        "sourceOptions": {
+          "queryable": true,
+          "crossOrigin": "anonymous",
+          "queryFormat": "geojson",
+          "queryHtmlTarget": "iframe",
+          "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?",
+          "params": {
+              "layers": "Unité de gestion {1:20 000},Unité de gestion {1:1 000 000}"
+          },
+          "type": "wms"         
+        }
+      },
+      {
+        "title":"Écosystème forestier exceptionnel (EFE)",
+        "zIndex": 16,
+        "visible" : false,
+        "metadata": {
+            "url": "https://www.donneesquebec.ca/recherche/fr/dataset/ecosysteme-forestier-exceptionnel-efe",
+            "extern": "false"
+            },
+        "sourceOptions": {
+          "queryable": true,
+          "crossOrigin": "anonymous",
+          "queryFormat": "geojson",
+          "queryHtmlTarget": "iframe",
+          "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?",
+          "params": {
+              "layers": "Écosystèmes forestiers exceptionnels - Point,Écosystèmes forestiers exceptionnels"
+          },
+          "type": "wms"        
+        }
+      },
+      {
+        "title":"Refuge biologique (désigné et en projet)",
+        "zIndex": 17,
+        "visible" : false,
+        "metadata": {
+            "url": "https://www.donneesquebec.ca/recherche/fr/dataset/refuge-biologique-designe-et-en-projet",
+            "extern": "false"
+            },
+        "sourceOptions": {
+          "queryable": true,
+          "crossOrigin": "anonymous",
+          "queryFormat": "geojson",
+          "queryHtmlTarget": "iframe",
+          "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?",
+          "params": {
+              "layers": "Refuges biologiques - Point,Refuge biologique désigné,Projet de refuge biologique"
+          },
+          "type": "wms"      
+        }
+      },
+      {
+        "zIndex": 18,
+        "title": "Chemins",
+        "visible": false,
+        "baseLayer": false,
+        "legendOptions": {
+            "display": true,
+            "html": "<img width=45% height=45% src='./particular/images/chemins.png'>"
+          },
+        "sourceOptions": {
+          "crossOrigin": "anonymous",
+          "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Territoire/AQreseauPlus_WMS/MapServer/WMSServer",
+          "params": {
+            "version": "1.3.0",
+            "layers": "Autoroute [35M - 750K],Autoroute [50K - 8K],Autoroute [750K - 50K],Autoroute [8K - 1],Nationale [25M - 40K],Nationale [40K - 25K],Nationale [25K - 10K],Nationale [10K - 1],Collectrice [650K - 350K],Collectrice [350K - 75K],Collectrice [75K - 10K],Collectrice [10K - 1],Régionale  [250K - 25K],Régionale  [25K - 1],Autre route [150K - 15K],Autre route [15K - 1],Bretelle [10K - 1],Bretelle [35K - 10K],Bretelle [750K - 35K],Bretelle [3K - 2],Bretelle [14K - 3K],Bretelle [500K - 13K],Bretelle [5K - 1],Bretelle [15K - 5K],Bretelle [40K - 15K],Bretelle [3K - 1],Bretelle [13K -3k],Bretelle [50K - 13K],Route locale [200K - 25K],Route locale [25K - 10K],Route locale [10K - 1]",
+            "srs": "ESPG:3857"
+          },
+          "type": "wms"
+        }
+      },
+      {
+        "zIndex": 19,
+        "title": "Lieux habités",
+        "visible": false,
+        "baseLayer": false,
+        "legendOptions": {
+            "display": true,
+            "html": "<img width=45% height=45% src='./particular/images/lieux_habites.png'>"
+          },
+        "style": "default",
+        "sourceOptions": {
+          "crossOrigin": "anonymous",
+          "url": "@host/apis/ws/swtq?",
+          "params": {
+            "version": "1.3.0",
+            "layers": "villagerelais,lieuhabite",
+            "srs": "ESPG:3857"
+          },
+          "type": "wms"
+        }
       }
-  },
-  {
-    "title": "Limite territoriale des forêts attribuables",
-    "zIndex": 8,
-    "visible" : true,
-    "metadata": {
-        "url": "https://www.donneesquebec.ca/recherche/fr/dataset/limite-territoriale-des-forets-attribuables",
-        "extern": "false"
-        },
-    "sourceOptions": {
-        "queryable": true,
-        "crossOrigin": "anonymous",
-        "queryFormat": "geojson",
-        "queryHtmlTarget": "iframe",
-        "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?",
-        "params": {
-            "layers": "Limite territoriale des forêts attribuables"
-        },
-        "type": "wms"       
-    }
-  },
-  {
-    "title": "Aire d'intensification de la production ligneuse (AIPL)",
-    "zIndex": 9,
-    "visible" : false,
-    "metadata": {
-        "url": "https://www.donneesquebec.ca/recherche/fr/dataset/aire-d-intensification-de-la-production-ligneuse-aipl",
-        "extern": "false"
-        },
-    "sourceOptions": {
-        "queryable": true,
-        "crossOrigin": "anonymous",
-        "queryFormat": "geojson",
-        "queryHtmlTarget": "iframe",
-        "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?",
-        "params": {
-            "layers": "Aire intensification de la production ligneuse"
-        },
-        "type": "wms"       
-    }
-  },
-  {
-    "title": "Agence régionale de mise en valeur des forêts privées",
-    "zIndex": 10,
-    "visible" : false,
-    "metadata": {
-        "url": "https://www.donneesquebec.ca/recherche/fr/dataset/agences-regionales-de-mise-en-valeur-des-forets-privees",
-        "extern": "false"
-        },
-    "sourceOptions": {
-      "queryable": true,
-      "crossOrigin": "anonymous",
-      "queryFormat": "geojson",
-      "queryHtmlTarget": "iframe",
-      "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?",
-      "params": {
-          "layers": "Agence de mise en valeur des forêts privées {1:20 000},Agence de mise en valeur des forêts privées {1:1 000 000}"
-      },
-      "type": "wms"         
-    }
-  },
-  {
-    "title":"Zone de tarification forestière",
-    "zIndex": 11,
-    "visible" : false,
-    "metadata": {
-        "url": "https://www.donneesquebec.ca/recherche/fr/dataset/zone-de-tarification",
-        "extern": "false"
-        },
-    "sourceOptions": {
-      "queryable": true,
-      "crossOrigin": "anonymous",
-      "queryFormat": "geojson",
-      "queryHtmlTarget": "iframe",
-      "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?",
-      "params": {
-          "layers": "Zone de tarification"
-      },
-      "type": "wms"         
-    }
-  },
-  {
-    "title":"Territoire de droits consentis (TDC)",
-    "zIndex": 12,
-    "visible" : false,
-    "metadata": {
-        "url": "https://www.donneesquebec.ca/recherche/fr/dataset/territoire-de-droits-consentis-tdc",
-        "extern": "false"
-        },
-    "sourceOptions": {
-      "queryable": true,
-      "crossOrigin": "anonymous",
-      "queryFormat": "geojson",
-      "queryHtmlTarget": "iframe",
-      "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?",
-      "params": {
-          "layers": "Convention de gestion territoriale - CGT,Entente de délégation - ED,Forêt enseignement et de recherche - FER,Garantie approvisionnement - GA,Permis de récolte approvisionnement usine - PRAU,Permis de récolte approvisionnement usine biomasse - PRBIO,Station forestière,Terres de catégorie"
-      },
-      "type": "wms"         
-    }
-  },
-  {
-    "title":"Bureau de l'unité de gestion (UG)",
-    "zIndex": 13,
-    "visible" : true,
-    "metadata": {
-        "url": "https://www.donneesquebec.ca/recherche/fr/dataset/bureau-de-l-unite-de-gestion-ug",
-        "extern": "false"
-        },
-    "sourceOptions": {
-      "queryable": true,
-      "crossOrigin": "anonymous",
-      "queryFormat": "geojson",
-      "queryHtmlTarget": "iframe",
-      "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?",
-      "params": {
-          "layers": "Bureau UG"
-      },
-      "type": "wms"       
-    }
-  },
-  {
-    "title":"Unité de gestion (UG)",
-    "zIndex": 14,
-    "visible" : true,
-    "metadata": {
-        "url": "https://www.donneesquebec.ca/recherche/fr/dataset/unite-de-gestion-ug",
-        "extern": "false"
-        },
-    "sourceOptions": {
-      "queryable": true,
-      "crossOrigin": "anonymous",
-      "queryFormat": "geojson",
-      "queryHtmlTarget": "iframe",
-      "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?",
-      "params": {
-          "layers": "Unité de gestion {1:20 000},Unité de gestion {1:1 000 000}"
-      },
-      "type": "wms"         
-    }
-  },
-  {
-    "title":"Écosystème forestier exceptionnel (EFE)",
-    "zIndex": 15,
-    "visible" : false,
-    "metadata": {
-        "url": "https://www.donneesquebec.ca/recherche/fr/dataset/ecosysteme-forestier-exceptionnel-efe",
-        "extern": "false"
-        },
-    "sourceOptions": {
-      "queryable": true,
-      "crossOrigin": "anonymous",
-      "queryFormat": "geojson",
-      "queryHtmlTarget": "iframe",
-      "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?",
-      "params": {
-          "layers": "Écosystèmes forestiers exceptionnels - Point,Écosystèmes forestiers exceptionnels"
-      },
-      "type": "wms"        
-    }
-  },
-  {
-    "title":"Refuge biologique (désigné et en projet)",
-    "zIndex": 16,
-    "visible" : false,
-    "metadata": {
-        "url": "https://www.donneesquebec.ca/recherche/fr/dataset/refuge-biologique-designe-et-en-projet",
-        "extern": "false"
-        },
-    "sourceOptions": {
-      "queryable": true,
-      "crossOrigin": "anonymous",
-      "queryFormat": "geojson",
-      "queryHtmlTarget": "iframe",
-      "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?",
-      "params": {
-          "layers": "Refuges biologiques - Point,Refuge biologique désigné,Projet de refuge biologique"
-      },
-      "type": "wms"      
-    }
-  },
-  {
-    "zIndex": 17,
-    "title": "Chemins",
-    "visible": false,
-    "baseLayer": false,
-    "legendOptions": {
-      "display": false
-    },
-    "sourceOptions": {
-      "crossOrigin": "anonymous",
-      "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Territoire/AQreseauPlus_WMS/MapServer/WMSServer",
-      "params": {
-        "version": "1.3.0",
-        "layers": "Autoroute [35M - 750K],Autoroute [50K - 8K],Autoroute [750K - 50K],Autoroute [8K - 1],Nationale [25M - 40K],Nationale [40K - 25K],Nationale [25K - 10K],Nationale [10K - 1],Collectrice [650K - 350K],Collectrice [350K - 75K],Collectrice [75K - 10K],Collectrice [10K - 1],Régionale  [250K - 25K],Régionale  [25K - 1],Autre route [150K - 15K],Autre route [15K - 1],Bretelle [10K - 1],Bretelle [35K - 10K],Bretelle [750K - 35K],Bretelle [3K - 2],Bretelle [14K - 3K],Bretelle [500K - 13K],Bretelle [5K - 1],Bretelle [15K - 5K],Bretelle [40K - 15K],Bretelle [3K - 1],Bretelle [13K -3k],Bretelle [50K - 13K],Route locale [200K - 25K],Route locale [25K - 10K],Route locale [10K - 1]",
-        "srs": "ESPG:3857"
-      },
-      "type": "wms"
-    }
-  },
-  {
-    "zIndex": 18,
-    "title": "Lieux habités",
-    "visible": false,
-    "baseLayer": false,
-    "style": "default",
-    "sourceOptions": {
-      "crossOrigin": "anonymous",
-      "url": "https://geoegl.msp.gouv.qc.ca/apis/ws/swtq?",
-      "params": {
-        "version": "1.3.0",
-        "layers": "villagerelais,lieuhabite",
-        "srs": "ESPG:3857"
-      },
-      "type": "wms"
-    }
-  }
-
-] 
+    
+    ]
   
 }
 
