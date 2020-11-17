@@ -27,7 +27,7 @@
             "queryHtmlTarget": "iframe",
             "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Forets/STF_WMS/MapServer/WMSServer?",
             "params": {
-                "layers": "Unité aménagement - UA,Territoires forestiers résiduels - TFR,Forêt de proximité - FP,Forêt enseignement et de recherche,Forêt expérimentation,Station forestière Duchesnay,Pépinière publique forestière - PPU,Aires protégées,Autres terrains publics,Terres privées,Territoires autochtones,Lacs et rivières importantes"
+                "layers": "Unité aménagement - UA,Territoires forestiers résiduels - TFR,Forêt de proximité - FP,Forêt enseignement et de recherche,Forêt expérimentation - FE,Station forestière Duchesnay,Pépinière publique forestière - PPU,Aires protégées,Autres terrains publics,Terres privées,Territoires autochtones,Lacs et rivières importantes"
             },
             "type": "wms"
           }
