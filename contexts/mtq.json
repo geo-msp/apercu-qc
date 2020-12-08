@@ -887,10 +887,16 @@
                     "editable": false
                 },
                 "sourceFields": [
-                    { "alias": "Nom de la route", "name": "odonyme_pr", "excludeFromOgcFilters": true },
-                    { "alias": "Classe de la route", "name": "cl_fonct" },
-                    { "alias": "Vitesse de la route", "name": "class_vits" },
-                    { "alias": "Niveau de convivialité", "name": "code" }
+                    
+                    { "alias": "Niveau de convivialité", "name": "conviviali" },
+                    { "alias": "Vitesse de la route", "name": "vitesse" },
+                    { "alias": "Débit", "name": "debit" },
+                    { "alias": "Accotement", "name": "accotement", "excludeFromOgcFilters": true },
+                    { "alias": "Camion", "name": "camion" },
+                    { "alias": "# Route", "name": "num_route" },
+                    { "alias": "Gravelle (o/n)", "name": "gravelle" },
+                    { "alias": "Classe de la route", "name": "des_clasf_" },
+                    { "alias": "Version", "name": "version" }
                 ]
             }
         },
