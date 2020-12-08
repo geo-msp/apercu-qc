@@ -1156,8 +1156,8 @@
             "name": "mapTools",
             "title": "Couches",
             "options": {
-                "expandLegendOfVisibleLayers": true,
-                "toggleLegendOnVisibilityChange": true,
+                "expandLegendOfVisibleLayers": false,
+                "toggleLegendOnVisibilityChange": false,
                 "layerListControls": {
                     "excludeBaseLayers": true,
                     "showToolbar": "always"
