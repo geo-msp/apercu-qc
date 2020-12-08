@@ -870,7 +870,7 @@
             }
         },
         {
-            "id": "convi_velo_glv",
+            "id": "convivialite_velo",
             "visible": false,
             "removable": false,
             "sourceOptions": {
@@ -879,7 +879,7 @@
                 "url": "/apis/ws/swtq",
                 "queryable": true,
                 "params": {
-                    "layers": "convi_velo_glv",
+                    "layers": "convivialite_velo",
                     "feature_count": 365
                 },
                 "ogcFilters": {
