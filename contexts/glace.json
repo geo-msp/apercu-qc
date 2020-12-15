@@ -6,7 +6,7 @@
       "title": "Cartes de glace en cours",
       "visible": true,
       "sourceOptions": {
-        "url": "apis/wss/complet.fcgi",
+        "url": "/apis/wss/complet.fcgi",
         "attributions": "  © <a href='http://dromadaire-geo.com'>Dromadaire Géo-Innovations inc.</a>",
         "params": {
           "layers": "",
@@ -19,7 +19,7 @@
       "title": "Embâcles de l'année en cours",
       "visible": true,
       "sourceOptions": {
-        "url": "apis/wss/complet.fcgi?time=2020-12-15T00%3A00%3A00Z%2F2021-05-31T03%3A00%3A00Z",
+        "url": "/apis/wss/complet.fcgi?time=2020-12-15T00%3A00%3A00Z%2F2021-05-31T03%3A00%3A00Z",
         "queryable": true,
         "queryFormat": "gml2",
         "params": {
