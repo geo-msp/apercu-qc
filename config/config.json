@@ -111,7 +111,7 @@
         "sortDirection": "asc"
       },
       {
-        "title": "Carte de glace",
+        "title": "Carte de glace (Historique)",
         "url": "/ws/radarsat.fcgi"
       },
       {
