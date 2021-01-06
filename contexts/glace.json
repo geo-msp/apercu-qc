@@ -9,7 +9,7 @@
         "url": "/apis/wss/complet.fcgi",
         "attributions": "  © <a href='http://dromadaire-geo.com'>Dromadaire Géo-Innovations inc.</a>",
         "params": {
-          "layers": "S1_MONTREAL_03_JANVIER_2021,S1_ROUGE_03_JANVIER_2021",
+          "layers": "python:,can't,open,file,'modification_json.py':,[Errno,2],No,such,file,or,directory",
           "version": "1.3.0"
         },
         "type": "wms"
