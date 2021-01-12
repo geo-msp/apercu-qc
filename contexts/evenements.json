@@ -3,185 +3,185 @@
     "title": "Événements de sécurité civile",
     "base": "_base",
     "layers": [{
-	"title": "Événements de sécurité civile (depuis juin 2020)",
+            "title": "Événements de sécurité civile (depuis juin 2020)",
             "visible": true,
             "sourceOptions": {
                 "url": "/apis/wss/all.fcgi",
                 "timeFilter": {
-        "max": "2030-01-01",
-        "min": "2020-01-01",
-        "type": "date",
-        "range": true,
-        "style": "calendar"
-    },
-    "timeFilterable": true,
-    "ogcFilters": {
-        "enabled": true,
-        "editable": false,
-        "allowedOperatorsType": "*",
-        "pushButtons": {
-            "groups": [{
-                    "title": "Aléa et Sévérité",
-                    "name": "1",
-                    "ids": ["alea", "severite"]
-                }
-            ],
-            "bundles": [{
-                    "id": "alea",
-                    "logical": "Or",
-                    "buttons": [{
-                            "title": "Inondation",
-                            "enabled": false,
-                            "color": "115,178,255",
-                            "filters": {
-                                "operator": "PropertyIsEqualTo",
-                                "propertyName": "code_alea",
-                                "expression": "8"
+                    "max": "2030-01-01",
+                    "min": "2020-01-01",
+                    "type": "date",
+                    "range": true,
+                    "style": "calendar"
+                },
+                "timeFilterable": true,
+                "ogcFilters": {
+                    "enabled": true,
+                    "editable": false,
+                    "allowedOperatorsType": "*",
+                    "pushButtons": {
+                        "groups": [{
+                                "title": "Aléa et Sévérité",
+                                "name": "1",
+                                "ids": ["alea", "severite"]
                             }
-                        }, {
-                            "title": "Mouvement de terrain",
-                            "enabled": false,
-                            "color": "230,156,21",
-                            "filters": {
-                                "operator": "PropertyIsEqualTo",
-                                "propertyName": "code_alea",
-                                "expression": "101"
-                            }
-                        }, {
-                            "title": "Érosion",
-                            "enabled": false,
-                            "color": "158,215,194",
-                            "filters": {
-                                "operator": "PropertyIsEqualTo",
-                                "propertyName": "code_alea",
-                                "expression": "9"
-                            }
-                        }, {
-                            "title": "Feu de forêt",
-                            "enabled": false,
-                            "color": "144,203,50",
-                            "filters": {
-                                "operator": "PropertyIsEqualTo",
-                                "propertyName": "code_alea",
-                                "expression": "39"
-                            }
-                        }, {
-                            "title": "Matières dangeureuses",
-                            "enabled": false,
-                            "color": "205,270,102",
-                            "filters": {
-                                "operator": "PropertyIsEqualTo",
-                                "propertyName": "code_alea",
-                                "expression": "10"
-                            }
-                        }, {
-                            "title": "Incendie industriel",
-                            "enabled": false,
-                            "color": "230,85,58",
-                            "filters": {
-                                "operator": "PropertyIsEqualTo",
-                                "propertyName": "code_alea",
-                                "expression": "88"
-                            }
-                        }, {
-                            "title": "Autres aléas",
-                            "enabled": false,
-                            "color": "208,208,208",
-                            "filters": {
-                                "logical": "And",
-                                "filters": [{
-                                        "operator": "PropertyIsNotEqualTo",
-                                        "propertyName": "code_alea",
-                                        "expression": "8"
+                        ],
+                        "bundles": [{
+                                "id": "alea",
+                                "logical": "Or",
+                                "buttons": [{
+                                        "title": "Inondation",
+                                        "enabled": false,
+                                        "color": "115,178,255",
+                                        "filters": {
+                                            "operator": "PropertyIsEqualTo",
+                                            "propertyName": "code_alea",
+                                            "expression": "8"
+                                        }
                                     }, {
-                                        "operator": "PropertyIsNotEqualTo",
-                                        "propertyName": "code_alea",
-                                        "expression": "101"
+                                        "title": "Mouvement de terrain",
+                                        "enabled": false,
+                                        "color": "230,156,21",
+                                        "filters": {
+                                            "operator": "PropertyIsEqualTo",
+                                            "propertyName": "code_alea",
+                                            "expression": "101"
+                                        }
                                     }, {
-                                        "operator": "PropertyIsNotEqualTo",
-                                        "propertyName": "code_alea",
-                                        "expression": "9"
+                                        "title": "Érosion",
+                                        "enabled": false,
+                                        "color": "158,215,194",
+                                        "filters": {
+                                            "operator": "PropertyIsEqualTo",
+                                            "propertyName": "code_alea",
+                                            "expression": "9"
+                                        }
                                     }, {
-                                        "operator": "PropertyIsNotEqualTo",
-                                        "propertyName": "code_alea",
-                                        "expression": "39"
+                                        "title": "Feu de forêt",
+                                        "enabled": false,
+                                        "color": "144,203,50",
+                                        "filters": {
+                                            "operator": "PropertyIsEqualTo",
+                                            "propertyName": "code_alea",
+                                            "expression": "39"
+                                        }
                                     }, {
-                                        "operator": "PropertyIsNotEqualTo",
-                                        "propertyName": "code_alea",
-                                        "expression": "10"
+                                        "title": "Matières dangeureuses",
+                                        "enabled": false,
+                                        "color": "205,270,102",
+                                        "filters": {
+                                            "operator": "PropertyIsEqualTo",
+                                            "propertyName": "code_alea",
+                                            "expression": "10"
+                                        }
                                     }, {
-                                        "operator": "PropertyIsNotEqualTo",
-                                        "propertyName": "code_alea",
-                                        "expression": "88"
+                                        "title": "Incendie industriel",
+                                        "enabled": false,
+                                        "color": "230,85,58",
+                                        "filters": {
+                                            "operator": "PropertyIsEqualTo",
+                                            "propertyName": "code_alea",
+                                            "expression": "88"
+                                        }
+                                    }, {
+                                        "title": "Autres aléas",
+                                        "enabled": false,
+                                        "color": "208,208,208",
+                                        "filters": {
+                                            "logical": "And",
+                                            "filters": [{
+                                                    "operator": "PropertyIsNotEqualTo",
+                                                    "propertyName": "code_alea",
+                                                    "expression": "8"
+                                                }, {
+                                                    "operator": "PropertyIsNotEqualTo",
+                                                    "propertyName": "code_alea",
+                                                    "expression": "101"
+                                                }, {
+                                                    "operator": "PropertyIsNotEqualTo",
+                                                    "propertyName": "code_alea",
+                                                    "expression": "9"
+                                                }, {
+                                                    "operator": "PropertyIsNotEqualTo",
+                                                    "propertyName": "code_alea",
+                                                    "expression": "39"
+                                                }, {
+                                                    "operator": "PropertyIsNotEqualTo",
+                                                    "propertyName": "code_alea",
+                                                    "expression": "10"
+                                                }, {
+                                                    "operator": "PropertyIsNotEqualTo",
+                                                    "propertyName": "code_alea",
+                                                    "expression": "88"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }, {
+                                "id": "severite",
+                                "logical": "Or",
+                                "vertical": false,
+                                "buttons": [{
+                                        "title": "Sévérité extrême",
+                                        "enabled": false,
+                                        "color": "255,0,0",
+                                        "filters": {
+                                            "operator": "PropertyIsEqualTo",
+                                            "propertyName": "code_severite",
+                                            "expression": "1"
+                                        }
+                                    }, {
+                                        "title": "Sévérité importante",
+                                        "enabled": false,
+                                        "color": "236,126,0",
+                                        "filters": {
+                                            "operator": "PropertyIsEqualTo",
+                                            "propertyName": "code_severite",
+                                            "expression": "2"
+                                        }
+                                    }, {
+                                        "title": "Sévérité modérée",
+                                        "enabled": false,
+                                        "color": "236,200,21",
+                                        "filters": {
+                                            "operator": "PropertyIsEqualTo",
+                                            "propertyName": "code_severite",
+                                            "expression": "3"
+                                        }
+                                    }, {
+                                        "title": "Sévérité mineure",
+                                        "enabled": false,
+                                        "color": "255,255,0",
+                                        "filters": {
+                                            "operator": "PropertyIsEqualTo",
+                                            "propertyName": "code_severite",
+                                            "expression": "4"
+                                        }
+                                    }, {
+                                        "title": "Sévérité normale",
+                                        "enabled": false,
+                                        "color": "128,128,128",
+                                        "filters": {
+                                            "operator": "PropertyIsEqualTo",
+                                            "propertyName": "code_severite",
+                                            "expression": "0"
+                                        }
+                                    }, {
+                                        "title": "Sévérité inconnue",
+                                        "enabled": false,
+                                        "color": "208,208,208",
+                                        "filters": {
+                                            "operator": "PropertyIsEqualTo",
+                                            "propertyName": "code_severite",
+                                            "expression": "5"
+                                        }
                                     }
                                 ]
                             }
-                        }
-                    ]
-                }, {
-                    "id": "severite",
-                    "logical": "Or",
-                    "vertical": false,
-                    "buttons": [{
-                            "title": "Sévérité extrême",
-                            "enabled": false,
-                            "color": "255,0,0",
-                            "filters": {
-                                "operator": "PropertyIsEqualTo",
-                                "propertyName": "code_severite",
-                                "expression": "1"
-                            }
-                        }, {
-                            "title": "Sévérité importante",
-                            "enabled": false,
-                            "color": "236,126,0",
-                            "filters": {
-                                "operator": "PropertyIsEqualTo",
-                                "propertyName": "code_severite",
-                                "expression": "2"
-                            }
-                        }, {
-                            "title": "Sévérité modérée",
-                            "enabled": false,
-                            "color": "236,200,21",
-                            "filters": {
-                                "operator": "PropertyIsEqualTo",
-                                "propertyName": "code_severite",
-                                "expression": "3"
-                            }
-                        }, {
-                            "title": "Sévérité mineure",
-                            "enabled": false,
-                            "color": "255,255,0",
-                            "filters": {
-                                "operator": "PropertyIsEqualTo",
-                                "propertyName": "code_severite",
-                                "expression": "4"
-                            }
-                        }, {
-                            "title": "Sévérité normale",
-                            "enabled": false,
-                            "color": "128,128,128",
-                            "filters": {
-                                "operator": "PropertyIsEqualTo",
-                                "propertyName": "code_severite",
-                                "expression": "0"
-                            }
-                        }, {
-                            "title": "Sévérité inconnue",
-                            "enabled": false,
-                            "color": "208,208,208",
-                            "filters": {
-                                "operator": "PropertyIsEqualTo",
-                                "propertyName": "code_severite",
-                                "expression": "5"
-                            }
-                        }
-                    ]
-                }
-            ]
-        }
-    },
+                        ]
+                    }
+                },
                 "queryable": true,
                 "queryFormat": "gml2",
                 "optionsFromCapabilities": true,
@@ -195,8 +195,8 @@
                 "stylesAvailable": []
             }
         }, {
-		"title": "Historique des événements de sécurité civile (Archives)"
-            "visible": true,
+            "title": "Historique des événements de sécurité civile (Archives)",
+			"visible": true,
             "sourceOptions": {
                 "url": "/apis/wss/all.fcgi",
                 "timeFilter": {
@@ -216,14 +216,13 @@
                         "name": "type",
                         "alias": "Aléa",
                         "values": ["Accident ferroviaire", "Accident maritime", "Alerte à la bombe", "Alimentation publique en eau potable", "Autre", "Avalanche", "Coup de vent", "Crue éclair", "Débordement de barrage", "Démonstration civile", "Distribution d'électricité", "Écrasement d'avion", "Émeute civile", "Fermeture de pont", "Feu de brousse", "Feu de forêt", "Feu urbain", "Géomorphologique (ex. érosion)", "Glace", "Grêle", "Incendie industriel", "Infestation", "Inondation", "Inondation par ruissellement", "Maladie infectieuse", "Matières dangereuses", "Mouvement de terrain", "Onde de tempête", "Orage violent", "Ouragan", "Panne de télécommunication", "Personne disparue", "Pluie", "Pluie verglaçante", "Qualité de l'air", "Risque chimique", "Risque d'explosion", "Risque radiologique", "Routier", "Santé", "Santé animale", "Tempête hivernale", "Tempête tropicale", "Terrorisme", "Tir", "Tornade", "Tremblement de terre", "Vague de froid", "Vent de tempête"]
-                    },
-					{
+                    }, {
                         "name": "severite",
                         "alias": "Sévérité",
                         "values": ["Extrême", "Importante", "Modérée", "Mineure", "Normal", "Inconnue"]
                     }
                 ],
-				"queryable": true,
+                "queryable": true,
                 "queryFormat": "gml2",
                 "optionsFromCapabilities": true,
                 "params": {
