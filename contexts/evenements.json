@@ -3,6 +3,47 @@
     "title": "Événements de sécurité civile",
     "base": "_base",
     "layers": [{
+            "title": "Historique des événements de sécurité civile (Archives)",
+			"visible": true,
+            "sourceOptions": {
+                "url": "/apis/wss/all.fcgi",
+                "timeFilter": {
+                    "max": "2020-12-31",
+                    "min": "1990-01-01",
+                    "type": "date",
+                    "range": true,
+                    "style": "calendar"
+                },
+                "timeFilterable": true,
+                "ogcFilters": {
+                    "enabled": true,
+                    "editable": true,
+                    "allowedOperatorsType": "Basic"
+                },
+                "sourceFields": [{
+                        "name": "type",
+                        "alias": "Aléa",
+                        "values": ["Accident ferroviaire", "Accident maritime", "Alerte à la bombe", "Alimentation publique en eau potable", "Autre", "Avalanche", "Coup de vent", "Crue éclair", "Débordement de barrage", "Démonstration civile", "Distribution d'électricité", "Écrasement d'avion", "Émeute civile", "Fermeture de pont", "Feu de brousse", "Feu de forêt", "Feu urbain", "Géomorphologique (ex. érosion)", "Glace", "Grêle", "Incendie industriel", "Infestation", "Inondation", "Inondation par ruissellement", "Maladie infectieuse", "Matières dangereuses", "Mouvement de terrain", "Onde de tempête", "Orage violent", "Ouragan", "Panne de télécommunication", "Personne disparue", "Pluie", "Pluie verglaçante", "Qualité de l'air", "Risque chimique", "Risque d'explosion", "Risque radiologique", "Routier", "Santé", "Santé animale", "Tempête hivernale", "Tempête tropicale", "Terrorisme", "Tir", "Tornade", "Tremblement de terre", "Vague de froid", "Vent de tempête"]
+                    }, {
+                        "name": "severite",
+                        "alias": "Sévérité",
+                        "values": ["Extrême", "Importante", "Modérée", "Mineure", "Normal", "Inconnue"]
+                    }
+                ],
+                "queryable": true,
+                "queryFormat": "gml2",
+                "optionsFromCapabilities": true,
+                "params": {
+                    "layers": "vg_observation_v_autre_wmst",
+                    "version": "1.3.0"
+                },
+                "type": "wms"
+            },
+            "legendOptions": {
+                "stylesAvailable": []
+            }
+        },
+		{
             "title": "Événements de sécurité civile (depuis juin 2020)",
             "visible": true,
             "sourceOptions": {
@@ -187,46 +228,6 @@
                 "optionsFromCapabilities": true,
                 "params": {
                     "layers": "msp_risc_evenements_public",
-                    "version": "1.3.0"
-                },
-                "type": "wms"
-            },
-            "legendOptions": {
-                "stylesAvailable": []
-            }
-        }, {
-            "title": "Historique des événements de sécurité civile (Archives)",
-			"visible": true,
-            "sourceOptions": {
-                "url": "/apis/wss/all.fcgi",
-                "timeFilter": {
-                    "max": "2020-12-31",
-                    "min": "1990-01-01",
-                    "type": "date",
-                    "range": true,
-                    "style": "calendar"
-                },
-                "timeFilterable": true,
-                "ogcFilters": {
-                    "enabled": true,
-                    "editable": true,
-                    "allowedOperatorsType": "Basic"
-                },
-                "sourceFields": [{
-                        "name": "type",
-                        "alias": "Aléa",
-                        "values": ["Accident ferroviaire", "Accident maritime", "Alerte à la bombe", "Alimentation publique en eau potable", "Autre", "Avalanche", "Coup de vent", "Crue éclair", "Débordement de barrage", "Démonstration civile", "Distribution d'électricité", "Écrasement d'avion", "Émeute civile", "Fermeture de pont", "Feu de brousse", "Feu de forêt", "Feu urbain", "Géomorphologique (ex. érosion)", "Glace", "Grêle", "Incendie industriel", "Infestation", "Inondation", "Inondation par ruissellement", "Maladie infectieuse", "Matières dangereuses", "Mouvement de terrain", "Onde de tempête", "Orage violent", "Ouragan", "Panne de télécommunication", "Personne disparue", "Pluie", "Pluie verglaçante", "Qualité de l'air", "Risque chimique", "Risque d'explosion", "Risque radiologique", "Routier", "Santé", "Santé animale", "Tempête hivernale", "Tempête tropicale", "Terrorisme", "Tir", "Tornade", "Tremblement de terre", "Vague de froid", "Vent de tempête"]
-                    }, {
-                        "name": "severite",
-                        "alias": "Sévérité",
-                        "values": ["Extrême", "Importante", "Modérée", "Mineure", "Normal", "Inconnue"]
-                    }
-                ],
-                "queryable": true,
-                "queryFormat": "gml2",
-                "optionsFromCapabilities": true,
-                "params": {
-                    "layers": "vg_observation_v_autre_wmst",
                     "version": "1.3.0"
                 },
                 "type": "wms"
