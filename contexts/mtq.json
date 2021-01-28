@@ -1056,7 +1056,7 @@
                     { "alias": "Nom", "name": "nometablis", "excludeFromOgcFilters": true },
                     { "alias": "Adresse", "name": "adresseco" },
                     { "alias": "Ville", "name": "ville", "excludeFromOgcFilters": true },
-                    { "alias": "# de l'établissement", "name": "noetablis" },
+                    { "alias": "# de l'établissement", "name": "idetablis" },
                     { "alias": "Propriétaire", "name": "propriete" }
                 ]
             }
