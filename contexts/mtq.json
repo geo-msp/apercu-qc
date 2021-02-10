@@ -104,7 +104,7 @@
                 "download": { "url": "https://www.donneesquebec.ca/recherche/fr/dataset/zone-potentiellement-exposee-aux-glissements-de-terrain-zpegt"},
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "params": {
                     "layers": "zpegt_cgt_s",
@@ -129,7 +129,7 @@
                 "download": { "url": "https://www.donneesquebec.ca/recherche/fr/dataset/zone-potentiellement-exposee-aux-glissements-de-terrain-zpegt"},
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "params": {
                     "layers": "zpegt_cgt_l",
@@ -153,7 +153,7 @@
             "sourceOptions": {
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "queryTitle": "NUM_5000",
                 "params": {
@@ -180,7 +180,7 @@
             "sourceOptions": {
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "queryTitle":"NO_SITE",
                 "params": {
@@ -204,7 +204,7 @@
             "sourceOptions": {
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "queryTitle":"NO_SITE",
                 "params": {
@@ -228,7 +228,7 @@
             "sourceOptions": {
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "queryTitle": "nomcartrou",
                 "params": {
@@ -249,7 +249,7 @@
             "sourceOptions": {
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "queryTitle": "nom",
                 "params": {
@@ -277,7 +277,7 @@
             "sourceOptions": {
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "queryTitle": "${depart} -- ${arrivee}",
                 "params": {
@@ -304,7 +304,7 @@
             "sourceOptions": {
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "queryTitle": "nomnavcana",
                 "params": {
@@ -328,7 +328,7 @@
             "sourceOptions": {
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "queryTitle": "nomnavcana",
                 "params": {
@@ -354,7 +354,7 @@
             "sourceOptions": {
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "queryFormat": "htmlgml2",
                 "queryHtmlTarget": "iframe",
@@ -372,7 +372,7 @@
             "sourceOptions": {
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "queryFormat": "htmlgml2",
                 "queryHtmlTarget": "iframe",
@@ -389,7 +389,7 @@
             "sourceOptions": {
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "queryTitle": "description",
                 "params": {
@@ -471,7 +471,7 @@
                 "download": { "url": "https://www.donneesquebec.ca/recherche/fr/dataset/avertissement-routier"},
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "queryTitle": "localisation",
                 "params": {
@@ -514,7 +514,7 @@
                 "download": { "url": "https://www.donneesquebec.ca/recherche/fr/dataset/travaux-routiers"},
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "queryTitle": "localisation",
                 "params": {
@@ -556,7 +556,7 @@
                 "download": { "url": "https://www.donneesquebec.ca/recherche/fr/dataset/condition-routiere-hivernale-du-reseau-routier-mtq"},
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "queryTitle": "${LocalisationDebutFR} À ${LocalisationFinFR}",
    
@@ -657,7 +657,7 @@
             "sourceOptions": {
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "queryTitle": "desc_local",
                 "params": {
@@ -683,7 +683,7 @@
             "sourceOptions": {
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "queryTitle": "nomparrout",
                 "params": {
@@ -714,7 +714,7 @@
             "sourceOptions": {
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "queryTitle": "nomcarrout",
                 "params": {
@@ -736,7 +736,7 @@
             "sourceOptions": {
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "queryTitle": "Ponceau # ${ide_drang_}",
                 "params": {
@@ -769,7 +769,7 @@
                 "download": { "url": "https://www.donneesquebec.ca/recherche/fr/dataset/structure"},
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "queryTitle": "num_dossr",
                 "params": {
@@ -799,7 +799,7 @@
             "sourceOptions": {
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "queryTitle": "${affichkm}",
                 "params": {
@@ -825,7 +825,7 @@
             "sourceOptions": {
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "queryTitle": " Sortie #${nosortie}",
                 "params": {
@@ -849,7 +849,7 @@
             "sourceOptions": {
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "queryTitle": "nmfrexploi",
                 "params": {
@@ -876,7 +876,7 @@
             "sourceOptions": {
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "params": {
                     "layers": "convivialite_velo",
@@ -907,7 +907,7 @@
             "sourceOptions": {
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "queryTitle": "${drodoreclg} ( ${descclasse} )",
                 "mapLabel": "drodoreclg",
@@ -941,7 +941,7 @@
             "sourceOptions": {
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "queryFormat": "html",
                 "queryHtmlTarget": "iframe",
@@ -959,7 +959,7 @@
                 "download": { "url": "https://www.donneesquebec.ca/recherche/fr/dataset/debit-de-circulation"},
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "queryTitle": "DJMA:${Djma}, DJME:${Djme}, DJMH:${Djmh}",
                 "params": {
@@ -995,7 +995,7 @@
             "sourceOptions": {
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "queryTitle": "num_rts",
                 "params": {
@@ -1024,7 +1024,7 @@
           "sourceOptions": {
             "type": "wms",
             "optionsFromCapabilities": true,
-            "url": "/apis/ws/swtq",
+            "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
             "queryable": true,
             "queryTitle": "etiquette",
             "params": {
@@ -1044,7 +1044,7 @@
             "sourceOptions": {
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "queryTitle":"nometablis",
                 "params": {
@@ -1068,7 +1068,7 @@
             "sourceOptions": {
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "queryTitle": "nom_unite_",
                 "params": {
@@ -1090,7 +1090,7 @@
             "sourceOptions": {
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "queryTitle": "nom_unite_",
                 "params": {
@@ -1111,7 +1111,7 @@
             "sourceOptions": {
                 "type": "wms",
                 "optionsFromCapabilities": true,
-                "url": "/apis/ws/swtq",
+                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
                 "queryable": true,
                 "queryTitle": "nom_unit00",
                 "params": {
