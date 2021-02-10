@@ -9,7 +9,7 @@
         "url": "/apis/wss/complet.fcgi",
         "attributions": "  © <a href='http://dromadaire-geo.com'>Dromadaire Géo-Innovations inc.</a>",
         "params": {
-          "layers": "S1_ROUGE_27_JANVIER_2021,S1_CHAUDIERE_29_JANVIER_2021,S1_BECANCOUR_29_JANVIER_2021,S1_ST-FRANCOIS_03_FEVRIER_2021,S1_YAMASKA_03_FEVRIER_2021,S1_MONTREAL_08_FEVRIER_2021",
+          "layers": "S1_ROUGE_27_JANVIER_2021,S1_BECANCOUR_29_JANVIER_2021,S1_CHAUDIERE_29_JANVIER_2021,S1_YAMASKA_03_FEVRIER_2021,S1_ST-FRANCOIS_03_FEVRIER_2021,S1_MONTREAL_03_FEVRIER_2021",
           "version": "1.3.0"
         },
         "type": "wms"
