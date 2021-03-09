@@ -22,6 +22,7 @@
           }
         },
         {
+          "id": "satellite",
           "title": "Satellite",
           "baseLayer": true,
           "visible": false,
@@ -32,6 +33,7 @@
           }
         },
         {
+          "id": "blanc",
           "title": "Blanc",
           "baseLayer": true,
           "visible": false,
@@ -53,6 +55,7 @@
           }
         },
         {
+          "id": "couleur",
           "title": "Couleur",
           "baseLayer": true,
           "visible": false,
@@ -63,6 +66,7 @@
           }
         },
         {
+          "id": "gris",
           "title": "Gris",
           "baseLayer": true,
           "visible": false,
