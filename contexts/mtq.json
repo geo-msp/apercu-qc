@@ -1,1205 +1,1237 @@
 {
-    "uri": "mtq",
-    "title": "Transports Québec",
-    "map": {
-    "view": {
-        "projection": "EPSG:3857",
-        "center": [-71.938087, 48.446975],
-        "zoom": 6,
-        "maxZoom": 20,
-        "maxZoomOnExtent": 17
-    }
-    },
-    "layers": [
-        {
-          "id": "fond_osm",
-          "title": "OSM",
-          "visible": false,
-          "baseLayer": true,
-          "sourceOptions": {
-            "type": "osm",
-            "attributions": "© les contributeurs <a href='https://www.openstreetmap.org/copyright' target='_blank'>d’OpenStreetMap</a> / <a href='http://www.igouverte.org/' target='_blank'>IGO2</a>"
-          }
-        },
-        {
-          "id": "satellite",
-          "title": "Satellite",
-          "baseLayer": true,
-          "visible": false,
-          "sourceOptions": {
-            "url": "/carto/tms/1.0.0/orthos@EPSG_3857/{z}/{x}/{-y}.jpeg",
-            "attributions": "© <a href='http://www.droitauteur.gouv.qc.ca/copyright.php' target='_blank'><img src='/gouvouvert/public/images/quebec/gouv_qc_logo.png' width='64' height='14'>Gouvernement du Québec</a> / <a href='http://www.igouverte.org/' target='_blank'>IGO2</a>",
-            "type": "xyz"
-          }
-        },
-        {
-          "id": "blanc",
-          "title": "Blanc",
-          "baseLayer": true,
-          "visible": false,
-          "sourceOptions": {
-            "attributions": "<a href='http://www.igouverte.org/' target='_blank'>IGO2</a>",
-            "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII=",
-            "type": "xyz"
-          }
-        },
-        {
-          "id": "carte_gouv_qc",
-          "title": "Route",
-          "visible": true,
-          "baseLayer": true,
-          "sourceOptions": {
-            "url": "/carto/tms/1.0.0/carte_gouv_qc_ro@EPSG_3857/{z}/{x}/{-y}.png",
-            "attributions": "© <a href='http://www.droitauteur.gouv.qc.ca/copyright.php' target='_blank'><img src='/gouvouvert/public/images/quebec/gouv_qc_logo.png' width='64' height='14'>Gouvernement du Québec</a> / <a href='http://www.igouverte.org/' target='_blank'>IGO2</a>",
-            "type": "xyz"
-          }
-        },
-        {
-          "id": "couleur",
-          "title": "Couleur",
-          "baseLayer": true,
-          "visible": false,
-          "sourceOptions": {
-            "url": "/carto/tms/1.0.0/carte_adn@EPSG_3857/{z}/{x}/{-y}.png",
-            "attributions": "© <a href='http://www.droitauteur.gouv.qc.ca/copyright.php' target='_blank'><img src='/gouvouvert/public/images/quebec/gouv_qc_logo.png' width='64' height='14'>Gouvernement du Québec</a> / <a href='http://www.igouverte.org/' target='_blank'>IGO2</a>",
-            "type": "xyz"
-          }
-        },
-        {
-          "id": "gris",
-          "title": "Gris",
-          "baseLayer": true,
-          "visible": false,
-          "sourceOptions": {
-            "url": "/carto/tms/1.0.0/fond_thematique@EPSG_3857/{z}/{x}/{-y}.png",
-            "attributions": "© <a href='http://www.droitauteur.gouv.qc.ca/copyright.php' target='_blank'><img src='/gouvouvert/public/images/quebec/gouv_qc_logo.png' width='64' height='14'>Gouvernement du Québec</a> / <a href='http://www.igouverte.org/' target='_blank'>IGO2</a>",
-            "type": "xyz"
-          }
-        },
-        {
-            "title": "Zone de dégel",
-            "id": "zones_degel",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "queryTitle": "zone",
-                "params": {
-                    "layers": "zone_degel",
-                    "feature_count": 365
-                },
-                "ogcFilters": {
-                    "enabled": false,
-                    "editable": false
-                },
-                "sourceFields": [
-                    { "alias": "Zone de dégel", "name": "zone" },
-                    { "alias": "Date de mise à jour", "name": "Date_de_mise_à_jour" }]
-            }
-        },
-        {
-            "id": "zpegt_cgt_s",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "download": { "url": "https://www.donneesquebec.ca/recherche/fr/dataset/zone-potentiellement-exposee-aux-glissements-de-terrain-zpegt"},
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "params": {
-                    "layers": "zpegt_cgt_s",
-                    "feature_count": 365
-                },               
-                "ogcFilters": {
-                    "enabled": true,
-                    "editable": true
-                },
-                "sourceFields": [
-                    { "alias": "Contrainte", "name": "etq_contr", "values": ["E" ,"E-NA1" ,"E-NA2" ,"E-NH" ,"E-NHd" ,"E-NR" ,"E-NS1" ,"E-NS2" ,"E-RA1 Base" ,"NA1" ,"NA1 talus" ,"NA1L" ,"NA1L talus" ,"NA2" ,"NA2 talus" ,"NC" ,"NC talus" ,"NH" ,"NH talus" ,"NHL" ,"NHL talus" ,"NHd" ,"NI" ,"NI talus" ,"NR" ,"NR talus" ,"NS1" ,"NS1 talus" ,"NS1L" ,"NS1L talus" ,"NS2" ,"NS2 talus" ,"RA1 Base" ,"RA1 Sommet" ,"RA1-NA2"] },
-                    { "alias": "Fam_gliss", "name": "fam_gliss", "excludeFromOgcFilters": true, "values" : [""]},
-                    { "alias": "Description", "name": "descriptio", "excludeFromOgcFilters": true, "values" : [""]},
-                    { "alias": "Date", "name": "date_prod", "values" : ["2004", "2007-03", "2007-04", "2007-09", "2007-12", "2008-08", "2010-04", "2010-05", "2011-04", "2011-05", "2011-06", "2012-04", "2013-02", "2013-09", "2014-04", "2015-01", "2015-02", "2015-03", "2015-04", "2015-12", "2016-01", "2016-05", "2016-09", "2017-04", "2017-06", "2017-12", "2018-06", "2018-09", "2018-10"] }]
-            }
-        },
-        {
-            "id": "zpegt_cgt_l",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "download": { "url": "https://www.donneesquebec.ca/recherche/fr/dataset/zone-potentiellement-exposee-aux-glissements-de-terrain-zpegt"},
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "params": {
-                    "layers": "zpegt_cgt_l",
-                    "feature_count": 365
-                },               
-                "ogcFilters": {
-                    "enabled": true,
-                    "editable": true
-                },
-                "sourceFields": [
-                    { "alias": "Contrainte", "name": "etq_contr", "values": ["BT Contr","LC Contr","RA2","ST Contr","ST2 Contr"] },
-                    { "alias": "Fam_gliss", "name": "fam_gliss", "excludeFromOgcFilters": true },
-                    { "alias": "Description", "name": "descriptio", "excludeFromOgcFilters": true },
-                    { "alias": "Date", "name": "date_prod", "values": ["2004", "2007-03", "2007-04", "2007-09", "2007-12", "2008-08", "2010-04", "2010-05", "2011-04", "2011-05", "2011-06", "2012-04", "2013-02", "2013-09", "2014-04", "2015-01", "2015-02", "2015-03", "2015-04", "2015-12", "2016-01", "2016-05", "2016-09", "2017-04", "2017-06", "2017-12", "2018-06", "2018-09", "2018-10"] }]
-            }
-        },
-        {
-            "id": "zpegt_index_cgt_s",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "queryTitle": "NUM_5000",
-                "params": {
-                    "layers": "zpegt_index_cgt_s",
-                    "feature_count": 365
-                },
-                "ogcFilters": {
-                    "enabled": false,
-                    "editable": false
-                },
-                "sourceFields": [
-                    { "alias": "Nom", "name": "Nom" },
-                    { "alias": "No carte", "name": "NUM_5000" },
-                    { "alias": "Description", "name": "Descriptio", "excludeFromOgcFilters": true },
-                    { "alias": "Date", "name": "Date_prod" },
-                    { "alias": "Téléchargement (Pdf)", "name": "Hyperliens", "excludeFromOgcFilters": true }
-                ]
-            }
-        },
-        {
-            "id": "site_inv_geotech_bdg_p",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "queryTitle":"NO_SITE",
-                "params": {
-                    "layers": "site_inv_geotech_bdg_p",
-                    "feature_count": 365
-                },
-                "sourceFields": [
-                    { "alias": "Numéro du site", "name": "NO_SITE" },
-                    { "alias": "Numéro de sondage", "name": "NO_SONDAGE" },
-                    { "alias": "Type de sondage", "name": "TYPE" },
-                    { "alias": "Profondeur", "name": "PROF_MAX" },
-                    { "alias": "Nature de l’arrêt", "name": "NATU_ARRET" },
-                    { "alias": "Téléchargement du rapport de sondage (Pdf)", "name": "HYPERLIEN" }
-                ]
-            }
-        },        
-        {
-            "id": "site_inv_geotech_p",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "queryTitle":"NO_SITE",
-                "params": {
-                    "layers": "site_inv_geotech_p",
-                    "feature_count": 365
-                },
-                "sourceFields": [
-                    { "alias": "Numéro du site", "name": "NO_SITE" },
-                    { "alias": "Numéro de sondage", "name": "NO_SONDAGE" },
-                    { "alias": "Type de sondage", "name": "TYPE" },
-                    { "alias": "Profondeur", "name": "PROF_MAX" },
-                    { "alias": "Nature de l’arrêt", "name": "NATU_ARRET" },
-                    { "alias": "Téléchargement du rapport de sondage (Pdf)", "name": "HYPERLIEN" }
-                ]
-            }
-        },
-        {
-            "id": "lieuhabite",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "queryTitle": "nomcartrou",
-                "params": {
-                    "layers": "lieuhabite",
-                    "feature_count": 365
-                },
-                "sourceFields": [
-                    { "alias": "Toponyme", "name": "nomcartrou" },
-                    { "alias": "Population", "name": "popdecrt" },
-                    { "alias": "Info Type", "name": "typentitto" }
-                ]
-            }
-        },
-        {
-            "id": "port_installation",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "queryTitle": "nom",
-                "params": {
-                    "layers": "port_installation",
-                    "feature_count": 365
-                },
-                "ogcFilters": {
-                    "enabled": false,
-                    "editable": false
-                },
-                "sourceFields": [
-                    { "alias": "Nom du port", "name": "nom" },
-                    { "alias": "Vocation", "name": "vocation" },
-                    { "alias": "Désignation Transport Canada", "name": "desgntrspc" },
-                    { "alias": "Desserte (STQ), Traverse Non STQ", "name": "desserte" , "excludeFromOgcFilters": true },
-                    { "alias": "Nom de la liaison", "name": "liaison" },
-                    { "alias": "Identifiant", "name": "ideport", "excludeFromOgcFilters": true }
-                ]
-            }
-        },
-        {
-            "id": "liaison_maritime",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "queryTitle": "${depart} -- ${arrivee}",
-                "params": {
-                    "layers": "liaison_maritime",
-                    "feature_count": 365
-                },
-                "ogcFilters": {
-                    "enabled": false,
-                    "editable": false
-                },
-                "sourceFields": [
-                    { "alias": "Type de lien", "name": "typelien" },
-                    { "alias": "Départ", "name": "depart" },
-                    { "alias": "Arrivée", "name": "arrivee" },
-                    { "alias": "Saisonnier", "name": "operation" },
-                    { "alias": "Camion permis", "name": "camion" }
-                ]
-            }
-        },
-        {
-            "id": "aeroport_piste",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "queryTitle": "nomnavcana",
-                "params": {
-                    "layers": "aeroport_piste",
-                    "feature_count": 365
-                },
-                "ogcFilters": {
-                    "enabled": false,
-                    "editable": false
-                },
-                "sourceFields": [
-                    { "alias": "Nom de la piste", "name": "nomnavcana" },
-                    { "alias": "Code de la piste", "name": "codeindic" }
-                ]
-            }
-        },
-        {
-            "id": "aeroport",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "queryTitle": "nomnavcana",
-                "params": {
-                    "layers": "aeroport",
-                    "feature_count": 365
-                },
-                "ogcFilters": {
-                    "enabled": false,
-                    "editable": false
-                },
-                "sourceFields": [
-                    { "alias": "Emplacement", "name": "nomnavcana" },
-                    { "alias": "Infrastructure", "name": "typeinfras" },
-                    { "alias": "Propriétaire", "name": "proprietai" },
-                    { "alias": "Nom exploit", "name": "nomexploit" }
-                ]
-            }
-        },
-        {
-            "id": "histo_station_meteoroutiere",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "queryFormat": "htmlgml2",
-                "queryHtmlTarget": "iframe",
-                "params": {
-                    "layers": "histo_stations_meteoroutieres",
-                    "feature_count": 3650,
-                    "time": "2008-01-01/2020-10-31"
-                }
-            }
-        },
-        {
-            "id": "station_meteoroutiere",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "queryFormat": "htmlgml2",
-                "queryHtmlTarget": "iframe",
-                "params": {
-                    "layers": "stations_meteoroutieres",
-                    "feature_count": 365
-                }
-            }
-        },
-        {
-            "id": "radars_photos",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "queryTitle": "description",
-                "params": {
-                    "layers": "radars_photos"
-                  },
-                  "sourceFields": [
-                      { "alias": "Region", "name": "region" },
-                      { "alias": "Municipalité", "name": "municipalite" },
-                      { "alias": "Description", "name": "description" },
-                      { "alias": "Type d'appareil", "name": "typeAppareil" }
-                  ],
-                  "ogcFilters": {
-                    "enabled": true,
-                    "editable": true,
-                    "pushButtons": {
-                      "groups": [
-                        {"title": "Group 1 Title","name": "1","ids": ["id1"]}
-                      ],
-                      "bundles": [
-                        {
-                          "id": "id1",
-                          "logical": "Or",
-                          "buttons": [
-                            {
-                              "title": "Radar photo fixe",
-                              "enabled": false,
-                              "color": "0,0,255",
-                              "filters": {
-                                "operator": "PropertyIsEqualTo",
-                                "propertyName": "typeAppareil",
-                                "expression": "Radar photo fixe"
-                              }
-                            },
-                            {
-                              "title": "Radar photo mobile",
-                              "enabled": false,
-                              "color": "255,200,0",
-                              "filters": {
-                                "operator": "PropertyIsEqualTo",
-                                "propertyName": "typeAppareil",
-                                "expression": "Radar photo mobile"
-                              }
-                            },
-                            {
-                              "title": "Radar photo fixe + feu rouge",
-                              "enabled": false,
-                              "color": "0,200,0",
-                              "filters": {
-                                "operator": "PropertyIsEqualTo",
-                                "propertyName": "typeAppareil",
-                                "expression": "Radar photo fixe et surveillance au feu rouge"
-                              }
-                            },
-                            {
-                              "title": "Radar feu rouge",
-                              "enabled": false,
-                              "color": "255,0,0",
-                              "filters": {
-                                "operator": "PropertyIsEqualTo",
-                                "propertyName": "typeAppareil",
-                                "expression": "Appareil de surveillance au feu rouge"
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    "allowedOperatorsType": "basic"
-                  }
-                }
-              
-            
-        },
-        {
-            "id": "evenements",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "download": { "url": "https://www.donneesquebec.ca/recherche/fr/dataset/avertissement-routier"},
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "queryTitle": "localisation",
-                "params": {
-                    "layers": "evenements",
-                    "feature_count": 365
-                },               
-                "paramsWFS": {
-                    "featureTypes": "evenements",
-                    "fieldNameGeometry": "geometry",
-                    "maxFeatures": 5000,
-                    "version": "2.0.0",
-                    "outputFormatDownload": "shp"
-                },
-                "ogcFilters": {
-                    "enabled": true,
-                    "editable": true
-                },
-                "sourceFields": [
-                    { "alias": "Identifiant", "name": "identifiant" , "excludeFromOgcFilters": true },
-                    { "alias": "Entrave ", "name": "entrave" , "excludeFromOgcFilters": true },
-                    { "alias": "Numéro de la route", "name": "numeroRoute", "excludeFromOgcFilters": true },
-                    { "alias": "Localisation", "name": "localisation", "excludeFromOgcFilters": true },
-                    { "alias": "Direction", "name": "direction", "excludeFromOgcFilters": true },
-                    { "alias": "Municipalité", "name": "municipalite" },
-                    { "alias": "Durée", "name": "duree" , "excludeFromOgcFilters": true },
-                    { "alias": "Cause", "name": "cause", "excludeFromOgcFilters": false },
-                    { "alias": "Consequence", "name": "consequence", "excludeFromOgcFilters": true },
-                    { "alias": "Detour", "name": "detour", "excludeFromOgcFilters": true },
-                    { "alias": "Regions", "name": "regions", "excludeFromOgcFilters": true },
-                    { "alias": "Regions diffusion", "name": "regionsDiffusion" },
-                    { "alias": "En vigueur depuis", "name": "enVigueurDepuis", "excludeFromOgcFilters": true }
-                ]
-            }
-        },
-        {
-            "id": "chantiers_mtmdet",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "download": { "url": "https://www.donneesquebec.ca/recherche/fr/dataset/travaux-routiers"},
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "queryTitle": "localisation",
-                "params": {
-                    "layers": "chantiers_mtmdet",
-                    "feature_count": 365
-                },               
-                "paramsWFS": {
-                    "featureTypes": "chantiers_mtmdet",
-                    "fieldNameGeometry": "geometry",
-                    "maxFeatures": 5000,
-                    "version": "2.0.0",
-                    "outputFormatDownload": "shp"
-                },
-                "ogcFilters": {
-                    "enabled": true,
-                    "editable": true
-                },
-                "sourceFields": [
-                    { "alias": "Identifiant", "name": "identifiant" , "excludeFromOgcFilters": true },
-                    { "alias": "Numéro de route ou autoroute ", "name": "routeAutoroute", "excludeFromOgcFilters": true },
-                    { "alias": "Type d'entrave", "name": "entraveType" },
-                    { "alias": "Date de début", "name": "debut", "excludeFromOgcFilters": true },
-                    { "alias": "Date de fin", "name": "fin", "excludeFromOgcFilters": true },
-                    { "alias": "Date de mise à jour", "name": "miseAJour", "excludeFromOgcFilters": true },
-                    { "alias": "Identification des travaux", "name": "identificationDesTravaux" },
-                    { "alias": "URL", "name": "urlFrancais" , "excludeFromOgcFilters": true },
-                    { "alias": "Détours et itinéraires facultatifs", "name": "detoursEtItinerairesFacultatifs" , "excludeFromOgcFilters": true },
-                    { "alias": "Entrave", "name": "entrave", "excludeFromOgcFilters": true },
-                    { "alias": "Entraves liée aux charges et dimensions", "name": "entravesLieesAuxChargesEtDimensions", "excludeFromOgcFilters": true },
-                    { "alias": "Localisation", "name": "localisation", "excludeFromOgcFilters": true }
-                ]
-            }
-        },
-        {
-            "id": "conditions_routieres",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "download": { "url": "https://www.donneesquebec.ca/recherche/fr/dataset/condition-routiere-hivernale-du-reseau-routier-mtq"},
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "queryTitle": "${LocalisationDebutFR} À ${LocalisationFinFR}",
-   
-                "params": {
-                    "layers": "conditions_routieres",
-                    "feature_count": 365
-                },               
-                "paramsWFS": {
-                    "featureTypes": "conditions_routieres",
-                    "fieldNameGeometry": "geometry",
-                    "maxFeatures": 5000,
-                    "version": "2.0.0",
-                    "outputFormatDownload": "shp"
-                },
-                "ogcFilters": {
-                    "enabled": true,
-                    "editable": true,
-                    "INACTIFCARRISQUEDECHANGEMENTDEVALEURSpushButtons": {
-                      "groups": [
-                        {"title": "Group 1 Title", "name": "2", "ids": ["id1"]}
-                      ],
-                      "bundles": [
-                        {
-                          "id": "id1",
-                          "logical": "Or",
-                          "buttons": [
-                            {
-                              "title": "Couverte de neige durcie",
-                              "enabled": false,
-                              "filters": {
-                                "operator": "PropertyIsEqualTo",
-                                "propertyName": "DescriptionEtatChausseeFR",
-                                "expression": "Couverte de neige durcie"
-                              }
-                            },
-                            {
-                              "title": "Dégagée et mouillée",
-                              "enabled": false,
-                              "filters": {
-                                "operator": "PropertyIsEqualTo",
-                                "propertyName": "DescriptionEtatChausseeFR",
-                                "expression": "Dégagée et mouillée"
-                              }
-                            },
-                            {
-                              "title": "Dégagée et sèche",
-                              "enabled": false,
-                              "filters": {
-                                "operator": "PropertyIsEqualTo",
-                                "propertyName": "DescriptionEtatChausseeFR",
-                                "expression": "Dégagée et sèche"
-                              }
-                            },
-                            {
-                              "title": "Enneigée",
-                              "enabled": false,
-                              "filters": {
-                                "operator": "PropertyIsEqualTo",
-                                "propertyName": "DescriptionEtatChausseeFR",
-                                "expression": "Enneigée"
-                              }
-                            },
-                            {
-                              "title": "Partiellement couverte de neige durcie",
-                              "enabled": false,
-                              "filters": {
-                                "operator": "PropertyIsEqualTo",
-                                "propertyName": "DescriptionEtatChausseeFR",
-                                "expression": "Partiellement couverte de neige durcie"
-                              }
-                            },
-                            {
-                              "title": "Partiellement enneigée",
-                              "enabled": false,
-                              "filters": {
-                                "operator": "PropertyIsEqualTo",
-                                "propertyName": "DescriptionEtatChausseeFR",
-                                "expression": "Partiellement enneigée"
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                },
-                "sourceFields": [
-                    { "alias": "De", "name": "LocalisationDebutFR" },
-                    { "alias": "À", "name": "LocalisationFinFR" },
-                    { "alias": "Chaussée", "name": "DescriptionEtatChausseeFR" },
-                    { "alias": "Visibilité", "name": "DescriptionVisibiliteFR" }
-                ]
-            }
-        },
-        {
-            "id": "telephone_urg",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "queryTitle": "desc_local",
-                "params": {
-                    "layers": "telephone_urg",
-                    "feature_count": 365
-                },
-                "ogcFilters": {
-                    "enabled": false,
-                    "editable": false
-                },
-                "sourceFields": [
-                    { "alias": "Identifiant", "name": "desc_local" , "excludeFromOgcFilters": true },
-                    { "alias": "Direction", "name": "dirrte" },
-                    { "alias": "Responsable", "name": "orgresp" },
-                    { "alias": "Emplacement", "name": "emplacemen" }
-                ]
-            }
-        },
-        {
-            "id": "parc_routier",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "queryTitle": "nomparrout",
-                "params": {
-                    "layers": "parc_routier",
-                    "feature_count": 365
-                },
-                "ogcFilters": {
-                    "enabled": false,
-                    "editable": false
-                },
-                "sourceFields": [
-                    { "alias": "Nom", "name": "nomparrout" , "excludeFromOgcFilters": true },
-                    { "alias": "Type", "name": "typparrout" },
-                    { "alias": "Responsable", "name": "orgrespon" },
-                    { "alias": "Période opération", "name": "peroperat" },
-                    { "alias": "Numéro de la route", "name": "noroute" , "excludeFromOgcFilters": true },
-                    { "alias": "Nom de la route", "name": "nomroute" , "excludeFromOgcFilters": true },
-                    { "alias": "Localisation", "name": "desclocal" , "excludeFromOgcFilters": true },
-                    { "alias": "Municipalité", "name": "nommun" },
-                    { "alias": "Accessible en direction", "name": "dirroute" , "excludeFromOgcFilters": true }
-                ]
-            }
-        },
-        {
-            "id": "villagerelais",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "queryTitle": "nomcarrout",
-                "params": {
-                    "layers": "villagerelais",
-                    "feature_count": 365
-                },
-                "sourceFields": [
-                    { "alias": "Nom du village", "name": "nomcarrout" },
-                    { "alias": "Site web du village", "name": "url_villag" },
-                    { "alias": "Carte", "name": "url_carte" },
-                    { "alias": "Services", "name": "services" }
-                ]
-            }
-        },
-        {
-            "id": "iit_v_drang_condu_permn_ligne",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "queryTitle": "Ponceau # ${ide_drang_}",
-                "params": {
-                    "layers": "iit_v_drang_condu_permn_ligne",
-                    "feature_count": 365
-                },
-                "sourceFields": [
-                    { "alias": "Identifiant", "name": "ide_drang_" },
-                    { "alias": "Référence ponceau", "name": "num_refrn_" },
-                    { "alias": "Type", "name": "des_long_t" },
-                    { "alias": "Sous-type", "name": "des_long_s" },
-                    { "alias": "Longueur (m)", "name": "val_mesr" },
-                    { "alias": "Largeur/diamètre (mm)", "name": "val_larg_1" },
-                    { "alias": "Hauteur (mm)", "name": "val_hautr" },
-                    { "alias": "Année construction", "name": "val_annee_" },
-                    { "alias": "Année réhabilitation", "name": "val_anne_1" },
-                    { "alias": "Numéro route début", "name": "num_rts_de" },
-                    { "alias": "Chaînage début", "name": "val_chang_" },
-                    { "alias": "Numéro route fin", "name": "num_rts_fi" },
-                    { "alias": "Chaînage fin", "name": "val_chan_1" },
-                    { "alias": "Classe fonctionnelle", "name": "des_cour_6" }
-                ]
-            }
-        },
-        {
-            "id": "gsq_v_desc_strct_tri",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "download": { "url": "https://www.donneesquebec.ca/recherche/fr/dataset/structure"},
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "queryTitle": "num_dossr",
-                "params": {
-                    "layers": "gsq_v_desc_strct_tri",
-                    "feature_count": 365
-                },               
-                "ogcFilters": {
-                    "enabled": true,
-                    "editable": true
-                },
-                "sourceFields": [
-                    { "alias": "Numéro de dossier", "name": "num_dossr" , "excludeFromOgcFilters": true },
-                    { "alias": "Nom de la route", "name": "nom_route" , "excludeFromOgcFilters": true },
-                    { "alias": "Nom de l'obstacle", "name": "nom_obstc" , "excludeFromOgcFilters": true },
-                    { "alias": "Année de construction", "name": "val_annee_", "values" : [""] },
-                    { "alias": "Type de structure", "name": "code_des_t", "values": ["11 - Ponceau à dalle en béton armé", "12 - Ponceau portique en béton armé", "13 - Ponceau rectang. en béton armé", "14 - Ponceau circul. en béton armé", "15 - Ponceau circulaire en acier", "16 - Ponceau circ. polyéthylène", "17 - Ponceau elliptique en acier", "18 - Ponceau arqué en acier", "19 - Ponceau voûté en béton armé", "20 - Ponceau voûté en acier", "21 - Ponceau rectangulaire en bois", "31 - Pont à dalle pleine en béton armé", "32 - Pont à dalle pleine en béton précont.", "33 - Pont à dalle évidée en béton armé", "34 - Pont à dalle évidée en béton précont.", "35 - Portique en béton armé", "36 - Port. béton armé, ss remblai", "37 - Portique en béton précontraint", "38 - Pont à béquilles, béton armé", "39 - Pont à béquil., béton précont.", "41 - Pont à poutres en béton armé", "42 - Pont à pout. béton précont., préfabr.", "43 - Pont à pout. béton préc., coul. place", "44 - Pont à poutres en acier", "45 - Pont acier-bois", "46 - Pont à poutres en bois", "47 - Portique en béton", "50 - Pont à béquilles en béton", "51 - Pont à béquilles, en acier", "52 - Pont à poutres en acier enr. de béton", "56 - Pont à poutres-caissons en béton armé", "57 - Pont à pout.-cais. en béton précont.", "58 - Pont à poutres-caissons en acier", "61 - Pont à tablier inférieur, en acier", "62 - Pont à tablier interméd., en acier", "63 - Pont de type Pony-Warren, en acier", "64 - Pont de type Bailey, en acier", "65 - Pont à tablier supérieur, en acier", "66 - Pont en bois", "67 - Pont couvert", "71 - Pont à tablier infér., béton armé", "72 - Pont à tablier inférieur, en acier", "73 - Pont à tablier interm., béton armé", "74 - Pont à tablier intermédiaire, acier", "75 - Pont à tablier supér., béton armé", "76 - Pont à tablier supérieur, en acier", "77 - Pont à tablier supérieur, en bois", "81 - Pont suspendu", "82 - Pont à haubans", "85 - Pont mobile", "94 - Tunnel", "97 - Mur", "98 - Station de pompage"] },
-                    { "alias": "CS", "name": "des_cs", "excludeFromOgcFilters": true },
-                    { "alias": "DT", "name": "dirct_te00", "excludeFromOgcFilters": true }
-
-                ]
-            }
-        },
-        {
-            "id": "repere_km",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "queryTitle": "${affichkm}",
-                "params": {
-                    "layers": "repere_km",
-                    "feature_count": 365
-                },
-                "ogcFilters": {
-                    "enabled": false,
-                    "editable": false
-                },
-                "sourceFields": [
-                    { "alias": "Affiche Km", "name": "affichkm" },
-                    { "alias": "Nom de la route", "name": "nomrte" },
-                    { "alias": "Nom municipalité", "name": "nommun" }
-
-                ]
-            }
-        },
-        {
-            "id": "sortie_aut",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "queryTitle": " Sortie #${nosortie}",
-                "params": {
-                    "layers": "sortie_aut",
-                    "feature_count": 365
-                },
-                "sourceFields": [
-                    { "alias": "Numéro de sortie", "name": "nosortie" },
-                    { "alias": "Direction", "name": "direction" },
-                    { "alias": "Nom de la route", "name": "noroute" , "excludeFromOgcFilters": true },
-                    { "alias": "Message", "name": "messagpan" , "excludeFromOgcFilters": true },
-                    { "alias": "Code route (rtss)", "name": "rtssrte" },
-                    { "alias": "Code bretelle (rtss)", "name": "rtssbret" }
-                ]
-            }
-        },
-        {
-            "id": "reseau_chfer_qc",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "queryTitle": "nmfrexploi",
-                "params": {
-                    "layers": "reseau_chfer_qc",
-                    "feature_count": 365
-                },
-                "ogcFilters": {
-                    "enabled": false,
-                    "editable": false
-                },
-                "sourceFields": [
-                    { "alias": "Exploitant", "name": "nmfrexploi" },
-                    { "alias": "État", "name": "etat" },
-                    { "alias": "Type d'utilisation", "name": "typeutilis" },
-                    { "alias": "Propriétaire", "name": "nmfrpropr" },
-                    { "alias": "Niveau hiérarchique", "name": "nivhierar" }
-                ]
-            }
-        },
-        {
-            "id": "convivialite_velo",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "params": {
-                    "layers": "convivialite_velo",
-                    "feature_count": 365
-                },
-                "ogcFilters": {
-                    "enabled": false,
-                    "editable": false
-                },
-                "sourceFields": [
-                    
-                    { "alias": "Niveau de convivialité", "name": "conviviali" },
-                    { "alias": "Vitesse de la route", "name": "vitesse" },
-                    { "alias": "Débit", "name": "debit" },
-                    { "alias": "Accotement", "name": "accotement", "excludeFromOgcFilters": true },
-                    { "alias": "Camion", "name": "camion" },
-                    { "alias": "# Route", "name": "num_route" },
-                    { "alias": "Gravelle (o/n)", "name": "gravelle" },
-                    { "alias": "Classe de la route", "name": "des_clasf_" },
-                    { "alias": "Version", "name": "version" }
-                ]
-            }
-        },
-        {
-            "id": "aq_camion",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "queryTitle": "${drodoreclg} ( ${descclasse} )",
-                "mapLabel": "drodoreclg",
-                "params": {
-                    "layers": "aq_camion",
-                    "feature_count": 365
-                },
-                "ogcFilters": {
-                    "enabled": false,
-                    "editable": false
-                },
-                "sourceFields": [
-                    { "alias": "Nom de la route", "name": "drodoreclg" },
-                    { "alias": "Classification camionnage", "name": "descclasse" },
-                    { "alias": "Classification fonctionnelle", "name": "clsrte" },
-                    { "alias": "Gestion", "name": "gestion", "excludeFromOgcFilters": true },
-                    { "alias": "Municipalité", "name": "drmunnom" },
-                    { "alias": "Remarque", "name": "remarques", "excludeFromOgcFilters": true },
-                    { "alias": "Restriction de charge ou dimension", "name": "cddescr", "excludeFromOgcFilters": true },
-                    { "alias": "No. de règlement municipal", "name": "reglmun", "excludeFromOgcFilters": true },
-                    { "alias": "Date d’approbation MTQ", "name": "dateappr", "excludeFromOgcFilters": true },
-                    { "alias": "Tonnage max. 1-2-3 essieux", "name": "cdtonnage", "excludeFromOgcFilters": true },
-                    { "alias": "Version", "name": "version" }
-                ]
-            }
-        },
-        {
-            "id": "pes_v_limtn_charg",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "queryFormat": "html",
-                "queryHtmlTarget": "iframe",
-                "params": {
-                    "layers": "pes_v_limtn_charg",
-                    "feature_count": 365
-                }
-            }
-        },
-        {
-            "id": "circulation_routier",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "download": { "url": "https://www.donneesquebec.ca/recherche/fr/dataset/debit-de-circulation"},
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "queryTitle": "DJMA:${Djma}, DJME:${Djme}, DJMH:${Djmh}",
-                "params": {
-                    "layers": "circulation_routier",
-                    "feature_count": 365
-                },               
-                "ogcFilters": {
-                    "enabled": true,
-                    "editable": true,
-                    "allowedOperatorsType": "basicnumeric"
-                },
-                "sourceFields": [
-                    { "alias": "No section de trafic", "name": "numsectntr", "values": [""] },
-                    { "alias": "Débit journalier moyen annuel ", "name": "Djma", "values": [""] },
-                    { "alias": "Débit journalier moyen estival ", "name": "Djme", "values": [""] },
-                    { "alias": "Débit journalier moyen hivernal ", "name": "Djmh", "values": [""] },
-                    { "alias": "Année des comptages ", "name": "Annee", "values": [1990, 1993, 1995, 1996, 2000, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018] },
-                    { "alias": "% véhicules lourds ", "name": "PrctCamion", "values": [""] },
-                    { "alias": "Année véhicules lourds ", "name": "AnCamion", "values": [2013, 2014, 2015, 2016, 2017, 2018] },
-                    { "alias": "des début sous-route ", "name": "DebutRoute", "values": [""] },
-                    { "alias": "des fin sous-route ", "name": "FinRoute", "values": [""] },
-                    { "alias": "RTSS début ", "name": "RtssDebut", "values": ["Ex: 00005-01-010-000D"] },
-                    { "alias": "Chaînage début ", "name": "changdebut", "values": [""] },
-                    { "alias": "RTSS fin ", "name": "RtssFin", "values": ["Ex: 00005-01-010-000D"] },
-                    { "alias": "Chaînage fin ", "name": "changfin", "values": [""] }
-                ]
-            }
-        },
-        {
-            "id": "bgr_v_sous_route_res_sup_act",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "queryTitle": "num_rts",
-                "params": {
-                    "layers": "bgr_v_sous_route_res_sup_act",
-                    "feature_count": 365
-                },
-                "ogcFilters": {
-                    "enabled": false,
-                    "editable": false
-                },
-                "sourceFields": [
-                    { "alias": "RTSS", "name": "num_rts", "excludeFromOgcFilters": true },
-                    { "alias": "Longueur", "name": "val_longr_", "excludeFromOgcFilters": true },
-                    { "alias": "Classe fonctionnelle", "name": "des_clasf_" },
-                    { "alias": "Nom de la route", "name": "nom_sous_r", "excludeFromOgcFilters": true },
-                    { "alias": "Nom organisme gestion", "name": "nom_orgns_" },
-                    { "alias": "Nom organisme entretien", "name": "nom_orgn00" },
-                    { "alias": "Unité responsable de la route:", "name": "des_unite_" }
-                ]
-            }
-        },
-        {
-          "id": "bgr_reperage_metrique",
+  "uri": "mtq",
+  "title": "Transports Québec",
+  "map": {
+  "view": {
+      "projection": "EPSG:3857",
+      "center": [-71.938087, 48.446975],
+      "zoom": 6,
+      "maxZoom": 20,
+      "maxZoomOnExtent": 17
+  }
+  },
+  "layers": [
+      {
+        "id": "fond_osm",
+        "title": "OSM",
+        "visible": false,
+        "baseLayer": true,
+        "sourceOptions": {
+          "type": "osm",
+          "attributions": "© les contributeurs <a href='https://www.openstreetmap.org/copyright' target='_blank'>d’OpenStreetMap</a> / <a href='http://www.igouverte.org/' target='_blank'>IGO2</a>"
+        }
+      },
+      {
+        "id": "satellite",
+        "title": "Satellite",
+        "baseLayer": true,
+        "visible": false,
+        "sourceOptions": {
+          "url": "/carto/tms/1.0.0/orthos@EPSG_3857/{z}/{x}/{-y}.jpeg",
+          "attributions": "© <a href='http://www.droitauteur.gouv.qc.ca/copyright.php' target='_blank'><img src='/gouvouvert/public/images/quebec/gouv_qc_logo.png' width='64' height='14'>Gouvernement du Québec</a> / <a href='http://www.igouverte.org/' target='_blank'>IGO2</a>",
+          "type": "xyz"
+        }
+      },
+      {
+        "id": "blanc",
+        "title": "Blanc",
+        "baseLayer": true,
+        "visible": false,
+        "sourceOptions": {
+          "attributions": "<a href='http://www.igouverte.org/' target='_blank'>IGO2</a>",
+          "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII=",
+          "type": "xyz"
+        }
+      },
+      {
+        "id": "carte_gouv_qc",
+        "title": "Route",
+        "visible": true,
+        "baseLayer": true,
+        "sourceOptions": {
+          "url": "/carto/tms/1.0.0/carte_gouv_qc_ro@EPSG_3857/{z}/{x}/{-y}.png",
+          "attributions": "© <a href='http://www.droitauteur.gouv.qc.ca/copyright.php' target='_blank'><img src='/gouvouvert/public/images/quebec/gouv_qc_logo.png' width='64' height='14'>Gouvernement du Québec</a> / <a href='http://www.igouverte.org/' target='_blank'>IGO2</a>",
+          "type": "xyz"
+        }
+      },
+      {
+        "id": "couleur",
+        "title": "Couleur",
+        "baseLayer": true,
+        "visible": false,
+        "sourceOptions": {
+          "url": "/carto/tms/1.0.0/carte_adn@EPSG_3857/{z}/{x}/{-y}.png",
+          "attributions": "© <a href='http://www.droitauteur.gouv.qc.ca/copyright.php' target='_blank'><img src='/gouvouvert/public/images/quebec/gouv_qc_logo.png' width='64' height='14'>Gouvernement du Québec</a> / <a href='http://www.igouverte.org/' target='_blank'>IGO2</a>",
+          "type": "xyz"
+        }
+      },
+      {
+        "id": "gris",
+        "title": "Gris",
+        "baseLayer": true,
+        "visible": false,
+        "sourceOptions": {
+          "url": "/carto/tms/1.0.0/fond_thematique@EPSG_3857/{z}/{x}/{-y}.png",
+          "attributions": "© <a href='http://www.droitauteur.gouv.qc.ca/copyright.php' target='_blank'><img src='/gouvouvert/public/images/quebec/gouv_qc_logo.png' width='64' height='14'>Gouvernement du Québec</a> / <a href='http://www.igouverte.org/' target='_blank'>IGO2</a>",
+          "type": "xyz"
+        }
+      },
+      {
+          "title": "Zone de dégel",
+          "id": "zones_degel",
           "visible": false,
           "removable": false,
           "sourceOptions": {
-            "type": "wms",
-            "optionsFromCapabilities": true,
-            "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-            "queryable": true,
-            "queryTitle": "etiquette",
-            "params": {
-              "layers": "bgr_reperage_metrique",
-              "feature_count": 1
-            },
-            "sourceFields": [
-              {"alias": "RTSS","name": "num_rts"},
-              {"alias": "Chainage","name": "chainage"}
-            ]
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryTitle": "zone",
+              "queryFormat": "gml2",
+              "params": {
+                  "layers": "zone_degel",
+                  "feature_count": 365
+              },
+              "ogcFilters": {
+                  "enabled": false,
+                  "editable": false
+              },
+              "sourceFields": [
+                  { "alias": "Zone de dégel", "name": "zone" },
+                  { "alias": "Date de mise à jour", "name": "Date_de_mise_à_jour" }]
           }
-        },
-        {
-            "id": "etablissement_mtq",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "queryTitle":"nometablis",
-                "params": {
-                    "layers": "etablissement_mtq",
-                    "feature_count": 365
-                },
-                "sourceFields": [
-                    { "alias": "Type", "name": "typetablis", "excludeFromOgcFilters": true },
-                    { "alias": "Nom", "name": "nometablis", "excludeFromOgcFilters": true },
-                    { "alias": "Adresse", "name": "adresseco" },
-                    { "alias": "Ville", "name": "ville", "excludeFromOgcFilters": true },
-                    { "alias": "# de l'établissement", "name": "idetablis" },
-                    { "alias": "Propriétaire", "name": "propriete" }
-                ]
-            }
-        },
-        {
-            "id": "bgr_v_centr_servc_geomt_act",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "queryTitle": "nom_unite_",
-                "params": {
-                    "layers": "bgr_v_centr_servc_geomt_act",
-                    "feature_count": 365
-                },
-                "sourceFields": [
-                    { "alias": "Nom", "name": "nom_unit00", "excludeFromOgcFilters": true },
-                    { "alias": "Adresse", "name": "val_adrs_u", "excludeFromOgcFilters": true },
-                    { "alias": "Code de niveau 01", "name": "cod_niv_01" },
-                    { "alias": "Code de niveau 02", "name": "cod_niv_02" }
-                ]
-            }
-        },
-        {
-            "id": "bgr_v_dirct_terrt_geomt_act",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "queryTitle": "nom_unite_",
-                "params": {
-                    "layers": "bgr_v_dirct_terrt_geomt_act",
-                    "feature_count": 365
-                },
-                "sourceFields": [
-                    { "alias": "Nom", "name": "nom_unit00", "excludeFromOgcFilters": true },
-                    { "alias": "Adresse", "name": "val_adrs_u", "excludeFromOgcFilters": true },
-                    { "alias": "Code de niveau", "name": "cod_niv_01" }
-                ]
-            }
-        },
-        {
-            "id": "bgr_v_dirct_genrl_geomt_act",
-            "visible": false,
-            "removable": false,
-            "sourceOptions": {
-                "type": "wms",
-                "optionsFromCapabilities": true,
-                "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-                "queryable": true,
-                "queryTitle": "nom_unit00",
-                "params": {
-                    "layers": "bgr_v_dirct_genrl_geomt_act"
-                },
-                "sourceFields": [
-                    { "alias": "Nom", "name": "nom_unit00", "excludeFromOgcFilters": true },
-                    { "alias": "Adresse", "name": "val_adrs_u", "excludeFromOgcFilters": true }
-                ]
-            }
-        }
-    ],
-    "toolbar": [
-        "searchResults",
-        "contextManager",
-        "mapTools",
-        "measurer",
-        "directions",
-        "catalog",
-        "importExport",
-        "print",
-        "shareMap",
-        "about"
-      ],
-      "tools": [
-        {
-          "name": "searchResults",
-          "options": {
-            "focusFirst": false
+      },
+      {
+          "id": "zpegt_cgt_s",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "download": { "url": "https://www.donneesquebec.ca/recherche/fr/dataset/zone-potentiellement-exposee-aux-glissements-de-terrain-zpegt"},
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryFormat": "gml2",
+              "params": {
+                  "layers": "zpegt_cgt_s",
+                  "feature_count": 365
+              },               
+              "ogcFilters": {
+                  "enabled": true,
+                  "editable": true
+              },
+              "sourceFields": [
+                  { "alias": "Contrainte", "name": "etq_contr", "values": ["E" ,"E-NA1" ,"E-NA2" ,"E-NH" ,"E-NHd" ,"E-NR" ,"E-NS1" ,"E-NS2" ,"E-RA1 Base" ,"NA1" ,"NA1 talus" ,"NA1L" ,"NA1L talus" ,"NA2" ,"NA2 talus" ,"NC" ,"NC talus" ,"NH" ,"NH talus" ,"NHL" ,"NHL talus" ,"NHd" ,"NI" ,"NI talus" ,"NR" ,"NR talus" ,"NS1" ,"NS1 talus" ,"NS1L" ,"NS1L talus" ,"NS2" ,"NS2 talus" ,"RA1 Base" ,"RA1 Sommet" ,"RA1-NA2"] },
+                  { "alias": "Fam_gliss", "name": "fam_gliss", "excludeFromOgcFilters": true, "values" : [""]},
+                  { "alias": "Description", "name": "descriptio", "excludeFromOgcFilters": true, "values" : [""]},
+                  { "alias": "Date", "name": "date_prod", "values" : ["2004", "2007-03", "2007-04", "2007-09", "2007-12", "2008-08", "2010-04", "2010-05", "2011-04", "2011-05", "2011-06", "2012-04", "2013-02", "2013-09", "2014-04", "2015-01", "2015-02", "2015-03", "2015-04", "2015-12", "2016-01", "2016-05", "2016-09", "2017-04", "2017-06", "2017-12", "2018-06", "2018-09", "2018-10"] }]
           }
-        },
-        {
-          "name": "contextManager"
-        },
-        {
-            "name": "about",
-            "options": {
-                "html": "<img src='https://www.transports.gouv.qc.ca/ImagesCommunesDTI/LogoMinistereGrand.gif'> <br> <br>La mission du ministère des Transports est d’assurer, sur tout le territoire, la mobilité durable des personnes et des marchandises par des systèmes de transport efficaces et sécuritaires qui contribuent au développement du Québec. <br><hr> <h3>Nous joindre:</h3><a href='mailto:geomatique@transports.gouv.qc.ca'>geomatique@transports.gouv.qc.ca</a><br><a href='https://www.donneesquebec.ca/recherche/fr/organization/mtq' target='_blank'>Transport Québec sur Données Québec</a>"
-            }
-        },
-        {
-            "name": "mapTools",
-            "title": "Couches",
-            "options": {
-                "expandLegendOfVisibleLayers": false,
-                "toggleLegendOnVisibilityChange": false,
-                "layerListControls": {
-                    "excludeBaseLayers": true,
-                    "showToolbar": "always"
+      },
+      {
+          "id": "zpegt_cgt_l",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "download": { "url": "https://www.donneesquebec.ca/recherche/fr/dataset/zone-potentiellement-exposee-aux-glissements-de-terrain-zpegt"},
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryFormat": "gml2",
+              "params": {
+                  "layers": "zpegt_cgt_l",
+                  "feature_count": 365
+              },               
+              "ogcFilters": {
+                  "enabled": true,
+                  "editable": true
+              },
+              "sourceFields": [
+                  { "alias": "Contrainte", "name": "etq_contr", "values": ["BT Contr","LC Contr","RA2","ST Contr","ST2 Contr"] },
+                  { "alias": "Fam_gliss", "name": "fam_gliss", "excludeFromOgcFilters": true },
+                  { "alias": "Description", "name": "descriptio", "excludeFromOgcFilters": true },
+                  { "alias": "Date", "name": "date_prod", "values": ["2004", "2007-03", "2007-04", "2007-09", "2007-12", "2008-08", "2010-04", "2010-05", "2011-04", "2011-05", "2011-06", "2012-04", "2013-02", "2013-09", "2014-04", "2015-01", "2015-02", "2015-03", "2015-04", "2015-12", "2016-01", "2016-05", "2016-09", "2017-04", "2017-06", "2017-12", "2018-06", "2018-09", "2018-10"] }]
+          }
+      },
+      {
+          "id": "zpegt_index_cgt_s",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryTitle": "NUM_5000",
+              "queryFormat": "gml2",
+              "params": {
+                  "layers": "zpegt_index_cgt_s",
+                  "feature_count": 365
+              },
+              "ogcFilters": {
+                  "enabled": false,
+                  "editable": false
+              },
+              "sourceFields": [
+                  { "alias": "Nom", "name": "Nom" },
+                  { "alias": "No carte", "name": "NUM_5000" },
+                  { "alias": "Description", "name": "Descriptio", "excludeFromOgcFilters": true },
+                  { "alias": "Date", "name": "Date_prod" },
+                  { "alias": "Téléchargement (Pdf)", "name": "Hyperliens", "excludeFromOgcFilters": true }
+              ]
+          }
+      },
+      {
+          "id": "site_inv_geotech_bdg_p",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryTitle":"NO_SITE",
+              "queryFormat": "gml2",
+              "params": {
+                  "layers": "site_inv_geotech_bdg_p",
+                  "feature_count": 365
+              },
+              "sourceFields": [
+                  { "alias": "Numéro du site", "name": "NO_SITE" },
+                  { "alias": "Numéro de sondage", "name": "NO_SONDAGE" },
+                  { "alias": "Type de sondage", "name": "TYPE" },
+                  { "alias": "Profondeur", "name": "PROF_MAX" },
+                  { "alias": "Nature de l’arrêt", "name": "NATU_ARRET" },
+                  { "alias": "Téléchargement du rapport de sondage (Pdf)", "name": "HYPERLIEN" }
+              ]
+          }
+      },        
+      {
+          "id": "site_inv_geotech_p",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryTitle":"NO_SITE",
+              "queryFormat": "gml2",
+              "params": {
+                  "layers": "site_inv_geotech_p",
+                  "feature_count": 365
+              },
+              "sourceFields": [
+                  { "alias": "Numéro du site", "name": "NO_SITE" },
+                  { "alias": "Numéro de sondage", "name": "NO_SONDAGE" },
+                  { "alias": "Type de sondage", "name": "TYPE" },
+                  { "alias": "Profondeur", "name": "PROF_MAX" },
+                  { "alias": "Nature de l’arrêt", "name": "NATU_ARRET" },
+                  { "alias": "Téléchargement du rapport de sondage (Pdf)", "name": "HYPERLIEN" }
+              ]
+          }
+      },
+      {
+          "id": "lieuhabite",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryTitle": "nomcartrou",
+              "queryFormat": "gml2",
+              "params": {
+                  "layers": "lieuhabite",
+                  "feature_count": 365
+              },
+              "sourceFields": [
+                  { "alias": "Toponyme", "name": "nomcartrou" },
+                  { "alias": "Population", "name": "popdecrt" },
+                  { "alias": "Info Type", "name": "typentitto" }
+              ]
+          }
+      },
+      {
+          "id": "port_installation",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryTitle": "nom",
+              "queryFormat": "gml2",
+              "params": {
+                  "layers": "port_installation",
+                  "feature_count": 365
+              },
+              "ogcFilters": {
+                  "enabled": false,
+                  "editable": false
+              },
+              "sourceFields": [
+                  { "alias": "Nom du port", "name": "nom" },
+                  { "alias": "Vocation", "name": "vocation" },
+                  { "alias": "Désignation Transport Canada", "name": "desgntrspc" },
+                  { "alias": "Desserte (STQ), Traverse Non STQ", "name": "desserte" , "excludeFromOgcFilters": true },
+                  { "alias": "Nom de la liaison", "name": "liaison" },
+                  { "alias": "Identifiant", "name": "ideport", "excludeFromOgcFilters": true }
+              ]
+          }
+      },
+      {
+          "id": "liaison_maritime",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryTitle": "${depart} -- ${arrivee}",
+              "queryFormat": "gml2",
+              "params": {
+                  "layers": "liaison_maritime",
+                  "feature_count": 365
+              },
+              "ogcFilters": {
+                  "enabled": false,
+                  "editable": false
+              },
+              "sourceFields": [
+                  { "alias": "Type de lien", "name": "typelien" },
+                  { "alias": "Départ", "name": "depart" },
+                  { "alias": "Arrivée", "name": "arrivee" },
+                  { "alias": "Saisonnier", "name": "operation" },
+                  { "alias": "Camion permis", "name": "camion" }
+              ]
+          }
+      },
+      {
+          "id": "aeroport_piste",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryTitle": "nomnavcana",
+              "queryFormat": "gml2",
+              "params": {
+                  "layers": "aeroport_piste",
+                  "feature_count": 365
+              },
+              "ogcFilters": {
+                  "enabled": false,
+                  "editable": false
+              },
+              "sourceFields": [
+                  { "alias": "Nom de la piste", "name": "nomnavcana" },
+                  { "alias": "Code de la piste", "name": "codeindic" }
+              ]
+          }
+      },
+      {
+          "id": "aeroport",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryTitle": "nomnavcana",
+              "queryFormat": "gml2",
+              "params": {
+                  "layers": "aeroport",
+                  "feature_count": 365
+              },
+              "ogcFilters": {
+                  "enabled": false,
+                  "editable": false
+              },
+              "sourceFields": [
+                  { "alias": "Emplacement", "name": "nomnavcana" },
+                  { "alias": "Infrastructure", "name": "typeinfras" },
+                  { "alias": "Propriétaire", "name": "proprietai" },
+                  { "alias": "Nom exploit", "name": "nomexploit" }
+              ]
+          }
+      },
+      {
+          "id": "histo_station_meteoroutiere",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryFormat": "htmlgml2",
+              "queryHtmlTarget": "iframe",
+              "params": {
+                  "layers": "histo_stations_meteoroutieres",
+                  "feature_count": 3650,
+                  "time": "2008-01-01/2020-10-31"
+              }
+          }
+      },
+      {
+          "id": "station_meteoroutiere",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryFormat": "htmlgml2",
+              "queryHtmlTarget": "iframe",
+              "params": {
+                  "layers": "stations_meteoroutieres",
+                  "feature_count": 365
+              }
+          }
+      },
+      {
+          "id": "radars_photos",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryTitle": "description",
+              "queryFormat": "gml2",
+              "params": {
+                  "layers": "radars_photos"
+                },
+                "sourceFields": [
+                    { "alias": "Region", "name": "region" },
+                    { "alias": "Municipalité", "name": "municipalite" },
+                    { "alias": "Description", "name": "description" },
+                    { "alias": "Type d'appareil", "name": "typeAppareil" }
+                ],
+                "ogcFilters": {
+                  "enabled": true,
+                  "editable": true,
+                  "pushButtons": {
+                    "groups": [
+                      {"title": "Group 1 Title","name": "1","ids": ["id1"]}
+                    ],
+                    "bundles": [
+                      {
+                        "id": "id1",
+                        "logical": "Or",
+                        "buttons": [
+                          {
+                            "title": "Radar photo fixe",
+                            "enabled": false,
+                            "color": "0,0,255",
+                            "filters": {
+                              "operator": "PropertyIsEqualTo",
+                              "propertyName": "typeAppareil",
+                              "expression": "Radar photo fixe"
+                            }
+                          },
+                          {
+                            "title": "Radar photo mobile",
+                            "enabled": false,
+                            "color": "255,200,0",
+                            "filters": {
+                              "operator": "PropertyIsEqualTo",
+                              "propertyName": "typeAppareil",
+                              "expression": "Radar photo mobile"
+                            }
+                          },
+                          {
+                            "title": "Radar photo fixe + feu rouge",
+                            "enabled": false,
+                            "color": "0,200,0",
+                            "filters": {
+                              "operator": "PropertyIsEqualTo",
+                              "propertyName": "typeAppareil",
+                              "expression": "Radar photo fixe et surveillance au feu rouge"
+                            }
+                          },
+                          {
+                            "title": "Radar feu rouge",
+                            "enabled": false,
+                            "color": "255,0,0",
+                            "filters": {
+                              "operator": "PropertyIsEqualTo",
+                              "propertyName": "typeAppareil",
+                              "expression": "Appareil de surveillance au feu rouge"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "allowedOperatorsType": "basic"
                 }
-            }
-        },
-        {
-          "name": "shareMap"
-        },
-        {
-          "name": "measurer"
-        },
-        {
-          "name": "directions"
-        },
-        {
-          "name": "catalog"
-        },
-        {
-          "name": "catalogBrowser"
-        },
-        {
-          "name": "timeFilter"
-        },
-        {
-          "name": "ogcFilter"
-        },
-        {
-          "name": "importExport"
-        },
-        {
-          "name": "print"
-        },
-        {
-          "name": "activeTimeFilter"
-        },
-        {
-          "name": "activeOgcFilter"
+              }
+            
+          
+      },
+      {
+          "id": "evenements",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "download": { "url": "https://www.donneesquebec.ca/recherche/fr/dataset/avertissement-routier"},
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryTitle": "localisation",
+              "queryFormat": "gml2",
+              "params": {
+                  "layers": "evenements",
+                  "feature_count": 365
+              },               
+              "paramsWFS": {
+                  "featureTypes": "evenements",
+                  "fieldNameGeometry": "geometry",
+                  "maxFeatures": 5000,
+                  "version": "2.0.0",
+                  "outputFormatDownload": "shp"
+              },
+              "ogcFilters": {
+                  "enabled": true,
+                  "editable": true
+              },
+              "sourceFields": [
+                  { "alias": "Identifiant", "name": "identifiant" , "excludeFromOgcFilters": true },
+                  { "alias": "Entrave ", "name": "entrave" , "excludeFromOgcFilters": true },
+                  { "alias": "Numéro de la route", "name": "numeroRoute", "excludeFromOgcFilters": true },
+                  { "alias": "Localisation", "name": "localisation", "excludeFromOgcFilters": true },
+                  { "alias": "Direction", "name": "direction", "excludeFromOgcFilters": true },
+                  { "alias": "Municipalité", "name": "municipalite" },
+                  { "alias": "Durée", "name": "duree" , "excludeFromOgcFilters": true },
+                  { "alias": "Cause", "name": "cause", "excludeFromOgcFilters": false },
+                  { "alias": "Consequence", "name": "consequence", "excludeFromOgcFilters": true },
+                  { "alias": "Detour", "name": "detour", "excludeFromOgcFilters": true },
+                  { "alias": "Regions", "name": "regions", "excludeFromOgcFilters": true },
+                  { "alias": "Regions diffusion", "name": "regionsDiffusion" },
+                  { "alias": "En vigueur depuis", "name": "enVigueurDepuis", "excludeFromOgcFilters": true }
+              ]
+          }
+      },
+      {
+          "id": "chantiers_mtmdet",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "download": { "url": "https://www.donneesquebec.ca/recherche/fr/dataset/travaux-routiers"},
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryTitle": "localisation",
+              "queryFormat": "gml2",
+              "params": {
+                  "layers": "chantiers_mtmdet",
+                  "feature_count": 365
+              },               
+              "paramsWFS": {
+                  "featureTypes": "chantiers_mtmdet",
+                  "fieldNameGeometry": "geometry",
+                  "maxFeatures": 5000,
+                  "version": "2.0.0",
+                  "outputFormatDownload": "shp"
+              },
+              "ogcFilters": {
+                  "enabled": true,
+                  "editable": true
+              },
+              "sourceFields": [
+                  { "alias": "Identifiant", "name": "identifiant" , "excludeFromOgcFilters": true },
+                  { "alias": "Numéro de route ou autoroute ", "name": "routeAutoroute", "excludeFromOgcFilters": true },
+                  { "alias": "Type d'entrave", "name": "entraveType" },
+                  { "alias": "Date de début", "name": "debut", "excludeFromOgcFilters": true },
+                  { "alias": "Date de fin", "name": "fin", "excludeFromOgcFilters": true },
+                  { "alias": "Date de mise à jour", "name": "miseAJour", "excludeFromOgcFilters": true },
+                  { "alias": "Identification des travaux", "name": "identificationDesTravaux" },
+                  { "alias": "URL", "name": "urlFrancais" , "excludeFromOgcFilters": true },
+                  { "alias": "Détours et itinéraires facultatifs", "name": "detoursEtItinerairesFacultatifs" , "excludeFromOgcFilters": true },
+                  { "alias": "Entrave", "name": "entrave", "excludeFromOgcFilters": true },
+                  { "alias": "Entraves liée aux charges et dimensions", "name": "entravesLieesAuxChargesEtDimensions", "excludeFromOgcFilters": true },
+                  { "alias": "Localisation", "name": "localisation", "excludeFromOgcFilters": true }
+              ]
+          }
+      },
+      {
+          "id": "conditions_routieres",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "download": { "url": "https://www.donneesquebec.ca/recherche/fr/dataset/condition-routiere-hivernale-du-reseau-routier-mtq"},
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryTitle": "${LocalisationDebutFR} À ${LocalisationFinFR}",
+ 
+              "queryFormat": "gml2",
+              "params": {
+                  "layers": "conditions_routieres",
+                  "feature_count": 365
+              },               
+              "paramsWFS": {
+                  "featureTypes": "conditions_routieres",
+                  "fieldNameGeometry": "geometry",
+                  "maxFeatures": 5000,
+                  "version": "2.0.0",
+                  "outputFormatDownload": "shp"
+              },
+              "ogcFilters": {
+                  "enabled": true,
+                  "editable": true,
+                  "INACTIFCARRISQUEDECHANGEMENTDEVALEURSpushButtons": {
+                    "groups": [
+                      {"title": "Group 1 Title", "name": "2", "ids": ["id1"]}
+                    ],
+                    "bundles": [
+                      {
+                        "id": "id1",
+                        "logical": "Or",
+                        "buttons": [
+                          {
+                            "title": "Couverte de neige durcie",
+                            "enabled": false,
+                            "filters": {
+                              "operator": "PropertyIsEqualTo",
+                              "propertyName": "DescriptionEtatChausseeFR",
+                              "expression": "Couverte de neige durcie"
+                            }
+                          },
+                          {
+                            "title": "Dégagée et mouillée",
+                            "enabled": false,
+                            "filters": {
+                              "operator": "PropertyIsEqualTo",
+                              "propertyName": "DescriptionEtatChausseeFR",
+                              "expression": "Dégagée et mouillée"
+                            }
+                          },
+                          {
+                            "title": "Dégagée et sèche",
+                            "enabled": false,
+                            "filters": {
+                              "operator": "PropertyIsEqualTo",
+                              "propertyName": "DescriptionEtatChausseeFR",
+                              "expression": "Dégagée et sèche"
+                            }
+                          },
+                          {
+                            "title": "Enneigée",
+                            "enabled": false,
+                            "filters": {
+                              "operator": "PropertyIsEqualTo",
+                              "propertyName": "DescriptionEtatChausseeFR",
+                              "expression": "Enneigée"
+                            }
+                          },
+                          {
+                            "title": "Partiellement couverte de neige durcie",
+                            "enabled": false,
+                            "filters": {
+                              "operator": "PropertyIsEqualTo",
+                              "propertyName": "DescriptionEtatChausseeFR",
+                              "expression": "Partiellement couverte de neige durcie"
+                            }
+                          },
+                          {
+                            "title": "Partiellement enneigée",
+                            "enabled": false,
+                            "filters": {
+                              "operator": "PropertyIsEqualTo",
+                              "propertyName": "DescriptionEtatChausseeFR",
+                              "expression": "Partiellement enneigée"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+              },
+              "sourceFields": [
+                  { "alias": "De", "name": "LocalisationDebutFR" },
+                  { "alias": "À", "name": "LocalisationFinFR" },
+                  { "alias": "Chaussée", "name": "DescriptionEtatChausseeFR" },
+                  { "alias": "Visibilité", "name": "DescriptionVisibiliteFR" }
+              ]
+          }
+      },
+      {
+          "id": "telephone_urg",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryTitle": "desc_local",
+              "queryFormat": "gml2",
+              "params": {
+                  "layers": "telephone_urg",
+                  "feature_count": 365
+              },
+              "ogcFilters": {
+                  "enabled": false,
+                  "editable": false
+              },
+              "sourceFields": [
+                  { "alias": "Identifiant", "name": "desc_local" , "excludeFromOgcFilters": true },
+                  { "alias": "Direction", "name": "dirrte" },
+                  { "alias": "Responsable", "name": "orgresp" },
+                  { "alias": "Emplacement", "name": "emplacemen" }
+              ]
+          }
+      },
+      {
+          "id": "parc_routier",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryTitle": "nomparrout",
+              "queryFormat": "gml2",
+              "params": {
+                  "layers": "parc_routier",
+                  "feature_count": 365
+              },
+              "ogcFilters": {
+                  "enabled": false,
+                  "editable": false
+              },
+              "sourceFields": [
+                  { "alias": "Nom", "name": "nomparrout" , "excludeFromOgcFilters": true },
+                  { "alias": "Type", "name": "typparrout" },
+                  { "alias": "Responsable", "name": "orgrespon" },
+                  { "alias": "Période opération", "name": "peroperat" },
+                  { "alias": "Numéro de la route", "name": "noroute" , "excludeFromOgcFilters": true },
+                  { "alias": "Nom de la route", "name": "nomroute" , "excludeFromOgcFilters": true },
+                  { "alias": "Localisation", "name": "desclocal" , "excludeFromOgcFilters": true },
+                  { "alias": "Municipalité", "name": "nommun" },
+                  { "alias": "Accessible en direction", "name": "dirroute" , "excludeFromOgcFilters": true }
+              ]
+          }
+      },
+      {
+          "id": "villagerelais",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryTitle": "nomcarrout",
+              "queryFormat": "gml2",
+              "params": {
+                  "layers": "villagerelais",
+                  "feature_count": 365
+              },
+              "sourceFields": [
+                  { "alias": "Nom du village", "name": "nomcarrout" },
+                  { "alias": "Site web du village", "name": "url_villag" },
+                  { "alias": "Carte", "name": "url_carte" },
+                  { "alias": "Services", "name": "services" }
+              ]
+          }
+      },
+      {
+          "id": "iit_v_drang_condu_permn_ligne",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryTitle": "Ponceau # ${ide_drang_}",
+              "queryFormat": "gml2",
+              "params": {
+                  "layers": "iit_v_drang_condu_permn_ligne",
+                  "feature_count": 365
+              },
+              "sourceFields": [
+                  { "alias": "Identifiant", "name": "ide_drang_" },
+                  { "alias": "Référence ponceau", "name": "num_refrn_" },
+                  { "alias": "Type", "name": "des_long_t" },
+                  { "alias": "Sous-type", "name": "des_long_s" },
+                  { "alias": "Longueur (m)", "name": "val_mesr" },
+                  { "alias": "Largeur/diamètre (mm)", "name": "val_larg_1" },
+                  { "alias": "Hauteur (mm)", "name": "val_hautr" },
+                  { "alias": "Année construction", "name": "val_annee_" },
+                  { "alias": "Année réhabilitation", "name": "val_anne_1" },
+                  { "alias": "Numéro route début", "name": "num_rts_de" },
+                  { "alias": "Chaînage début", "name": "val_chang_" },
+                  { "alias": "Numéro route fin", "name": "num_rts_fi" },
+                  { "alias": "Chaînage fin", "name": "val_chan_1" },
+                  { "alias": "Classe fonctionnelle", "name": "des_cour_6" }
+              ]
+          }
+      },
+      {
+          "id": "gsq_v_desc_strct_tri",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "download": { "url": "https://www.donneesquebec.ca/recherche/fr/dataset/structure"},
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryTitle": "num_dossr",
+              "queryFormat": "gml2",
+              "params": {
+                  "layers": "gsq_v_desc_strct_tri",
+                  "feature_count": 365
+              },               
+              "ogcFilters": {
+                  "enabled": true,
+                  "editable": true
+              },
+              "sourceFields": [
+                  { "alias": "Numéro de dossier", "name": "num_dossr" , "excludeFromOgcFilters": true },
+                  { "alias": "Nom de la route", "name": "nom_route" , "excludeFromOgcFilters": true },
+                  { "alias": "Nom de l'obstacle", "name": "nom_obstc" , "excludeFromOgcFilters": true },
+                  { "alias": "Année de construction", "name": "val_annee_", "values" : [""] },
+                  { "alias": "Type de structure", "name": "code_des_t", "values": ["11 - Ponceau à dalle en béton armé", "12 - Ponceau portique en béton armé", "13 - Ponceau rectang. en béton armé", "14 - Ponceau circul. en béton armé", "15 - Ponceau circulaire en acier", "16 - Ponceau circ. polyéthylène", "17 - Ponceau elliptique en acier", "18 - Ponceau arqué en acier", "19 - Ponceau voûté en béton armé", "20 - Ponceau voûté en acier", "21 - Ponceau rectangulaire en bois", "31 - Pont à dalle pleine en béton armé", "32 - Pont à dalle pleine en béton précont.", "33 - Pont à dalle évidée en béton armé", "34 - Pont à dalle évidée en béton précont.", "35 - Portique en béton armé", "36 - Port. béton armé, ss remblai", "37 - Portique en béton précontraint", "38 - Pont à béquilles, béton armé", "39 - Pont à béquil., béton précont.", "41 - Pont à poutres en béton armé", "42 - Pont à pout. béton précont., préfabr.", "43 - Pont à pout. béton préc., coul. place", "44 - Pont à poutres en acier", "45 - Pont acier-bois", "46 - Pont à poutres en bois", "47 - Portique en béton", "50 - Pont à béquilles en béton", "51 - Pont à béquilles, en acier", "52 - Pont à poutres en acier enr. de béton", "56 - Pont à poutres-caissons en béton armé", "57 - Pont à pout.-cais. en béton précont.", "58 - Pont à poutres-caissons en acier", "61 - Pont à tablier inférieur, en acier", "62 - Pont à tablier interméd., en acier", "63 - Pont de type Pony-Warren, en acier", "64 - Pont de type Bailey, en acier", "65 - Pont à tablier supérieur, en acier", "66 - Pont en bois", "67 - Pont couvert", "71 - Pont à tablier infér., béton armé", "72 - Pont à tablier inférieur, en acier", "73 - Pont à tablier interm., béton armé", "74 - Pont à tablier intermédiaire, acier", "75 - Pont à tablier supér., béton armé", "76 - Pont à tablier supérieur, en acier", "77 - Pont à tablier supérieur, en bois", "81 - Pont suspendu", "82 - Pont à haubans", "85 - Pont mobile", "94 - Tunnel", "97 - Mur", "98 - Station de pompage"] },
+                  { "alias": "CS", "name": "des_cs", "excludeFromOgcFilters": true },
+                  { "alias": "DT", "name": "dirct_te00", "excludeFromOgcFilters": true }
+
+              ]
+          }
+      },
+      {
+          "id": "repere_km",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryTitle": "${affichkm}",
+              "queryFormat": "gml2",
+              "params": {
+                  "layers": "repere_km",
+                  "feature_count": 365
+              },
+              "ogcFilters": {
+                  "enabled": false,
+                  "editable": false
+              },
+              "sourceFields": [
+                  { "alias": "Affiche Km", "name": "affichkm" },
+                  { "alias": "Nom de la route", "name": "nomrte" },
+                  { "alias": "Nom municipalité", "name": "nommun" }
+
+              ]
+          }
+      },
+      {
+          "id": "sortie_aut",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryTitle": " Sortie #${nosortie}",
+              "queryFormat": "gml2",
+              "params": {
+                  "layers": "sortie_aut",
+                  "feature_count": 365
+              },
+              "sourceFields": [
+                  { "alias": "Numéro de sortie", "name": "nosortie" },
+                  { "alias": "Direction", "name": "direction" },
+                  { "alias": "Nom de la route", "name": "noroute" , "excludeFromOgcFilters": true },
+                  { "alias": "Message", "name": "messagpan" , "excludeFromOgcFilters": true },
+                  { "alias": "Code route (rtss)", "name": "rtssrte" },
+                  { "alias": "Code bretelle (rtss)", "name": "rtssbret" }
+              ]
+          }
+      },
+      {
+          "id": "reseau_chfer_qc",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryTitle": "nmfrexploi",
+              "queryFormat": "gml2",
+              "params": {
+                  "layers": "reseau_chfer_qc",
+                  "feature_count": 365
+              },
+              "ogcFilters": {
+                  "enabled": false,
+                  "editable": false
+              },
+              "sourceFields": [
+                  { "alias": "Exploitant", "name": "nmfrexploi" },
+                  { "alias": "État", "name": "etat" },
+                  { "alias": "Type d'utilisation", "name": "typeutilis" },
+                  { "alias": "Propriétaire", "name": "nmfrpropr" },
+                  { "alias": "Niveau hiérarchique", "name": "nivhierar" }
+              ]
+          }
+      },
+      {
+          "id": "convivialite_velo",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryFormat": "gml2",
+              "params": {
+                  "layers": "convivialite_velo",
+                  "feature_count": 365
+              },
+              "ogcFilters": {
+                  "enabled": false,
+                  "editable": false
+              },
+              "sourceFields": [
+                  
+                  { "alias": "Niveau de convivialité", "name": "conviviali" },
+                  { "alias": "Vitesse de la route", "name": "vitesse" },
+                  { "alias": "Débit", "name": "debit" },
+                  { "alias": "Accotement", "name": "accotement", "excludeFromOgcFilters": true },
+                  { "alias": "Camion", "name": "camion" },
+                  { "alias": "# Route", "name": "num_route" },
+                  { "alias": "Gravelle (o/n)", "name": "gravelle" },
+                  { "alias": "Classe de la route", "name": "des_clasf_" },
+                  { "alias": "Version", "name": "version" }
+              ]
+          }
+      },
+      {
+          "id": "aq_camion",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryTitle": "${drodoreclg} ( ${descclasse} )",
+              "mapLabel": "drodoreclg",
+              "queryFormat": "gml2",
+              "params": {
+                  "layers": "aq_camion",
+                  "feature_count": 365
+              },
+              "ogcFilters": {
+                  "enabled": false,
+                  "editable": false
+              },
+              "sourceFields": [
+                  { "alias": "Nom de la route", "name": "drodoreclg" },
+                  { "alias": "Classification camionnage", "name": "descclasse" },
+                  { "alias": "Classification fonctionnelle", "name": "clsrte" },
+                  { "alias": "Gestion", "name": "gestion", "excludeFromOgcFilters": true },
+                  { "alias": "Municipalité", "name": "drmunnom" },
+                  { "alias": "Remarque", "name": "remarques", "excludeFromOgcFilters": true },
+                  { "alias": "Restriction de charge ou dimension", "name": "cddescr", "excludeFromOgcFilters": true },
+                  { "alias": "No. de règlement municipal", "name": "reglmun", "excludeFromOgcFilters": true },
+                  { "alias": "Date d’approbation MTQ", "name": "dateappr", "excludeFromOgcFilters": true },
+                  { "alias": "Tonnage max. 1-2-3 essieux", "name": "cdtonnage", "excludeFromOgcFilters": true },
+                  { "alias": "Version", "name": "version" }
+              ]
+          }
+      },
+      {
+          "id": "pes_v_limtn_charg",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryFormat": "html",
+              "queryHtmlTarget": "iframe",
+              "params": {
+                  "layers": "pes_v_limtn_charg",
+                  "feature_count": 365
+              }
+          }
+      },
+      {
+          "id": "circulation_routier",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "download": { "url": "https://www.donneesquebec.ca/recherche/fr/dataset/debit-de-circulation"},
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryTitle": "DJMA:${Djma}, DJME:${Djme}, DJMH:${Djmh}",
+              "queryFormat": "gml2",
+              "params": {
+                  "layers": "circulation_routier",
+                  "feature_count": 365
+              },               
+              "ogcFilters": {
+                  "enabled": true,
+                  "editable": true,
+                  "allowedOperatorsType": "basicnumeric"
+              },
+              "sourceFields": [
+                  { "alias": "No section de trafic", "name": "numsectntr", "values": [""] },
+                  { "alias": "Débit journalier moyen annuel ", "name": "Djma", "values": [""] },
+                  { "alias": "Débit journalier moyen estival ", "name": "Djme", "values": [""] },
+                  { "alias": "Débit journalier moyen hivernal ", "name": "Djmh", "values": [""] },
+                  { "alias": "Année des comptages ", "name": "Annee", "values": [1990, 1993, 1995, 1996, 2000, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018] },
+                  { "alias": "% véhicules lourds ", "name": "PrctCamion", "values": [""] },
+                  { "alias": "Année véhicules lourds ", "name": "AnCamion", "values": [2013, 2014, 2015, 2016, 2017, 2018] },
+                  { "alias": "des début sous-route ", "name": "DebutRoute", "values": [""] },
+                  { "alias": "des fin sous-route ", "name": "FinRoute", "values": [""] },
+                  { "alias": "RTSS début ", "name": "RtssDebut", "values": ["Ex: 00005-01-010-000D"] },
+                  { "alias": "Chaînage début ", "name": "changdebut", "values": [""] },
+                  { "alias": "RTSS fin ", "name": "RtssFin", "values": ["Ex: 00005-01-010-000D"] },
+                  { "alias": "Chaînage fin ", "name": "changfin", "values": [""] }
+              ]
+          }
+      },
+      {
+          "id": "bgr_v_sous_route_res_sup_act",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryTitle": "num_rts",
+              "queryFormat": "gml2",
+              "params": {
+                  "layers": "bgr_v_sous_route_res_sup_act",
+                  "feature_count": 365
+              },
+              "ogcFilters": {
+                  "enabled": false,
+                  "editable": false
+              },
+              "sourceFields": [
+                  { "alias": "RTSS", "name": "num_rts", "excludeFromOgcFilters": true },
+                  { "alias": "Longueur", "name": "val_longr_", "excludeFromOgcFilters": true },
+                  { "alias": "Classe fonctionnelle", "name": "des_clasf_" },
+                  { "alias": "Nom de la route", "name": "nom_sous_r", "excludeFromOgcFilters": true },
+                  { "alias": "Nom organisme gestion", "name": "nom_orgns_" },
+                  { "alias": "Nom organisme entretien", "name": "nom_orgn00" },
+                  { "alias": "Unité responsable de la route:", "name": "des_unite_" }
+              ]
+          }
+      },
+      {
+        "id": "bgr_reperage_metrique",
+        "visible": false,
+        "removable": false,
+        "sourceOptions": {
+          "type": "wms",
+          "optionsFromCapabilities": true,
+          "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+          "queryable": true,
+          "queryTitle": "etiquette",
+          "queryFormat": "gml2",
+              "params": {
+            "layers": "bgr_reperage_metrique",
+            "feature_count": 1
+          },
+          "sourceFields": [
+            {"alias": "RTSS","name": "num_rts"},
+            {"alias": "Chainage","name": "chainage"}
+          ]
         }
-      ]
-    }
+      },
+      {
+          "id": "etablissement_mtq",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryTitle":"nometablis",
+              "queryFormat": "gml2",
+              "params": {
+                  "layers": "etablissement_mtq",
+                  "feature_count": 365
+              },
+              "sourceFields": [
+                  { "alias": "Type", "name": "typetablis", "excludeFromOgcFilters": true },
+                  { "alias": "Nom", "name": "nometablis", "excludeFromOgcFilters": true },
+                  { "alias": "Adresse", "name": "adresseco" },
+                  { "alias": "Ville", "name": "ville", "excludeFromOgcFilters": true },
+                  { "alias": "# de l'établissement", "name": "idetablis" },
+                  { "alias": "Propriétaire", "name": "propriete" }
+              ]
+          }
+      },
+      {
+          "id": "bgr_v_centr_servc_geomt_act",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryTitle": "nom_unite_",
+              "queryFormat": "gml2",
+              "params": {
+                  "layers": "bgr_v_centr_servc_geomt_act",
+                  "feature_count": 365
+              },
+              "sourceFields": [
+                  { "alias": "Nom", "name": "nom_unit00", "excludeFromOgcFilters": true },
+                  { "alias": "Adresse", "name": "val_adrs_u", "excludeFromOgcFilters": true },
+                  { "alias": "Code de niveau 01", "name": "cod_niv_01" },
+                  { "alias": "Code de niveau 02", "name": "cod_niv_02" }
+              ]
+          }
+      },
+      {
+          "id": "bgr_v_dirct_terrt_geomt_act",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryTitle": "nom_unite_",
+              "queryFormat": "gml2",
+              "params": {
+                  "layers": "bgr_v_dirct_terrt_geomt_act",
+                  "feature_count": 365
+              },
+              "sourceFields": [
+                  { "alias": "Nom", "name": "nom_unit00", "excludeFromOgcFilters": true },
+                  { "alias": "Adresse", "name": "val_adrs_u", "excludeFromOgcFilters": true },
+                  { "alias": "Code de niveau", "name": "cod_niv_01" }
+              ]
+          }
+      },
+      {
+          "id": "bgr_v_dirct_genrl_geomt_act",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryTitle": "nom_unit00",
+              "queryFormat": "gml2",
+              "params": {
+                  "layers": "bgr_v_dirct_genrl_geomt_act"
+              },
+              "sourceFields": [
+                  { "alias": "Nom", "name": "nom_unit00", "excludeFromOgcFilters": true },
+                  { "alias": "Adresse", "name": "val_adrs_u", "excludeFromOgcFilters": true }
+              ]
+          }
+      }
+  ],
+  "toolbar": [
+      "searchResults",
+      "contextManager",
+      "mapTools",
+      "measurer",
+      "directions",
+      "catalog",
+      "importExport",
+      "print",
+      "shareMap",
+      "about"
+    ],
+    "tools": [
+      {
+        "name": "searchResults",
+        "options": {
+          "focusFirst": false
+        }
+      },
+      {
+        "name": "contextManager"
+      },
+      {
+          "name": "about",
+          "options": {
+              "html": "<img src='https://www.transports.gouv.qc.ca/ImagesCommunesDTI/LogoMinistereGrand.gif'> <br> <br>La mission du ministère des Transports est d’assurer, sur tout le territoire, la mobilité durable des personnes et des marchandises par des systèmes de transport efficaces et sécuritaires qui contribuent au développement du Québec. <br><hr> <h3>Nous joindre:</h3><a href='mailto:geomatique@transports.gouv.qc.ca'>geomatique@transports.gouv.qc.ca</a><br><a href='https://www.donneesquebec.ca/recherche/fr/organization/mtq' target='_blank'>Transport Québec sur Données Québec</a>"
+          }
+      },
+      {
+          "name": "mapTools",
+          "title": "Couches",
+          "options": {
+              "expandLegendOfVisibleLayers": false,
+              "toggleLegendOnVisibilityChange": false,
+              "layerListControls": {
+                  "excludeBaseLayers": true,
+                  "showToolbar": "always"
+              }
+          }
+      },
+      {
+        "name": "shareMap"
+      },
+      {
+        "name": "measurer"
+      },
+      {
+        "name": "directions"
+      },
+      {
+        "name": "catalog"
+      },
+      {
+        "name": "catalogBrowser"
+      },
+      {
+        "name": "timeFilter"
+      },
+      {
+        "name": "ogcFilter"
+      },
+      {
+        "name": "importExport"
+      },
+      {
+        "name": "print"
+      },
+      {
+        "name": "activeTimeFilter"
+      },
+      {
+        "name": "activeOgcFilter"
+      }
+    ]
+  }
