@@ -10,6 +10,14 @@
       "maxZoomOnExtent": 17
   }
   },
+  "message": {
+    "title": "Avertissement",
+    "text": "Veuillez noter que la signalisation sur le réseau routier a préséance sur ces données qui vous sont offertes et sur la carte interactive. Ces informations n'ont aucune valeur légale.",
+    "type": "info",
+    "options": {
+      "timeOut": 30000
+    }
+  },
   "layers": [
       {
         "id": "fond_osm",
