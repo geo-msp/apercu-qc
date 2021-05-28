@@ -85,10 +85,12 @@
       }
     },
     {
-      "name": "contextManager"
+      "name": "contextManager",
+      "title": " Cartes prédefinies" 
     },
     {
-      "name": "about"
+      "name": "about",
+      "title": "Aide"
     },
     {
       "name": "mapTools",
@@ -96,8 +98,9 @@
         "toggleLegendOnVisibilityChange": true,
         "layerListControls": {
           "excludeBaseLayers": true
-        }
-      }
+        }        
+      },
+      "title": "Ma carte"
     },
     {
       "name": "shareMap",
