@@ -105,9 +105,10 @@
     {
       "name": "shareMap",
       "options": {
-        "hasShareMapButton": false,
+        "hasShareMapButton": true,
         "hasCopyLinkButton": true
       }
+      "title":"Dessin"
     },
     {
       "name": "measurer"
