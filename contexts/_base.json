@@ -70,6 +70,7 @@
     "contextManager",
     "mapTools",
     "measurer",
+    "Draw"
     "directions",
     "catalog",
     "importExport",
@@ -111,6 +112,9 @@
     },
     {
       "name": "measurer"
+    },
+    {
+      "name": "draw"
     },
     {
       "name": "directions"
