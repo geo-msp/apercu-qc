@@ -70,7 +70,7 @@
     "contextManager",
     "mapTools",
     "measurer",
-    "draw"
+    "draw",
     "directions",
     "catalog",
     "importExport",
