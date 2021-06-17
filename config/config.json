@@ -24,10 +24,10 @@
   "language": {
     "prefix": ["./particular/locale/", "./locale/"]
   },
-  interactiveTour: {
-      tourInMobile: true,
+  "interactiveTour": {
+      "tourInMobile": true,
       "activateInteractiveTour": true,
-      pathToConfigFile: './config/interactiveTour.json'
+      "pathToConfigFile": "./config/interactiveTour.json"
     },
   "searchSources": {
     "storedqueries": {
