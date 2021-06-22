@@ -32,7 +32,7 @@
   "searchSources": {
     "storedqueries": {
       "title": "Réseau routier Transports Québec",
-      "searchUrl": "/apis/ws/swtq",
+      "searchUrl": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
       "enabled": true,
       "available": true,
       "storedquery_id": "rtss",
