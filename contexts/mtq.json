@@ -825,33 +825,6 @@
           }
       },
       {
-          "id": "repere_km",
-          "visible": false,
-          "removable": false,
-          "sourceOptions": {
-              "type": "wms",
-              "optionsFromCapabilities": true,
-              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
-              "queryable": true,
-              "queryTitle": "${affichkm}",
-              "queryFormat": "gml2",
-              "params": {
-                  "layers": "repere_km",
-                  "feature_count": 365
-              },
-              "ogcFilters": {
-                  "enabled": false,
-                  "editable": false
-              },
-              "sourceFields": [
-                  { "alias": "Affiche Km", "name": "affichkm" },
-                  { "alias": "Nom de la route", "name": "nomrte" },
-                  { "alias": "Nom municipalité", "name": "nommun" }
-
-              ]
-          }
-      },
-      {
           "id": "sortie_aut",
           "visible": false,
           "removable": false,
@@ -1053,6 +1026,33 @@
                   { "alias": "Nom organisme gestion", "name": "nom_orgns_" },
                   { "alias": "Nom organisme entretien", "name": "nom_orgn00" },
                   { "alias": "Unité responsable de la route:", "name": "des_unite_" }
+              ]
+          }
+      },
+      {
+          "id": "repere_km",
+          "visible": false,
+          "removable": false,
+          "sourceOptions": {
+              "type": "wms",
+              "optionsFromCapabilities": true,
+              "url": "https://ws.mapserver.transports.gouv.qc.ca/swtq",
+              "queryable": true,
+              "queryTitle": "${affichkm}",
+              "queryFormat": "gml2",
+              "params": {
+                  "layers": "repere_km",
+                  "feature_count": 365
+              },
+              "ogcFilters": {
+                  "enabled": false,
+                  "editable": false
+              },
+              "sourceFields": [
+                  { "alias": "Affiche Km", "name": "affichkm" },
+                  { "alias": "Nom de la route", "name": "nomrte" },
+                  { "alias": "Nom municipalité", "name": "nommun" }
+
               ]
           }
       },
