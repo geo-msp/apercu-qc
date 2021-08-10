@@ -131,7 +131,38 @@
         "title": "Milieux humides",
         "url": "https://www.servicesgeo.enviroweb.gouv.qc.ca/donnees/services/Public/Themes_publics/MapServer/WMSServer?",
         "sortDirection": "asc"
-      }
+      },
+      {
+            "id":3,
+            "title": "Données fauniques",
+            "sortDirection": "asc",
+           "composite": [
+            {
+              "id": "3",
+              "url":  "https://servicesvecto3.mern.gouv.qc.ca/geoserver/SmartFaunePub/ows?",
+              "crossOrigin": true,
+              "showLegend":false,
+              "queryFormat": {
+                  "gml": "*"
+              },
+              "regFilters": ["Bureaux_protection_faune","LIMITE_REGIONS_PFQ"],
+              "groupImpose": {"id": "protection", "title": "Protection de la faune"}
+            },
+            {
+                "id": "3",
+                "url": "https://servicesvecto3.mern.gouv.qc.ca/geoserver/SmartFaunePub/ows?",
+                "crossOrigin": true,
+                "showLegend":false,
+                "queryFormat": {
+                  "gml": "*"
+              },
+                 "regFilters": ["Chasse_Interdite","Zone_chasse_da3_sefaq","Habitats_Fauniques","TFS","IGT_UGAF"],
+                "groupImpose": {
+                    "id": "faune", "title": "Gestion de la faune et des habitats"}
+              }
+          ]
+
+        }
     ]
   }
 }
