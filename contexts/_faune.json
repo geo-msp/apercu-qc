@@ -1,0 +1,193 @@
+{
+  "uri": "_faune",
+  "title": "Faune",
+  "base": "_base",
+
+  "message": {
+    "text": "messageContextFaune",
+    "type": "info",
+    "options": {
+      "timeOut": 30000
+    }
+  },
+
+  "layers": [
+
+    {
+        "title": "Unités de gestion des animaux à fourrure",
+        "zIndex": 1,
+        "visible": false,
+        "metadata": {
+            "url": "https://www.donneesquebec.ca/recherche/dataset/unites-de-gestion-des-animaux-a-fourrure-ugaf",
+            "extern": true
+            },
+        "opacity" : 1,
+        "baseLayer": false,
+        "style": "default",
+        "sourceOptions": {
+            "crossOrigin": "anonymous",
+            "queryable": true,
+            "queryFormat": "gml",
+            "url": "https://servicesvecto3.mern.gouv.qc.ca/geoserver/SmartFaunePub/ows?",
+            "params": {
+                "layers": "IGT_UGAF"
+            },
+            "type": "wms",
+            "optionsFromCapabilities": false
+        }
+    },
+    {
+        "title": "Chasse interdite",
+        "zIndex": 2,
+        "visible": false,
+        "opacity" : 1,
+        "baseLayer": false,
+        "style": "default",
+        "sourceOptions": {
+            "crossOrigin": "anonymous",
+            "queryable": true,
+            "queryFormat": "gml",
+            "url": "https://servicesvecto3.mern.gouv.qc.ca/geoserver/SmartFaunePub/ows?",
+            "params": {
+                "layers": "Chasse_Interdite"
+            },
+            "type": "wms",
+            "optionsFromCapabilities": false
+        }
+    },
+    {
+        "title": "Sous-zones de chasse",
+        "zIndex": 3,
+        "visible": false,
+        "opacity" : 1,
+        "baseLayer": false,
+        "style": "default",
+        "messages": [{
+            "title": "Zones de chasse",
+            "text": "<div style='color:red;font-weight:bold;font-size:22px;padding-bottom:5px'>Attention </div>Les limites géographiques représentées sur cette carte sont fournies à titre indicatif. Elle ne remplace en aucun cas les textes officiels des lois et des règlements. Pour des renseignements plus détaillés sur une règle en particulier, référez-vous à la <a href='https://www.quebec.ca/tourisme-et-loisirs/activites-sportives-et-de-plein-air/chasse-sportive/' target='_blank'>chasse sportive</a> sur Québec.ca.",
+            "type": "warn",
+            "animate": "fade",
+            "options": {
+              "timeOut": 30000
+            }
+          }],
+        "sourceOptions": {
+            "crossOrigin": "anonymous",
+            "queryable": true,
+            "queryFormat": "gml",
+            "url": "https://servicesvecto3.mern.gouv.qc.ca/geoserver/SmartFaunePub/ows?",
+            "params": {
+                "layers": "Zone_chasse_da3_sefaq"
+            },
+            "type": "wms",
+            "optionsFromCapabilities": false
+        }
+    },
+    
+    {
+        "title": "Territoires fauniques structurés",
+        "zIndex": 5,
+        "visible": false,
+        "opacity" : 0.75,
+        "baseLayer": false,
+        "legendOptions": {
+            "collapsed": false,
+            "display": true,
+            "url": "https://servicesvecto3.mern.gouv.qc.ca/geoserver/SmartFaunePub/ows?REQUEST=GetLegendGraphic&SERVICE=WMS&FORMAT=image/png&SLD_VERSION=1.1.0&VERSION=1.3.0&LAYER=TFS"
+        },
+        "sourceOptions": {
+            "crossOrigin": "anonymous",
+            "queryable": true,
+            "queryFormat": "gml",
+            "url": "https://servicesvecto3.mern.gouv.qc.ca/geoserver/SmartFaunePub/ows?",
+            "params": {
+                "layers": "TFS"
+            },
+            "type": "wms",
+            "optionsFromCapabilities": true
+        }
+    },
+  
+    {
+      "title": "Habitats fauniques",
+      "zIndex": 6,
+      "visible": true,
+      "metadata": {
+        "url": "https://www.donneesquebec.ca/recherche/dataset/habitats-fauniques",
+        "extern": true
+        },
+        "legendOptions": {
+            "collapsed": false,
+            "display": true,
+            "url": "https://servicesvecto3.mern.gouv.qc.ca/geoserver/SmartFaunePub/ows?REQUEST=GetLegendGraphic&SERVICE=WMS&FORMAT=image/png&SLD_VERSION=1.1.0&VERSION=1.3.0&LAYER=Habitats_Fauniques"
+        },
+      "sourceOptions": {
+        "url": "https://servicesvecto3.mern.gouv.qc.ca/geoserver/SmartFaunePub/ows?",
+        "params": {
+          "layers": "Habitats_Fauniques",
+          "version": "1.3.0"
+        },
+        "type": "wms",
+        "crossOrigin": "Anonymous",
+        "queryable": true,
+        "queryFormat": "gml",
+        "optionsFromCapabilities": true
+      }
+    },
+    {
+        "zIndex": 7,
+        "title": "Chemins",
+        "visible": true,
+        "baseLayer": false,
+        "legendOptions": {
+            "display": true,
+            "html": "<img width=70% height=70% src='./particular/images/chemins.png'>"
+          },
+        "sourceOptions": {
+          "crossOrigin": "anonymous",
+          "url": "https://servicescarto.mern.gouv.qc.ca/pes/services/Territoire/AQreseauPlus_WMS/MapServer/WMSServer",
+          "params": {
+            "version": "1.3.0",
+            "layers": "Autoroute [35M - 750K],Autoroute [50K - 8K],Autoroute [750K - 50K],Autoroute [8K - 1],Nationale [25M - 40K],Nationale [40K - 25K],Nationale [25K - 10K],Nationale [10K - 1],Collectrice [650K - 350K],Collectrice [350K - 75K],Collectrice [75K - 10K],Collectrice [10K - 1],Régionale  [250K - 25K],Régionale  [25K - 1],Autre route [150K - 25K],Autre route [25K - 1],Bretelle [10K - 1],Bretelle [35K - 10K],Bretelle [750K - 35K],Bretelle [3K - 1],Bretelle [14K - 3K],Bretelle [500K - 13K],Bretelle [5K - 1],Bretelle [15K - 5K],Bretelle [40K - 15K],Bretelle [3K - 1],Bretelle [13K -3k],Bretelle [50K - 13K],Route locale [200K - 25K],Route locale [25K - 10K],Route locale [10K - 1]",
+            "srs": "ESPG:3857"
+          },
+          "type": "wms"
+        }
+    },
+    {   
+        "zIndex": 8,
+        "title": "Directions régionales de la Protection de la faune",
+        "visible" : true,
+        "sourceOptions": {
+            "crossOrigin": "anonymous",
+            "queryable": true,
+            "queryFormat": "gml",
+            "optionsFromCapabilities": false,
+            "url": "https://servicesvecto3.mern.gouv.qc.ca/geoserver/SmartFaunePub/ows?",
+            "params": {
+                "layers": "LIMITE_REGIONS_PFQ",
+                "version": "1.3.0"
+            },
+            "type": "wms"
+        }
+    },
+    {
+        "zIndex": 9,
+        "title": "Bureaux de la Protection de la faune du Québec",
+        "visible" : true,
+        "sourceOptions": {
+            "crossOrigin": "anonymous",
+            "queryable": true,
+            "queryFormat": "gml",
+            "url": "https://servicesvecto3.mern.gouv.qc.ca/geoserver/SmartFaunePub/ows?",
+            "optionsFromCapabilities": false,
+            "params": {
+                "layers": "Bureaux_protection_faune",
+                "version": "1.3.0"
+            },
+            "type": "wms"
+        }
+    }
+  ]
+  
+}
