@@ -25,10 +25,8 @@
     "prefix": ["./particular/locale/", "./locale/"]
   },
   "interactiveTour": {
-      "tourInMobile": true,
-      "activateInteractiveTour": true,
-      "pathToConfigFile": "./config/interactiveTour.json"
-    },
+    "activateInteractiveTour": false
+  },
   "searchSources": {
     "storedqueries": {
       "title": "Réseau routier Transports Québec",
